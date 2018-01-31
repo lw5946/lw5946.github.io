@@ -1,0 +1,3060 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0040)http://demo.nicebox.cn/6c17d1355bb2b62f/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 启用极速模式(webkit) -->
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<!--  -->
+
+<meta name="KeyWords" content="首页">
+<meta name="description" content="首页">
+<title>首页</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://demo.nicebox.cn/6c17d1355bb2b62f/img/upimages/favicon.ico">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="full-screen" content="yes">
+<!-- SEO友好提示 -->
+<meta name="applicable-device" content="pc,mobile">
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/js/comm/html5shiv.js"></script>
+<script type="text/javascript" src="/js/comm/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="./jquery.min.js.下载"></script>
+<script type="text/javascript" src="./jquery.lazyload.min.js.下载"></script>
+<script type="text/javascript" src="./jquery.nicescroll.min.js.下载"></script>
+<script type="text/javascript" src="./ubox.js.下载" charset="utf-8"></script><meta id="headScreen" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"><style>@media screen and (max-width:640px){::-webkit-scrollbar { width: 0px;}}</style></head><body style="width: auto;"><div style="display: none; z-index: 2147483640; top: 0px; left: 0px; position: fixed; height: 100%; width: 100%;"></div><div id="idBox" class="lightbox" style="display: none; z-index: 2147483647;">	<div id="boxMain">		<div id="boxTopTitle">			<span id="boxName">显示框</span>			<span id="boxClose" title="关闭" onclick="box.Close();">×</span>		</div>		<div id="boxContent">			<iframe id="showiframe" src="./saved_resource.html" frameborder="0" style="width:100%;" name="bookConfirm"></iframe>		</div>	</div></div>
+<script type="text/javascript" src="./wow.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./alert.js.下载" charset="utf-8"></script>
+<script type="text/javascript" src="./0118123.js.下载" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="./font-awesome.min(1).css">
+<link rel="stylesheet" type="text/css" href="./animate.min.css">
+<link rel="stylesheet" type="text/css" href="./box.css">
+<link rel="stylesheet" type="text/css" href="./alert.css">
+<link rel="stylesheet" type="text/css" href="./0118123.css">
+
+<script>
+var isOpenMobie = 2;
+var isOpenPad = 2;
+if(isOpenMobie == 1){
+	if(isOpenPad == 1){
+		$("body").css("width","auto");
+	}else{
+		//是否手机端判断
+		var ua = navigator.userAgent;
+		var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+		isIphone =!ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+		isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+		isMobile = isIphone || isAndroid;
+		if(isMobile){
+			$("body").css("width","1280px");
+		}else{
+			$("body").css("width","auto");
+		}
+	}
+}else{
+	$("body").css("width","auto");
+	$("head").append("<meta id='headScreen' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport' />");
+}
+</script>
+<script>
+if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+	new WOW().init();
+};
+var DIY_WEBSITE_ID = "8648";
+var DIY_JS_SERVER = "s143js.nicebox.cn";
+</script>
+<script src="./login_html_v9_diy.php"></script>
+
+
+	<script type="text/javascript">var Default_isFT = 0;</script>
+<script type="text/javascript" src="./transform.js.下载"></script>
+			<div id="comm_layout_header" class="layout  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div class="view_contents">
+								<div id="div_includeBlock_1499356407894" class="view includeBlock div  none includeView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+								<div id="qqol_style_01_1499567168427" class="view style_01 qqol  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="qqol" class="view_contents">
+					<script>
+/*
+ * ***************************************************************
+ * 片段列表类
+ */
+function FragmentList(config) {
+    this._default = {
+        'prefix':'fragment-',
+        'css':{}
+    };
+    config = $.extend(true, this._default, config);
+    this.config = config;
+    this.list = [];
+    this.object = $('<div></div>');
+    // 执行配置
+    this.init(config);
+}
+/*
+ * 初始化
+ */
+FragmentList.prototype.init = function(config) {
+    config.css && this.object.css(config.css);
+};
+/*
+ * 添加
+ */
+FragmentList.prototype.append = function (fragment) {
+    this.list.push(fragment);
+};
+/*
+ * 获取jquery对象
+ */
+FragmentList.prototype.get = function () {
+    this.object.addClass(this.config.prefix + 'list').children().remove();
+    for(var i = 0, len = this.list.length, html = ''; i < len; ++i) {
+        html += this.list[i].html();
+    }
+    return this.object.html(html);
+};
+/*
+ * 输出
+ */
+FragmentList.prototype.html = function () {
+    return this.get().prop('outerHTML');
+};
+
+/*
+ * ***************************************************************
+ * 片段类
+ */
+Fragment.prototype.prefix = 'fragment-';
+function Fragment(config) {
+    (!config.init || Util.prototype.type(config.init) != 'function') && (config.init = function () {});
+    !config.html && (config.html = '<div></div>');
+    this._default = {
+        'name':'item'
+    };
+    config = $.extend(true, this._default, config);
+    // 创建jquery对象
+    config.data && (config.html = Util.prototype.replace(config.html, Util.prototype.toArray(config.data)));
+    this.object = $(config.html).addClass((config.name != 'item' ? this.prefix + 'item': '') + ' ' + this.prefix + config.name);
+    config.init(this.object);
+    delete config.html; // jquery对象创建后, config.html 不再使用
+    this.config = config;
+    // 执行配置
+    this.init(config);
+}
+/*
+ * 复制
+ */
+Fragment.prototype.clone = function () {
+    return new Fragment($.extend(true, {}, this.config));
+};
+/*
+ * 初始化
+ */
+Fragment.prototype.init = function(config) {
+    config.css && this.object.css(config.css);
+};
+/*
+ * 修改样式
+ */
+Fragment.prototype.css = function(css) {
+    css && this.object.css(css);
+    return this;
+};
+/*
+ * 输出
+ */
+Fragment.prototype.html = function () {
+    return this.object.prop('outerHTML');
+};
+/*
+ * 使用指定数据更新自己
+ */
+Fragment.prototype.data = function (data) {
+    this.object.html(Util.prototype.replace(this.html(), Util.prototype.toArray(data)));
+    return this;
+};
+
+/*
+ * ***************************************************************
+ * 边栏类
+ */
+function Sidebar(config) {
+    this._default = {
+        // 默认配置, 常量, 不应该修改, 对象初始化时可覆盖
+        'template':'sidebar',
+        'expand':true,    // 默认展开还是隐藏
+        'css':undefined,
+        'main':{'width':'120px', 'position':'right'},
+        'border':{'width':'1px', 'color':'#ccc', 'radius':'2px'},
+        'button':{'width':'26px', 'color':'#333', 'font-size':'12px', 'background-color':'#ececec', 'radius':'5px'},
+        'close':{'hide':false, 'height':'25px', 'font-size':'12px', 'padding':'0 .6em 0 .3em'},
+        'show':{'start':undefined, 'end':undefined},   // 显示开始和结束时要执行的函数
+        'end':{'start':undefined, 'end':undefined}   // 隐藏开始和结束时要执行的函数
+    };
+    config = $.extend(true, this._default, config);
+    this.config = config;
+    // dom 结构
+    var temp = $('.'+config.template+':first');
+    temp.hide();
+    this.main = temp.clone().removeClass(config.template).show();
+    this.main.data('instance', this);    // dom 结构的 data 中保存类对象
+    config.css && this.main.addClass(config.css);
+    // 主要属性
+    this.width = config.main.width;
+    this.position = config.main.position;
+    this.main.addClass(this.position);
+    this.position_rev = this.position == 'right' ? 'left' : 'right';
+    this.wrapper = this.main.children('.wrapper');
+    this._close = this.wrapper.children('.close');
+    this.button = this.main.children('.button');
+    // 子元素的 dom 结构的 data 中保存类对象
+    this._close.data('parent', this);
+    this.button.data('parent', this);
+    // 执行配置
+    this.init(config);
+}
+/*
+ * 初始化
+ */
+Sidebar.prototype.init = function(config) {
+    this.initMain();
+    this.initWrapper(config);
+    this.initButton(config);
+    // 垂直居中后, 移动到body最后
+    this.verticalCenter().appendTo('body');
+    config.expand ? this.show(false) : this.hide(false);
+    this.main.show();
+    // 存储所有的对象到window中 (后期会使用)
+    !window.online_service_list && (window.online_service_list = []);
+    window.online_service_list.push(this);
+    $(window).resize(this.onWindowResize);
+};
+/*
+ * 初始化 - main
+ */
+Sidebar.prototype.initMain = function() {
+    this.main.hide().css({
+        'height':'auto',
+        'position':'fixed',
+        'z-index':'100000000',
+        'top':'0px',
+        'width':this.width
+    });
+    this.main.css(this.position, '0px');
+    // 移入移出时
+    this.main.hover(
+        function () {
+            $(this).data('instance').show();
+        },
+        function () {
+            if(!$(this).hasClass('animate-showing')) {
+                $(this).data('instance').hide();
+            }
+        }
+    );
+};
+/*
+ * 初始化 - wrapper
+ */
+Sidebar.prototype.initWrapper = function(config) {
+    this.wrapper.css({
+        'border': config.border.width +' solid ' + config.border.color,
+        'border-radius':config.border.radius,
+        '-moz-border-radius':config.border.radius
+    });
+    this._close.css({
+        'display':config.close.hide ? 'none' : 'block',
+        'position':'absolute',
+        'top':'0px',
+        'right':'0px',
+        'height':config.close.height,
+        'line-height':config.close.height,
+        'font-size':config.close['font-size'],
+        'padding':config.close.padding,
+        'cursor':'pointer'
+    }).click(function () {
+        var instance = $(this).data('parent');
+        Sidebar.prototype.hide.call(instance);
+        if(typeof($("img").lazyload)=="function"){
+            //异步加载图片
+            setTimeout(function(){
+                $("img").lazyload({effect: "fadeIn",threshold:0,failure_limit:20,skip_invisible:false});
+            },500);
+            
+        }
+    }).attr({'onselectstart':'return false', 'unselectable':'on'});   // [兼容]禁止选择文本
+};
+/*
+ * 隐藏Sidebar
+ * animate: 是否带动画
+ */
+Sidebar.prototype.hide = function (animate) {
+    animate === undefined && (animate = true);
+    var instance = this, width = '-'+this.width, end = this.position == 'right' ? {right :width} : {left :width},
+        btn_width = '-'+instance.config.button.width, btn_end = instance.position == 'right' ? {left :btn_width} : {right :btn_width};
+    instance.onHide('start');
+    if(animate) {
+        instance.main.animate(end, 'fast', function() {
+            instance.button.show().animate(btn_end, 'fast');
+            instance.onHide('end');
+        });
+    } else {
+        instance.main.css(end);
+        instance.button.show().css(btn_end);
+        instance.onHide('end');
+    }
+};
+/*
+ * 隐藏Sidebar开始和结束时
+ */
+Sidebar.prototype.onHide = function (status) {
+    var func;
+    if(this.config.hide) {
+        switch(status) {
+            case 'start':
+                Util.prototype.type(func = this.config.hide.start) == 'function' && func();  // 执行自定义函数
+                break;
+            case 'end':
+                Util.prototype.type(func = this.config.hide.end) == 'function' && func();  // 执行自定义函数
+                break;
+        }
+    }
+};
+/*
+ * 初始化 - button
+ */
+Sidebar.prototype.initButton = function(config) {
+    var width = config.button.width;
+    this.button.hide().css({
+        'position':'absolute',
+        'top':'0%',
+        'width':width,
+        'line-height':'1.35em',
+        'padding':'.5em 0',
+        'font-size':config.close['font-size'],
+        'color':config.button.color,
+        'background-color':config.button['background-color'],
+        'cursor':'pointer',
+        'word-wrap':'break-word',
+        'word-break':'break-all'
+    });
+    var radius = config.button.radius;
+    if(this.position == 'right') {
+        this.button.css({
+            'border-top-left-radius':radius,
+            'border-bottom-left-radius':radius
+        });
+    } else {
+        this.button.css({
+            'border-top-right-radius':radius,
+            'border-bottom-right-radius':radius
+        });
+    }
+    this.button.css(this.position_rev, '0px');
+    // 点击时
+    this.button.click(function () {
+        var instance = $(this).data('parent');
+        Sidebar.prototype.show.call(instance);
+    }).attr({'onselectstart':'return false', 'unselectable':'on'});   // [兼容]禁止选择文本
+};
+/*
+ * 显示Sidebar
+ * animate: 是否带动画
+ */
+Sidebar.prototype.show = function (animate) {
+    animate === undefined && (animate = true);
+    var instance = this, end = instance.position == 'right' ? {right :0} : {left :0};
+    instance.onShow('start');
+    if(animate) {
+        instance.onAnimate('showing');
+        instance.main.animate(end, 'fast', function() {
+            instance.onAnimate();
+            instance.button.hide(); // Bug修复: 额外隐藏一次
+            instance.onShow('end');
+        });
+    } else {
+        instance.main.css(end);
+        instance.onShow('end');
+    }
+    // 显示开始后, 不管是否有动画, 按钮应该马上隐藏
+    instance.button.hide();
+    instance.button.css(instance.position_rev,'0px');
+};
+/*
+ * 显示Sidebar开始和结束时
+ */
+Sidebar.prototype.onShow = function (status) {
+    var func;
+    if(this.config.show) {
+        switch (status) {
+            case 'start':
+                Util.prototype.type(func = this.config.show.start) == 'function' && func();  // 执行自定义函数
+                break;
+            case 'end':
+                Util.prototype.type(func = this.config.show.end) == 'function' && func();  // 执行自定义函数
+                break;
+        }
+    }
+};
+/*
+ * 设置实时动画状态
+ * status: 为空时表示动画结束
+ */
+Sidebar.prototype.onAnimate = function(status) {
+    Util.prototype.removeClass(this.main, 'animate-');
+    status && this.main.addClass('animate-'+status);
+};
+/*
+ * 窗口大小改变时
+ */
+Sidebar.prototype.onWindowResize = function() {
+    for(var i = 0, len = window.online_service_list.length; i < len; ++i) {
+        window.online_service_list[i].verticalCenter();
+    }
+};
+/*
+ * 在窗口垂直居中
+ */
+Sidebar.prototype.verticalCenter = function() {
+    var h1 = this.main.height(), h2 =$(window).height();
+    if(h1 && h2) {
+        this.main.css('top', ((h2 - h1) / 2) + 'px');
+    }
+    return this.main;
+};
+/*
+ * 添加内容
+ */
+Sidebar.prototype.append = function(obj) {
+    this.wrapper.append(obj);
+    this.verticalCenter();
+};
+
+/*
+ * ***************************************************************
+ * 工具类
+ */
+function Util() {
+}
+/*
+ * 返回对象类型
+ */
+Util.prototype.type = function(obj) {
+    var type = obj === undefined ? 'undefined' : (obj === null ? 'null' : undefined);   // 兼容旧版js解析器
+    return type ? type : Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
+};
+/*
+ * 检测对象类型
+ */
+Util.prototype.is = function(obj, type) {
+    var cls = this.type(obj);
+    return obj !== undefined && obj !== null && cls.toLowerCase() === type.toLowerCase();
+};
+/*
+ * 属性扩展( 增强版 )
+ * 注意: 一般深度复制, 可直接使用 $.extend(true, target, source)
+ */
+Util.prototype.extend = function(target, source, is_deep, is_add) {
+    is_deep === undefined && (is_deep = true);   // 如果值也是对象, 是否对值也调用extend
+    is_add === undefined && (is_add = true);     // 如果目标对象中没有源对象的键, 是否允许新增键值
+    for (var p in source) {
+        if (source.hasOwnProperty(p) && (is_add || target.hasOwnProperty(p))) {
+            // 执行extend
+            if(is_deep && this.is(target[p], 'object') && this.is(source[p], 'object')) {
+                this.extend(target[p], source[p]);
+            } else {
+                target[p] = source[p];
+            }
+        }
+    }
+    return target;
+};
+/*
+ * 删除class( 删除指定名称的class和所有以指定名称开头的class )
+ */
+Util.prototype.removeClass = function(obj, rm) {
+    obj.attr('class', function () {
+        var regExp = new RegExp(rm + '\\S*', 'g');
+        return Util.prototype.clear($(this).attr('class').replace(regExp, ''));
+    });
+    return obj;
+};
+/*
+ * 删除前后空白
+ */
+Util.prototype.trim = function(s){
+    return s.replace(/(^\s*)|(\s*$)/g,'');
+};
+/*
+ * 合并中间多个空白为一个
+ */
+Util.prototype.clear = function(s){
+    return s.replace(/(^\s*)|(\s*$)|(\s{2,})/g,'');
+};
+/*
+ * 对象转数组
+ */
+Util.prototype.toArray = function(obj) {
+    var array = [], p, item;
+    for (p in obj) {
+        if (obj.hasOwnProperty(p)) {
+            item = [p];
+            item.push(this.is(obj[p], 'object') ? this.toArray(obj[p]) : obj[p]);
+            array.push(item);
+        }
+    }
+    return array;
+};
+/*
+ * 使用指定的键值数组替换一个字符串
+ * 备注: 字符串中键以{{}}标记
+ * 备注: data: 二维数组, 一维数组的每一项是一个长度为二的内层数组, 内层数组的第一项为键, 第二项为值
+ */
+Util.prototype.replace = function(s, data) {
+    var i, len, reg_str = [], reg;
+    for(i = 0, len = data.length; i < len; ++i) {
+        reg_str.push('({{' + data[i][0] + '}})');
+    }
+    // 正则替换
+    reg = new RegExp(reg_str.join('|'), 'g');
+    return s.replace(reg, replace);
+    // 执行替换的函数
+    function replace(){
+        // arguments 中包含的是: 字符串中当前位置匹配到的字符串, 第0个()匹配到的字符串, ..., 第n-1个()匹配到的字符串, 当前匹配的位置, 整个字符串
+        // 从索引为1开始, 第一个不为undefined的项的索引值减一即为匹配到的键的索引
+        for(var i = 1, len = arguments.length; i < len; ++i) {
+            if(arguments[i] !== undefined) {
+                return data[--i][1];
+            }
+        }
+    }
+};
+</script>
+
+
+<div class="online-service online-template" style="display: none;">
+    <div class="wrapper">
+        <div class="close">×</div>
+    </div>
+    
+</div>
+<script type="application/javascript">
+	function remove_qqol_qqol_style_01_1499567168427(){
+		$('body > .online-service.qqol-qqol_style_01_1499567168427').remove();
+	}
+    // 创建在线客服
+    $(function () {
+        // 清理旧的
+        remove_qqol_qqol_style_01_1499567168427();
+
+        // 创建边栏
+        var sidebar = new Sidebar({
+            'template': 'online-template',
+            'css': 'qqol-qqol_style_01_1499567168427',
+            'expand': false,
+            'main': {'width':'251px', 'position': 'left'},
+            'border': {'color': '#628c74', 'width': '5px', 'radius': '10px'},
+            'button': {'color': '#fff', 'background-color': '#628c74', 'radius': '5px'},
+            'close': {'hide': false}
+        });
+
+        // 片段模板
+        var qqOnlineStr = '<div class="clearfix">' +
+                '<a class="qq-btn" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={{qq}}&site=qq&menu=yes">' +
+                '<img border="0" src="http://wpa.qq.com/pa?p=2:{{qq}}:{{style}}" alt="{{title}}" title="{{title}}"  ' +
+                'onerror="javascript:this.src=\'http://wpa.qq.com/pa?p=2:123456789:{{style}}\';">' +
+                '{{text}}</a></div>';	// 图标不能显示时, 更换QQ号码让其显示
+
+        // 创建片段
+        Fragment.prototype.prefix = 'ol-';
+
+        // 创建片段列表
+        var fragmentList = new FragmentList({
+            'prefix':'ol-',
+            'css':{'padding':'0 23px'}
+        });
+                        fragmentList.append(new Fragment({
+                    'name':'qq-online',
+                    'html':qqOnlineStr,
+                    'data':{'qq':'123', 'style':3, 'title':'QQ在线', 'text':'客服一'},
+                    'css':{'margin':'.5em 0'}
+                }));
+                            fragmentList.append(new Fragment({
+                    'name':'qq-online',
+                    'html':qqOnlineStr,
+                    'data':{'qq':'123456', 'style':3, 'title':'QQ在线', 'text':'客服二'},
+                    'css':{'margin':'.5em 0'}
+                }));
+                    		fragmentList.append(new Fragment({
+                    'name':'separator',
+                    'css':{'height':'2px', 'background-color':'#a0a0a0'}
+                }));
+        	        		fragmentList.append(new Fragment({
+                    'name': 'text',
+                    'html': '<div>工作时间</div>',
+                    'css':{'margin':'.5em 0'}
+                }));
+        	        		fragmentList.append(new Fragment({
+                    'name': 'text',
+                    'html': '<div>周一至周日 ：8:00-18:00</div>',
+                    'css':{'margin':'.5em 0'}
+                }));
+        	        		fragmentList.append(new Fragment({
+                    'name':'separator',
+                    'css':{'height':'2px', 'background-color':'#a0a0a0'}
+                }));
+        	        		fragmentList.append(new Fragment({
+                    'name': 'text',
+                    'html': '<div>联系方式</div>',
+                    'css':{'margin':'.5em 0'}
+                }));
+        	        		fragmentList.append(new Fragment({
+                    'name': 'text',
+                    'html': '<div>电话1： 186 4561 7962</div>',
+                    'css':{'margin':'.5em 0'}
+                }));
+        	        		fragmentList.append(new Fragment({
+                    'name': 'text',
+                    'html': '<div>电话2： 151 2361 7962</div>',
+                    'css':{'margin':'.5em 0'}
+                }));
+        	        		fragmentList.append(new Fragment({
+                    'name': 'text',
+                    'html': '<div>微信： zxczxc</div>',
+                    'css':{'margin':'.5em 0'}
+                }));
+        	        		fragmentList.append(new Fragment({
+                    'name': 'text',
+                    'html': '<div>QQ：123456 </div>',
+                    'css':{'margin':'.5em 0'}
+                }));
+        	        		fragmentList.append(new Fragment({
+                    'name': 'text',
+                    'html': '<div>QQ：222222</div>',
+                    'css':{'margin':'.5em 0'}
+                }));
+        	        		fragmentList.append(new Fragment({
+                    'name': 'text',
+                    'html': '<div>邮箱：32102468@qq.com</div>',
+                    'css':{'margin':'.5em 0'}
+                }));
+        	        // 添加到边栏
+        var list = fragmentList.get();
+        !list.children().length && list.html('<p>内容列表为空！</p>');
+        sidebar.append(list);
+        if(typeof($("img").lazyload)=="function"){
+            $("img").lazyload({effect: "fadeIn",threshold:0,failure_limit:20,skip_invisible:false});
+        }
+    });
+</script>
+
+<script type="application/javascript">
+    // 对输入内容中的尖括号、引号等进行转义
+    function html_encode(str) {
+        var s = "";
+        if (str.length == 0) return "";
+        s = str.replace(/&/g, "&amp;");
+        s = s.replace(/</g, "&lt;");
+        s = s.replace(/>/g, "&gt;");
+        s = s.replace(/ /g, "&nbsp;");
+        s = s.replace(/\'/g, "&#39;");
+        s = s.replace(/\"/g, "&quot;");
+        s = s.replace(/\n/g, "<br>");
+        return s;
+    }
+    function html_decode(str) {
+        var s = "";
+        if (str.length == 0) return "";
+        s = str.replace(/&amp;/g, "&");
+        s = s.replace(/&lt;/g, "<");
+        s = s.replace(/&gt;/g, ">");
+        s = s.replace(/&nbsp;/g, " ");
+        s = s.replace(/&#39;/g, "\'");
+        s = s.replace(/&quot;/g, "\"");
+        s = s.replace(/<br>/g, "\n");
+        return s;
+    }
+</script>				</div>
+			</div>
+					<div id="user_style_05_1515554661787" class="view style_05 user  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="user" class="view_contents">
+					
+<!---菜单区域--->
+<!--弹窗登录 PopupLogin -->
+<div id="UserLoginMain" class="PopUpLogin PopUpLoginStyle_1">
+	<div id="popUpLogin-t" class="Login_before">
+		<ul class="v9_hide_if_logined">
+			<li class="showpLogin"><a href="http://demo.nicebox.cn/6c17d1355bb2b62f/#" class="textSet" onclick="OnLogin(0);">登录</a></li>
+			<li class="w">|</li>
+			<li class="showpRegistered"><a href="javascript:void(0)" class="textSet" onclick="OnRegister(0);">注册</a></li>
+
+			
+			
+		</ul>
+	</div>
+    <!--登录后显示-->
+    <div class="Login_after" style="display: none;"></div>
+</div>
+<link rel="stylesheet" type="text/css" href="./userloginView.css">
+<script src="./userloginView.js.下载"></script>
+<script src="./login_html_v9_diy(1).php"></script>
+				</div>
+			</div>
+					<div id="image_logo_1499356635645" class="view logo image  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="image" class="view_contents">
+					<div class="logoStyle modSet">
+	
+
+<a href="http://demo.nicebox.cn/6c17d1355bb2b62f/login.html" target="_self"><img class="imgSet" src="./logo.png" title="" alt="" style="width:auto; height:100%; position:relative; top:0; left:50%; transform:translate(-50%,0);"></a>
+
+
+</div>				</div>
+			</div>
+					<div id="dh_style_01_1513925821252" class="view style_01 dh  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="dh" class="view_contents">
+					<script></script>
+<div id="menu" class="menu menuStyle_1">
+	<div class="menuLayout">
+		<ul class="miniMenu columnSet showmobile">
+			<li class="leftBox">
+				<div class="nav"></div>
+				<div class="sidebar icoMenuSet" onclick="setDhListen(&#39;style_01&#39;,this)">=</div>
+				<div class="menuScroll">
+					<ul class="menuUlCopy">
+	                	
+						 
+	                  		 
+		                    	<li id="hot" class="rflex" pageid="118123" showmobile=""><a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/index.html">首页</a>
+		                 	
+							
+								
+								 
+		                    	</li>
+								
+	                 	
+						 
+	                  		 
+		                    	<li class="rflex" pageid="118129" showmobile=""><a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/tea.html">茶类预约</a>
+							
+							
+								
+								 
+		                    	</li>
+								
+	                 	
+						 
+	                  		 
+		                    	<li class="rflex" pageid="118124" showmobile=""><a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/about.html">关于我们</a>
+							
+							
+								
+								 
+		                    	</li>
+								
+	                 	
+						 
+	                  		 
+		                    	<li class="rflex" pageid="118127" showmobile=""><a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news.html">最新资讯</a>
+							
+							
+								
+								 
+		                    	</li>
+								
+	                 	
+						 
+	                  		 
+		                    	<li class="rflex" pageid="118128" showmobile=""><a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/contact.html">联系我们</a>
+							
+							
+								
+								 
+		                    	</li>
+								
+	                 	
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="menuUl_box columnSet showpc">
+			<ul class="menuUl dflex">
+            	
+				 
+				<!-- 1118123 -->
+                    
+                        <li id="hot" class="rflex" pageid="118123" showpc="">
+                    
+				
+						 
+		                    <a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/index.html">首页</a>
+						
+							
+					 
+		                </li>
+					
+              	
+				 
+				<!-- 1118129 -->
+                    
+                    	<li class="rflex" pageid="118129" showpc="">
+					
+				
+						 
+		                    <a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/tea.html">茶类预约</a>
+						
+							
+					 
+		                </li>
+					
+              	
+				 
+				<!-- 1118124 -->
+                    
+                    	<li class="rflex" pageid="118124" showpc="">
+					
+				
+						 
+		                    <a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/about.html">关于我们</a>
+						
+							
+					 
+		                </li>
+					
+              	
+				 
+				<!-- 1118127 -->
+                    
+                    	<li class="rflex" pageid="118127" showpc="">
+					
+				
+						 
+		                    <a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news.html">最新资讯</a>
+						
+							
+					 
+		                </li>
+					
+              	
+				 
+				<!-- 1118128 -->
+                    
+                    	<li class="rflex" pageid="118128" showpc="">
+					
+				
+						 
+		                    <a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/contact.html">联系我们</a>
+						
+							
+					 
+		                </li>
+					
+              	
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 菜单区域 End-->
+
+
+
+
+
+
+				</div>
+			</div>
+					<div id="image_style_01_1515638920145" class="view style_01 image  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="image" class="view_contents">
+					<div class="imgStyle CompatibleImg">
+	
+		<a href="http://demo.nicebox.cn/6c17d1355bb2b62f/login.html?pageid=118130" target="">
+	
+			<img class="picSet link-type-" src="./login.png" title="" alt="描述" id="imageModeShow">
+	
+		</a>
+	
+</div>
+
+
+
+
+
+<!-- 新加的js  -->
+
+				</div>
+			</div>
+						</div>
+			</div>
+						</div>
+			</div>
+					<div id="layout_1515555779558" class="layout  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div class="view_contents">
+								<div id="div_a_includeBlock_1515659116099" class="view a_includeBlock div  none includeView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+								<div id="div_blank_1515659242936" class="view blank div  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+					<!-- 
+	<a href="login.html?pageid=118130" style="display:block;width:100%;height:100%;" id="divnet"></a>
+ -->
+
+
+
+				</div>
+			</div>
+					<div id="image_style_01_1515659740874" class="view style_01 image  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="image" class="view_contents">
+					<div class="imgStyle CompatibleImg">
+	
+		<a href="javascript:;" target="">
+	
+			<img class="picSet link-type-" src="./icon3.png" title="" alt="描述" id="imageModeShow">
+	
+		</a>
+	
+</div>
+
+
+
+
+
+
+<!-- 新加的js  -->
+
+				</div>
+			</div>
+					<div id="text_style_01_1515659881668" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					立即预订茶位
+
+				</div>
+			</div>
+					<div id="re_search_style_02_1517046206243" class="view style_02 re_search  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="re_search" class="view_contents">
+					<script></script><div class="re_searchStyle_2">
+<form method="post" action="http://demo.nicebox.cn/6c17d1355bb2b62f/tea.html" target="_self">
+	<div class="content">
+	
+
+	
+		
+			
+
+			
+
+
+			
+			
+			<!-- 	下拉框 -->
+			<div class="searchbox fourth eachbox">
+				<select class="selectbox cellSelectSet inputSet" name="attr[454]">
+				<option value="">包间种类</option>
+				
+				<option value="2-3人">2-3人</option>
+				
+				<option value="4-8人">4-8人</option>
+				
+				<option value="8-12人">8-12人</option>
+				
+				<option value="12人以上">12人以上</option>
+				
+				</select>
+			</div>
+			
+		
+			
+
+			
+
+
+			
+			
+			<!-- 	下拉框 -->
+			<div class="searchbox fourth eachbox">
+				<select class="selectbox cellSelectSet inputSet" name="attr[453]">
+				<option value="">优质茶类</option>
+				
+				<option value="普通">普通</option>
+				
+				<option value="优质">优质</option>
+				
+				<option value="上品">上品</option>
+				
+				<option value="顶级">顶级</option>
+				
+				</select>
+			</div>
+			
+		
+			
+
+			
+
+
+			
+			
+			<!-- 	下拉框 -->
+			<div class="searchbox fourth eachbox">
+				<select class="selectbox cellSelectSet inputSet" name="attr[455]">
+				<option value="">茶类品种</option>
+				
+				<option value="绿茶 ">绿茶 </option>
+				
+				<option value="乌龙">乌龙</option>
+				
+				<option value="铁观音">铁观音</option>
+				
+				</select>
+			</div>
+			
+		
+			
+
+			
+
+
+			
+			
+			<!-- 	下拉框 -->
+			<div class="searchbox fourth eachbox">
+				<select class="selectbox cellSelectSet inputSet" name="attr[452]">
+				<option value="">到店日期</option>
+				
+				<option value="8:00-12:00">8:00-12:00</option>
+				
+				<option value="12:00-16:00">12:00-16:00</option>
+				
+				<option value="16:00-20:00">16:00-20:00</option>
+				
+				</select>
+			</div>
+			
+		
+
+	
+		<hr class="clearhr">
+	</div>
+	
+	<div class="searchbox fifth">
+		<input type="button" value="立即搜索" class="subbox btnaSet" attrhref="tea.html">
+	</div>	
+	
+</form>
+<!-- 	<div class="mask_calendar">
+		<div class="calendar"></div>
+	</div> -->
+	<hr class="clearhr">
+</div>
+
+
+
+
+
+<!-- 引用日历插件的js方法，alex -->
+<script>
+		$(function(){
+			$('#re_search_style_02_1517046206243 #firstSelect').on('click',function () {
+				$('#re_search_style_02_1517046206243 .mask_calendar').show();
+
+			});
+			$('#re_search_style_02_1517046206243 .mask_calendar').on('click',function (e) {
+				if(e.target.className == "mask_calendar"){
+					$('#re_search_style_02_1517046206243 .calendar').slideUp(200);
+	                $('#re_search_style_02_1517046206243 .mask_calendar').fadeOut(200);
+				}
+			})
+			$('#re_search_style_02_1517046206243 #firstSelect').re_search_style_02_1517046206243_calendarSwitch({
+				selectors : {
+					sections : "#re_search_style_02_1517046206243 .calendar"
+				},
+                index : 4,      //展示的月份个数
+                animateFunction : "slideToggle",        //动画效果
+                controlDay:true,//知否控制在daysnumber天之内，这个数值的设置前提是总显示天数大于90天
+                daysnumber : "90",     //控制天数
+                comeColor : "#2EB6A8",       //开始颜色
+                outColor : "#2EB6A8",      //结束颜色
+                comeoutColor : "#E0F4F2",        //开始和结束之间的颜色
+                callback :function(){//回调函数
+                	$('#re_search_style_02_1517046206243 .mask_calendar').fadeOut(200);
+                	var startDate = $('#re_search_style_02_1517046206243 #startDate').val();  //开始的天数
+	                var endDate = $('#re_search_style_02_1517046206243 #endDate').val();      //结束的天数
+	                var NumDate = $('#re_search_style_02_1517046206243 .NumDate').text();    //共多少晚
+                }  ,   
+                comfireBtn:'.re_search_style_02_1517046206243_comfire'//确定按钮的class或者id
+            });
+			var re_search_style_02_1517046206243_b=new Date();
+            var ye=re_search_style_02_1517046206243_b.getFullYear();
+            var mo=re_search_style_02_1517046206243_b.getMonth()+1;
+            mo = mo<10?"0"+mo:mo;
+            var da=re_search_style_02_1517046206243_b.getDate();
+            da = da<10?"0"+da:da;
+
+
+            $('#re_search_style_02_1517046206243 #startDate').val(ye+'-'+mo+'-'+da);
+            re_search_style_02_1517046206243_b=new Date(re_search_style_02_1517046206243_b.getTime()+24*3600*1000);
+            var ye=re_search_style_02_1517046206243_b.getFullYear();
+            var mo=re_search_style_02_1517046206243_b.getMonth()+1;
+            mo = mo<10?"0"+mo:mo;
+            var da=re_search_style_02_1517046206243_b.getDate();
+            da = da<10?"0"+da:da;
+            $('#re_search_style_02_1517046206243 #endDate').val(ye+'-'+mo+'-'+da);
+        });
+	</script>
+
+<script type="text/javascript">
+	(function($) {
+    "use strict";
+    var re_search_style_02_1517046206243_calendarSwitch = (function() {
+        function re_search_style_02_1517046206243_calendarSwitch(element, options) {
+            this.settings = $.extend(true, $.fn.re_search_style_02_1517046206243_calendarSwitch.defaults, options || {});
+            this.element = element;
+            this.init();
+        }
+        re_search_style_02_1517046206243_calendarSwitch.prototype = { /*说明：初始化插件*/
+            /*实现：初始化dom结构，布局，分页及绑定事件*/
+            init: function() {
+                var me = this;
+                me.selectors = me.settings.selectors;
+                me.sections = me.selectors.sections;
+                me.index = me.settings.index;
+                me.comfire = me.settings.comfireBtn;
+
+                var html = "<div class='re_search_style_02_1517046206243_headerWrapper'><div class='re_search_style_02_1517046206243_comfire'>完成</div></div><table class='dateZone'><tr><td class='colo'>日</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td class='colo'>六</td></tr></table>" + "<div class='re_search_style_02_1517046206243_tbody tbodys'></div>"
+                $(me.sections).append(html);
+                $(me.sections).find('.re_search_style_02_1517046206243_headerWrapper').css({
+                    "height": "50px",
+                    "line-height": "50px",
+                    "width":"100%",
+                    "background":"#fff",
+                    "position": "absolute",
+                    "z-index":"9999"
+                });
+                $(me.sections).find('.re_search_style_02_1517046206243_headerTip').css({
+                    "text-align": "left",
+                    "line-height": "50px",
+                    "margin-left":"10px",
+                    "font-size":"15px"
+                });
+                $(me.sections).find(me.comfire).css({
+                    "height": "26px",
+                    "line-height": "26px",
+                    "width": "50px",
+                    "color": "#2EB6A8",
+                    "position": "absolute",
+                    "left": "10px",
+                    "text-align": "center",
+                    "font-size": "14px",
+                    "cursor": "pointer",
+                    "top": "11px",
+                    "border": "1px solid #2EB6A8",
+                    "border-radius": "4px"
+                });
+                for (var q = 0; q < me.index; q++) {
+                    var select = q;
+                    $(me.sections).find(".re_search_style_02_1517046206243_tbody").append("<p class='ny1'></p><table class='dateTable'></table>")
+                    var currentDate = new Date();
+                    currentDate.setMonth(currentDate.getMonth() + select);
+                    var currentYear = currentDate.getFullYear();
+                    var currentMonth = currentDate.getMonth();
+                    var setcurrentDate = new Date(currentYear, currentMonth, 1);
+                    var firstDay = setcurrentDate.getDay();
+                    var yf = currentMonth + 1;
+                    if (yf < 10) {
+                        $(me.sections).find('.ny1').eq(select).text(currentYear + '年' + '0' + yf + '月');
+                    } else {
+                        $(me.sections).find('.ny1').eq(select).text(currentYear + '年' + yf + '月');
+                    }
+                    var DaysInMonth = [];
+                    if (me._isLeapYear(currentYear)) {
+                        DaysInMonth = new Array(31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+                    } else {
+                        DaysInMonth = new Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31);
+                    }
+                    var Ntd = firstDay + DaysInMonth[currentMonth];
+                    var Ntr = Math.ceil(Ntd / 7);
+                    for (var i = 0; i < Ntr; i++) {
+                        $(me.sections).find('.dateTable').eq(select).append('<tr></tr>');
+                    };
+                    var createTd = $(me.sections).find('.dateTable').eq(select).find('tr');
+                    createTd.each(function(index, element) {
+                        for (var j = 0; j < 7; j++) {
+                            $(this).append('<td></td>')
+                        }
+                    });
+                    var arryTd = $(me.sections).find('.dateTable').eq(select).find('td');
+                    for (var m = 0; m < DaysInMonth[currentMonth]; m++) {
+                        arryTd.eq(firstDay++).text(m + 1);
+                    }
+                }
+                me._initselected();
+
+                me.element.on('click', function(event) {
+                    event.preventDefault();
+                    me._slider(me.sections)
+                });
+                //点击完成部分
+                $(me.comfire).on('click', function(event) {
+                    event.preventDefault();
+                    $(me.sections).find('.re_search_style_02_1517046206243_tbody .rz').each(function(index, element) {
+                        //判断是否有结束显示，没有就不给完成提交
+                        if ($(this).text() == '结束') {
+                            //点击的日期存入input
+                            $(me.sections).find('.re_search_style_02_1517046206243_tbody .rz').each(function(index, element) {
+                                if ($(this).text() == '开始') {
+                                    var day = parseInt($(this).parent().text().replace(/[^0-9]/ig, "")) //截取字符串中的数字
+                                    if(day < 10){
+                                        day = "0" + day;
+                                    }
+                                    var startDayArrays = $(this).parents('table').prev('p').text().split('');
+                                    var startDayArrayYear = [];
+                                    var startDayArrayMonth = [];
+                                    var startDayYear = "";
+                                    var startDayMonth = "";
+                                    for (var i = 0; i < me.index; i++) {
+                                        var select = i;
+                                        startDayArrayYear.push(startDayArrays[select])
+                                    }
+                                    startDayYear = startDayArrayYear.join('');
+                                    for (var i = 5; i < 7; i++) {
+                                        startDayArrayMonth.push(startDayArrays[i])
+                                    }
+                                    startDayMonth = startDayArrayMonth.join('');
+                                    //添加开始到input
+                                    $('#re_search_style_02_1517046206243 #startDate').val(startDayYear + '-' + startDayMonth + '-' + day);
+                                }
+                                if ($(this).text() == '结束') {
+                                    // var day = parseInt($(this).parent().text().replace(/[^0-9]/ig, "").substring(0, 2));
+                                    var day = $(this).parent().text().split('结')[0];
+                                    if(day < 10){
+                                        day = "0" + day;
+                                    }
+                                    var endDayArrays = $(this).parents('table').prev('p').text().split('');
+                                    var endDayArrayYear = [];
+                                    var endDayArrayMonth = [];
+                                    var endDayYear = "";
+                                    var endDayMonth = "";
+                                    for (var i = 0; i < 4; i++) {
+                                        endDayArrayYear.push(endDayArrays[i])
+                                    }
+                                    endDayYear = endDayArrayYear.join('');
+                                    for (var i = 5; i < 7; i++) {
+                                        endDayArrayMonth.push(endDayArrays[i])
+                                    }
+                                    endDayMonth = endDayArrayMonth.join('');
+                                    //添加开始到input
+                                    $('#re_search_style_02_1517046206243 #endDate').val(endDayYear + '-' + endDayMonth + '-' + day);
+                                   // console.log($("#startDate").val().replace(/[^0-9]/ig, ""))
+                                   // console.log($("#endDate").val().replace(/[^0-9]/ig, ""))
+                                   // 如果开始等于结束
+                                    if (parseInt($("#startDate").val().replace(/[^0-9]/ig, "")) == parseInt($("#endDate").val().replace(/[^0-9]/ig, ""))) {
+                                        var x = $('#startDate').val();
+                                        var a = new Date(x.replace(/-/g, "/"));
+                                        var b = new Date();
+                                        b = new Date(a.getTime() + 24 * 3600 * 1000);
+                                        var ye = b.getFullYear();
+                                        var mo = b.getMonth() + 1;
+                                        var da = b.getDate();
+                                        $('#re_search_style_02_1517046206243 #endDate').val(ye + '-' + mo + '-' + da);
+                                    }
+                                }
+                                startDayArrayYear = [];
+                                startDayArrayMonth = [];
+                                endDayArrayYear = [];
+                                endDayArrayMonth = [];
+
+                            });
+                            //添加晚数
+                            var NumDate = $('.lidian_hover').text().replace(/[^0-9]/ig,"");
+                            $('.NumDate').text(NumDate);
+
+                            var st = $('#re_search_style_02_1517046206243 #startDate').val();
+                            var en = $('#re_search_style_02_1517046206243 #endDate').val();
+                            //如果开始没值
+                            if (st) {
+                                me._slider(me.sections)
+                                me._callback();
+                            } else {
+                                var b = new Date();
+                                var ye = b.getFullYear();
+                                var mo = b.getMonth() + 1;
+                                var da = b.getDate();
+                                $('#re_search_style_02_1517046206243 #startDate').val(ye + '-' + mo + '-' + da);
+                                b = new Date(b.getTime() + 24 * 3600 * 1000);
+                                var ye = b.getFullYear();
+                                var mo = b.getMonth() + 1;
+                                var da = b.getDate();
+                                $('#re_search_style_02_1517046206243 #endDate').val(ye + '-' + mo + '-' + da);
+                                $('.NumDate').text("1");
+                                // alert("请选择开始结束日期")
+                                me._slider(me.sections)
+                                me._callback()
+                            }
+                        }
+                    });
+                });
+
+            },
+            _isLeapYear: function(year) {
+                return (year % 4 == 0) && (year % 100 != 0 || year % 400 == 0);
+            },
+            _slider: function(id) {
+                var me = this;
+                me.animateFunction = me.settings.animateFunction;
+                if (me.animateFunction == "fadeToggle") {
+                    $(id).fadeToggle();
+                } else if (me.animateFunction == "slideToggle") {
+                    $(id).slideToggle();
+                } else if (me.animateFunction == "toggle") {
+                    $(id).toggle();
+                }
+            },
+            _initselected: function() {
+                var me = this;
+                me.comeColor = me.settings.comeColor;
+                me.outColor = me.settings.outColor;
+                me.daysnumber = me.settings.daysnumber;
+                var strDays = new Date().getDate();
+                var arry = [];
+                var arry1 = [];
+                var tds = $(me.sections).find('.dateTable').eq(0).find('td');
+                tds.each(function(index, element) {
+                    if ($(this).text() == strDays) {
+                        var r = index;
+                        $(this).append('</br><p class="rz">开始</p>');
+                        if ($(this).next().text() != "") {
+                            $(this).next().append('</br><p class="rz">结束</p>');
+                        } else {
+                            $(".dateTable").eq(1).find("td").each(function(index, el) {
+                                if ($(this).text() != "") {
+                                    $(this).append('</br><p class="rz">结束</p>');
+                                    return false;
+                                }
+                            });
+                        }
+                        me._checkColor(me.comeColor, me.outColor)
+
+                    }
+                })
+
+                $(me.sections).find('.re_search_style_02_1517046206243_tbody').find('td').each(function(index, element) {
+                    if ($(this).text() != '') {
+                        arry.push(element);
+                    }
+                });
+                for (var i = 0; i < strDays - 1; i++) {
+                    $(arry[i]).css('color', '#ccc');
+                }
+                if (me.daysnumber) {
+                    //可以在这里添加90天的条件
+                    for (var i = strDays - 1; i < strDays + parseInt(me.daysnumber); i++) {
+                        arry1.push(arry[i])
+                    }
+                    for (var i = strDays + parseInt(me.daysnumber); i < $(arry).length; i++) {
+                        $(arry[i]).css('color', '#ccc')
+                    }
+                } else {
+                    for (var i = strDays - 1; i < $(arry).length; i++) {
+                        arry1.push(arry[i])
+                    }
+                }
+                me._selectDate(arry1)
+            },
+            _checkColor: function(comeColor, outColor) {
+                var me = this;
+                var rz = $(me.sections).find('.rz');
+                // console.log(rz);
+                for (var i = 0; i < rz.length; i++) {
+                    if (rz.eq(i).text() == "开始") {
+                        rz.eq(i).closest('td').css({
+                            'background': comeColor,
+                            'color': '#fff'
+                        });
+                    } else {
+                        rz.eq(i).closest('td').css({
+                            'background': outColor,
+                            'color': '#fff'
+                        });
+                    }
+                }
+
+            },
+            _callback: function() {
+                var me = this;
+                if (me.settings.callback && $.type(me.settings.callback) === "function") {
+                    me.settings.callback();
+                }
+            },
+            _selectDate: function(arry1) {
+                var me = this;
+                me.comeColor = me.settings.comeColor;
+                me.outColor = me.settings.outColor;
+                me.comeoutColor = me.settings.comeoutColor;
+                me.sections = me.selectors.sections;
+
+                var flag = 0;
+                var first;
+                var sum;
+                var second;
+                $(arry1).on('click', function(index) {
+                    index.stopPropagation();
+                    //第一次点击
+                    if (flag == 0) {
+                        $(me.sections).find('.re_search_style_02_1517046206243_hover').remove();
+                        $(me.sections).find('.re_search_style_02_1517046206243_tbody').find('p').remove('.rz');
+                        $(me.sections).find('.re_search_style_02_1517046206243_tbody').find('br').remove();
+                        $(arry1).css({
+                            'background': '#fff',
+                            'color': '#333333'
+                        });
+                        $(this).append('<p class="rz">开始</p>')
+                        first = $(arry1).index($(this));
+                        me._checkColor(me.comeColor, me.outColor)
+                        flag = 1;
+                        //显示提示：选择结束日期
+                        $(me.sections).find('.rz').each(function(index, element) {
+                            if ($(this).text() == '开始') {
+                                $(this).parent('td').append('<span class="re_search_style_02_1517046206243_hover ruzhu_hover">选择结束日期</span>');
+                                $(this).parent('td').css('position', 'relative');
+                            }
+                        });
+                        $('.re_search_style_02_1517046206243_hover').css({
+                            'position': 'absolute',
+                            'left': '-17px',
+                            'top': '0px'
+                        })
+                        $('.ruzhu_hover').css({
+                            'width':'100%',
+                            'height':'41px',
+                            'left': '0px',
+                            'top': '-45px',
+                            'background':'#434949',
+                            'color':'#fff',
+                            'z-index':'9999'
+                        })
+                    } else if (flag == 1) { //第二次点击
+                        $(me.sections).find('.rz').each(function(index, element) {
+                            if ($(this).text() == '开始') {
+                                $(this).parent('td').find('.ruzhu_hover').remove();
+                                $(this).parent('td').css('position', 'relative');
+                            }
+                        });
+                        flag = 0;
+                        second = $(arry1).index($(this))
+                        //如果第一次点击比第二次大，则不显示
+                        if(first >= second){
+                            $(me.sections).find('.re_search_style_02_1517046206243_hover').remove();
+                            $(me.sections).find('.re_search_style_02_1517046206243_tbody').find('p').remove('.rz');
+                            $(me.sections).find('.re_search_style_02_1517046206243_tbody').find('br').remove();
+                            $(arry1).css({
+                                'background': '#fff',
+                                'color': '#333333'
+                            });
+                            $(this).append('<p class="rz">开始</p>')
+                            first = $(arry1).index($(this));
+                            me._checkColor(me.comeColor, me.outColor)
+                            flag = 1;
+                            //显示提示：选择结束日期
+                            $(me.sections).find('.rz').each(function(index, element) {
+                                if ($(this).text() == '开始') {
+                                    $(this).parent('td').append('<span class="re_search_style_02_1517046206243_hover ruzhu_hover">选择结束日期</span>');
+                                    $(this).parent('td').css('position', 'relative');
+                                }
+                            });
+                            $('.re_search_style_02_1517046206243_hover').css({
+                                'position': 'absolute',
+                                'left': '-17px',
+                                'top': '0px'
+                            })
+                            $('.ruzhu_hover').css({
+                                'width':'100%',
+                                'height':'41px',
+                                'left': '0px',
+                                'top': '-45px',
+                                'background':'#434949',
+                                'color':'#fff',
+                                'z-index':'9999'
+                            });
+                            return;
+                        }
+                        sum = Math.abs(second - first);
+                        if (sum == 0) {
+                            sum = 1;
+                        }
+                        
+                        if (first < second) {
+                            $(this).append('<p class="rz">结束</p>')
+                            first = first + 1;
+                            for (first; first < second; first++) {
+                                $(arry1[first]).css({
+                                    'background': me.comeoutColor,
+                                    'color': '#333333'
+                                });
+                            }
+                        } else if (first == second) {
+
+                        } else if (first > second) {
+
+                            $(me.sections).find('.rz').text('结束');
+                            $(this).append('<p class="rz">开始</p>')
+                            second = second + 1;
+                            for (second; second < first; second++) {
+                                $(arry1[second]).css({
+                                    'background': me.comeoutColor,
+                                    'color': '#333333'
+                                });
+                            }
+                        }
+                        $(me.sections).find('.rz').each(function(index, element) {
+                            if ($(this).text() == '结束') {
+                              
+                            }
+
+                        });
+
+                        $('.re_search_style_02_1517046206243_hover').css({
+                            'position': 'absolute',
+                            'left': '-17px',
+                            'top': '0px'
+                        })
+                        $('.ruzhu_hover').css({
+                            'width':'200%',
+                            'left': '0px',
+                            'top': '-24px',
+                            'background':'#434949',
+                            'color':'#fff',
+                            'z-index':'9999'
+                        })
+                        $('.lidian_hover').css({
+                            'width':'100%',
+                            'left': '0px',
+                            'top': '-24px',
+                            'background':'#434949',
+                            'color':'#fff'
+                        })
+                        me._slider('firstSelect')
+
+                        
+                        var myweek = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+
+                        var st = new Date($('#re_search_style_02_1517046206243 #startDate').val());
+                        var en = new Date($('#re_search_style_02_1517046206243 #endDate').val());
+                        $('.week').text(myweek[st.getDay()])
+                        $('.week1').text(myweek[en.getDay()])
+                        me._checkColor(me.comeColor, me.outColor)
+                    }
+                    //第二次点击结束
+
+                })
+            }
+
+        }
+        return re_search_style_02_1517046206243_calendarSwitch;
+    })();
+    $.fn.re_search_style_02_1517046206243_calendarSwitch = function(options) {
+        return this.each(function() {
+            var me = $(this),
+                instance = me.data("re_search_style_02_1517046206243_calendarSwitch");
+
+            if (!instance) {
+                me.data("re_search_style_02_1517046206243_calendarSwitch", (instance = new re_search_style_02_1517046206243_calendarSwitch(me, options)));
+            }
+
+            if ($.type(options) === "string") return instance[options]();
+        });
+    };
+    $.fn.re_search_style_02_1517046206243_calendarSwitch.defaults = {
+        selectors: {
+            sections: "#calendar"
+        },
+        index: 4,
+        //展示的月份个数
+        animateFunction: "toggle",
+        //动画效果
+        controlDay: false,
+        //知否控制在daysnumber天之内，这个数值的设置前提是总显示天数大于90天
+        daysnumber: "30",
+        //控制天数
+        comeColor: "blue",
+        //开始颜色
+        outColor: "red",
+        //结束颜色
+        comeoutColor: "#0cf",
+        //开始和结束之间的颜色
+        callback: "",
+        //回调函数
+        comfireBtn: '.re_search_style_02_1517046206243_comfire' //确定按钮的class或者id
+
+    };
+})(jQuery);
+</script>
+
+<script type="application/javascript">
+	$("#re_search_style_02_1517046206243 .subbox").click(function(){
+		var data=$("#re_search_style_02_1517046206243 form").serialize();
+		var gourl = $(this).attr("attrhref");
+		href = gourl+(gourl.indexOf('?')>-1?'&':'?')+data;
+				location.href = href;
+			})
+</script>				</div>
+			</div>
+						</div>
+			</div>
+						</div>
+			</div>
+					<div id="layout_1515561931930" class="layout " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div class="view_contents">
+								<div id="text_style_01_1515566114267" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					优质茶品
+
+				</div>
+			</div>
+					<div id="reservation_pro_style_01_1515633777677" class="view style_01 reservation_pro  none wow fadeInUp lockHeightView animated" data-wow-duration="1s" data-wow-delay="0.25s" data-wow-offset="0" data-wow-iteration="1" style="visibility: visible; animation-duration: 1s; animation-delay: 0.25s; animation-iteration-count: 1; animation-name: fadeInUp;">
+				<div names="reservation_pro" class="view_contents"><div class="reservation_proStyle1">
+	<ul id="prod_Ulist">
+		
+			<li class="prod_Item modSet">
+				<div class="relative">
+					<!-- 产品图片 -->
+					
+						<div class="prodImg_box imgSet">
+							<div class="prod_img"><a href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242760" target="_self"><img class="pro_img horizontal" src="./prod_290160s.jpg"></a></div>
+							<div class="dummy" style="margin-top:67%"></div>
+						</div>
+					
+					<!-- 内容 -->
+					<div class="prod_info">
+						
+							<div class="p_name pc"><a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242760" target="_self">云南山顶铁观音</a></div>
+							<div class="p_name pad"><a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242760" target="_self">云南山顶铁观音</a></div>
+							<div class="p_name mobile"><a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242760" target="_self">云南山顶铁观音</a></div>
+						
+						
+							<div class="p_detail detailSet pc">铁观音里含有儿茶素，可以美白，抗...</div>
+							<div class="p_detail detailSet pad">铁观音里含有儿茶素，可以美白，抗辐射，保...</div>
+							<div class="p_detail detailSet mobile">铁观音里含有儿茶素，可以美白，抗辐射，保...</div>
+						
+						<div class="p_line">
+							
+
+							
+
+							
+
+							
+						</div>
+						<div class="p_line">
+							
+						
+						</div>
+						
+						<div class="p_buy">
+							<a href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242760" target="_self" class="btnaSet">立即预约</a>
+						</div>
+						
+					</div>
+				</div>
+			</li>
+		
+			<li class="prod_Item modSet">
+				<div class="relative">
+					<!-- 产品图片 -->
+					
+						<div class="prodImg_box imgSet">
+							<div class="prod_img"><a href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242759" target="_self"><img class="pro_img horizontal" src="./prod_290159s.jpg"></a></div>
+							<div class="dummy" style="margin-top:67%"></div>
+						</div>
+					
+					<!-- 内容 -->
+					<div class="prod_info">
+						
+							<div class="p_name pc"><a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242759" target="_self">小叶铁观音</a></div>
+							<div class="p_name pad"><a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242759" target="_self">小叶铁观音</a></div>
+							<div class="p_name mobile"><a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242759" target="_self">小叶铁观音</a></div>
+						
+						
+							<div class="p_detail detailSet pc">铁观音里含有儿茶素，可以美白，抗...</div>
+							<div class="p_detail detailSet pad">铁观音里含有儿茶素，可以美白，抗辐射，保...</div>
+							<div class="p_detail detailSet mobile">铁观音里含有儿茶素，可以美白，抗辐射，保...</div>
+						
+						<div class="p_line">
+							
+
+							
+
+							
+
+							
+						</div>
+						<div class="p_line">
+							
+						
+						</div>
+						
+						<div class="p_buy">
+							<a href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242759" target="_self" class="btnaSet">立即预约</a>
+						</div>
+						
+					</div>
+				</div>
+			</li>
+		
+			<li class="prod_Item modSet">
+				<div class="relative">
+					<!-- 产品图片 -->
+					
+						<div class="prodImg_box imgSet">
+							<div class="prod_img"><a href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242758" target="_self"><img class="pro_img horizontal" src="./prod_290158s.jpg"></a></div>
+							<div class="dummy" style="margin-top:67%"></div>
+						</div>
+					
+					<!-- 内容 -->
+					<div class="prod_info">
+						
+							<div class="p_name pc"><a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242758" target="_self">福建铁观音</a></div>
+							<div class="p_name pad"><a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242758" target="_self">福建铁观音</a></div>
+							<div class="p_name mobile"><a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242758" target="_self">福建铁观音</a></div>
+						
+						
+							<div class="p_detail detailSet pc">铁观音里含有儿茶素，可以美白，抗...</div>
+							<div class="p_detail detailSet pad">铁观音里含有儿茶素，可以美白，抗辐射，保...</div>
+							<div class="p_detail detailSet mobile">铁观音里含有儿茶素，可以美白，抗辐射，保...</div>
+						
+						<div class="p_line">
+							
+
+							
+
+							
+
+							
+						</div>
+						<div class="p_line">
+							
+						
+						</div>
+						
+						<div class="p_buy">
+							<a href="http://demo.nicebox.cn/6c17d1355bb2b62f/pro_details.html?pid=242758" target="_self" class="btnaSet">立即预约</a>
+						</div>
+						
+					</div>
+				</div>
+			</li>
+		
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	
+</div>
+
+<style>
+/*pc*/
+#reservation_pro_style_01_1515633777677 li{width: 32%;}
+#reservation_pro_style_01_1515633777677 li.prod_Item{margin-bottom:2%;}
+@media screen and (max-width: 1024px){/*ipad*/
+	#reservation_pro_style_01_1515633777677 li{width: 32%;}
+	#reservation_pro_style_01_1515633777677 li.prod_Item{margin-bottom:2%;}
+}
+@media screen and (max-width: 768px){/*mobi*/
+	#reservation_pro_style_01_1515633777677 li{width: 100%;}
+	#reservation_pro_style_01_1515633777677 li.prod_Item{margin-bottom:2%;}
+}
+</style>
+
+<style>
+#reservation_pro_style_01_1515633777677 .p_detail.pc {}
+#reservation_pro_style_01_1515633777677 .p_detail.pad, #reservation_pro_style_01_1515633777677 .p_detail.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+	#reservation_pro_style_01_1515633777677 .p_detail.pad {display:block;}
+	#reservation_pro_style_01_1515633777677 .p_detail.pc, #reservation_pro_style_01_1515633777677 .p_detail.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+	#reservation_pro_style_01_1515633777677 .p_detail.mobile {display:block;}
+	#reservation_pro_style_01_1515633777677 .p_detail.pc, #reservation_pro_style_01_1515633777677 .p_detail.pad {display:none;}
+	}
+</style>
+
+<style>
+#reservation_pro_style_01_1515633777677 .p_name.pc {display:block;}
+#reservation_pro_style_01_1515633777677 .p_name.pad, #reservation_pro_style_01_1515633777677 .p_name.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+	#reservation_pro_style_01_1515633777677 .p_name.pad {display:block;}
+	#reservation_pro_style_01_1515633777677 .p_name.pc, #reservation_pro_style_01_1515633777677 .p_name.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+	#reservation_pro_style_01_1515633777677 .p_name.mobile {display:block;}
+	#reservation_pro_style_01_1515633777677 .p_name.pc, #reservation_pro_style_01_1515633777677 .p_name.pad {display:none;}
+	}
+</style>
+
+
+
+
+</div>
+			</div>
+						</div>
+			</div>
+					<div id="layout_1515566188208" class="layout  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div class="view_contents">
+								<div id="text_style_01_1515566527842" class="view style_01 text  none wow rotateInDownRight lockHeightView animated" data-wow-duration="1s" data-wow-delay="0.25s" data-wow-offset="0" data-wow-iteration="1" style="visibility: visible; animation-duration: 1s; animation-delay: 0.25s; animation-iteration-count: 1; animation-name: rotateInDownRight;">
+				<div names="text" class="view_contents">
+					茶文化的内涵其实就是中国文化的内涵一种具体表现，谈茶文化必须结合中国传统文化而论之。&nbsp;<div><div>茶文化的精神内涵即是通过沏茶、赏茶、闻茶、饮茶、品茶等习惯和中华的文化内涵礼相结合形成的一种具有鲜明中国文化特征的一种文化现象，也可以说是一种礼节现象。
+
+</div>
+
+				</div>
+
+				</div>
+			</div>
+					<div id="image_style_01_1515582073505" class="view style_01 image  none wow fadeIn animated" data-wow-duration="1s" data-wow-delay="0.25s" data-wow-offset="0" data-wow-iteration="1" style="visibility: visible; animation-duration: 1s; animation-delay: 0.25s; animation-iteration-count: 1; animation-name: fadeIn;">
+				<div names="image" class="view_contents">
+					<div class="imgStyle CompatibleImg">
+	
+		<a href="javascript:;" target="">
+	
+			<img class="picSet link-type-" src="./004.png" title="" alt="描述" id="imageModeShow">
+	
+		</a>
+	
+</div>
+
+
+
+
+
+
+<!-- 新加的js  -->
+
+				</div>
+			</div>
+						</div>
+			</div>
+					<div id="layout_1515567086991" class="layout " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div class="view_contents">
+								<div id="text_style_01_1515567107350" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					来茶色品顶级茶
+
+				</div>
+			</div>
+					<div id="image_style_01_1515568166127" class="view style_01 image  none wow slideInRight animated" data-wow-duration="1s" data-wow-delay="0.25s" data-wow-offset="0" data-wow-iteration="1" style="visibility: visible; animation-duration: 1s; animation-delay: 0.25s; animation-iteration-count: 1; animation-name: slideInRight;">
+				<div names="image" class="view_contents">
+					<div class="imgStyle CompatibleImg">
+	
+		<a href="javascript:;" target="">
+	
+			<img class="picSet link-type-" src="./block1.jpg" title="" alt="描述" id="imageModeShow">
+	
+		</a>
+	
+</div>
+
+
+
+
+
+
+<!-- 新加的js  -->
+
+				</div>
+			</div>
+					<div id="div_a_includeBlock_1515568020923" class="view a_includeBlock div  none includeView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+								<div id="text_style_01_1515568298407" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					茶道，就是品赏茶的美感之道。<div>亦被视为一种烹茶饮茶的生活艺术，&nbsp;</div><div>一种以茶修身的生活方式。
+
+				</div>
+
+				</div>
+			</div>
+					<div id="div_blank_1515568340663" class="view blank div  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+					<!-- 
+	<a href="javascript:;" style="display:block;width:100%;height:100%;" id="divnet"></a>
+ -->
+
+
+
+				</div>
+			</div>
+					<div id="text_style_01_1515568260504" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					顶级茶叶，1斤9折起
+
+				</div>
+			</div>
+					<div id="customForm_style_button_01_1515568401669" class="view style_button_01 customForm  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="customForm" class="view_contents">
+					<script>function btnTop(){$("html,body").animate({scrollTop:"0px"},1000);}function btnBottom(){var bodyH = $("html,body").height();$("html,body").animate({scrollTop:bodyH},1000);}</script><input type="button" name="" value="立即查看" class="squareButton  btnaSet" onclick="location.href=&#39;news.html&#39;">
+
+
+<script type="text/javascript">
+if(typeof showcart !== 'function'){
+	function showcart(){
+		if(window.screen.width<767 || ($('body').width() > 0 && $('body').width() < 767)){
+		location.href = "http://s143js.nicebox.cn/exusers/u_cart.php?idweb=8648&act=show&lang=0&v=9";
+		}else{
+		document.getElementById("boxName").innerHTML="";
+		if(document.getElementById("boxClose")) document.getElementById("boxClose").innerHTML="×"; 
+		document.getElementById("showiframe").src="http://s143js.nicebox.cn/exusers/u_cart.php?idweb=8648&act=show&lang=0&v=9";
+		box.Show({width:'1000px', height:'600px'});
+		}
+	}
+}
+
+</script>				</div>
+			</div>
+						</div>
+			</div>
+					<div id="image_style_01_1515568216891" class="view style_01 image  none wow slideInLeft animated" data-wow-duration="1s" data-wow-delay="0.25s" data-wow-offset="0" data-wow-iteration="1" style="visibility: visible; animation-duration: 1s; animation-delay: 0.25s; animation-iteration-count: 1; animation-name: slideInLeft;">
+				<div names="image" class="view_contents">
+					<div class="imgStyle CompatibleImg">
+	
+		<a href="javascript:;" target="">
+	
+			<img class="picSet link-type-" src="./block2.jpg" title="" alt="描述" id="imageModeShow">
+	
+		</a>
+	
+</div>
+
+
+
+
+
+
+<!-- 新加的js  -->
+
+				</div>
+			</div>
+					<div id="div_a_includeBlock_1515568731627" class="view a_includeBlock div  none includeView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+								<div id="text_style_01_1515568731878" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					喝茶，看似一件简单的事，<div>却包含了太多的不简单，</div><div>学会喝茶，学会简单生活。
+
+				</div>
+
+				</div>
+			</div>
+					<div id="text_style_01_1515568731900" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					线上预订包间，即享85折
+
+				</div>
+			</div>
+					<div id="customForm_style_button_01_1515568731908" class="view style_button_01 customForm  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="customForm" class="view_contents">
+					<script>function btnTop(){$("html,body").animate({scrollTop:"0px"},1000);}function btnBottom(){var bodyH = $("html,body").height();$("html,body").animate({scrollTop:bodyH},1000);}</script><input type="button" name="" value="立即查看" class="squareButton  btnaSet" onclick="location.href=&#39;news.html&#39;">
+
+
+<script type="text/javascript">
+if(typeof showcart !== 'function'){
+	function showcart(){
+		if(window.screen.width<767 || ($('body').width() > 0 && $('body').width() < 767)){
+		location.href = "http://s143js.nicebox.cn/exusers/u_cart.php?idweb=8648&act=show&lang=0&v=9";
+		}else{
+		document.getElementById("boxName").innerHTML="";
+		if(document.getElementById("boxClose")) document.getElementById("boxClose").innerHTML="×"; 
+		document.getElementById("showiframe").src="http://s143js.nicebox.cn/exusers/u_cart.php?idweb=8648&act=show&lang=0&v=9";
+		box.Show({width:'1000px', height:'600px'});
+		}
+	}
+}
+
+</script>				</div>
+			</div>
+					<div id="div_blank_1515568731891" class="view blank div  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+					<!-- 
+	<a href="javascript:;" style="display:block;width:100%;height:100%;" id="divnet"></a>
+ -->
+
+
+
+				</div>
+			</div>
+						</div>
+			</div>
+						</div>
+			</div>
+					<div id="layout_1515569139346" class="layout " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div class="view_contents">
+								<div id="text_style_01_1515569147203" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					品茶包间推荐
+
+				</div>
+			</div>
+					<div id="div_a_includeBlock_1515569309628" class="view a_includeBlock div  none includeView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+								<div id="image_style_01_1515569358776" class="view style_01 image  none wow fadeIn animated" data-wow-duration="1s" data-wow-delay="0.25s" data-wow-offset="0" data-wow-iteration="1" style="visibility: visible; animation-duration: 1s; animation-delay: 0.25s; animation-iteration-count: 1; animation-name: fadeIn;">
+				<div names="image" class="view_contents">
+					<div class="imgStyle CompatibleImg">
+	
+		<a href="javascript:;" target="">
+	
+			<img class="picSet link-type-" src="./block3.jpg" title="" alt="描述" id="imageModeShow">
+	
+		</a>
+	
+</div>
+
+
+
+
+
+
+<!-- 新加的js  -->
+
+				</div>
+			</div>
+					<div id="text_style_01_1515569309918" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					茶道，就是品赏茶的美感之道。亦被视为一种烹茶饮茶的生活艺术，一种以茶修身的生活方式。
+
+				</div>
+			</div>
+					<div id="text_style_01_1515569309947" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					茶道新生活
+
+				</div>
+			</div>
+					<div id="text_style_01_1515569566444" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					<a href="http://demo.nicebox.cn/6c17d1355bb2b62f/tea.html?pageid=118129" target="" style="color:inherit" class="link-type-1-">预约识茶包间</a>
+
+				</div>
+			</div>
+						</div>
+			</div>
+					<div id="div_a_includeBlock_1515570251313" class="view a_includeBlock div  none includeView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+								<div id="image_style_01_1515570251947" class="view style_01 image  none wow fadeIn animated" data-wow-duration="1s" data-wow-delay="0.25s" data-wow-offset="0" data-wow-iteration="1" style="visibility: visible; animation-duration: 1s; animation-delay: 0.25s; animation-iteration-count: 1; animation-name: fadeIn;">
+				<div names="image" class="view_contents">
+					<div class="imgStyle CompatibleImg">
+	
+		<a href="javascript:;" target="">
+	
+			<img class="picSet link-type-" src="./block4.jpg" title="" alt="描述" id="imageModeShow">
+	
+		</a>
+	
+</div>
+
+
+
+
+
+
+<!-- 新加的js  -->
+
+				</div>
+			</div>
+					<div id="text_style_01_1515570252023" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					喝茶能静心、静神，有助于陶冶情操、去除杂念。茶道精神是茶文化的核心。
+
+				</div>
+			</div>
+					<div id="text_style_01_1515570252031" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					茶友交流
+
+				</div>
+			</div>
+					<div id="text_style_01_1515570252041" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					<a href="http://demo.nicebox.cn/6c17d1355bb2b62f/tea.html?pageid=118129" target="" style="color:inherit" class="link-type-1-">预约交流包间</a>
+
+				</div>
+			</div>
+						</div>
+			</div>
+						</div>
+			</div>
+					<div id="layout_1515570846780" class="layout " data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div class="view_contents">
+								<div id="div_a_includeBlock_1515570841293" class="view a_includeBlock div  none includeView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+								<div id="image_style_01_1515571116229" class="view style_01 image  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="image" class="view_contents">
+					<div class="imgStyle CompatibleImg">
+	
+		<a href="javascript:;" target="">
+	
+			<img class="picSet link-type-" src="./icon2.jpg" title="" alt="描述" id="imageModeShow">
+	
+		</a>
+	
+</div>
+
+
+
+
+
+
+<!-- 新加的js  -->
+
+				</div>
+			</div>
+					<div id="image_style_01_1515570841587" class="view style_01 image  none wow fadeIn animated" data-wow-duration="1s" data-wow-delay="0.25s" data-wow-offset="0" data-wow-iteration="1" style="visibility: visible; animation-duration: 1s; animation-delay: 0.25s; animation-iteration-count: 1; animation-name: fadeIn;">
+				<div names="image" class="view_contents">
+					<div class="imgStyle CompatibleImg">
+	
+		<a href="javascript:;" target="">
+	
+			<img class="picSet link-type-" src="./block5.jpg" title="" alt="描述" id="imageModeShow">
+	
+		</a>
+	
+</div>
+
+
+
+
+
+
+<!-- 新加的js  -->
+
+				</div>
+			</div>
+					<div id="text_style_01_1515570841610" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					<a href="http://demo.nicebox.cn/6c17d1355bb2b62f/tea.html?pageid=118129" target="" style="color:inherit" class="link-type-1-">了解更多包间</a>
+
+				</div>
+			</div>
+					<div id="text_style_01_1515570841603" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					品茶来茶色
+
+				</div>
+			</div>
+						</div>
+			</div>
+					<div id="div_a_includeBlock_1515571605905" class="view a_includeBlock div  none includeView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+								<div id="image_style_01_1515571606185" class="view style_01 image  none wow fadeIn animated" data-wow-duration="1s" data-wow-delay="0.25s" data-wow-offset="0" data-wow-iteration="1" style="visibility: visible; animation-duration: 1s; animation-delay: 0.25s; animation-iteration-count: 1; animation-name: fadeIn;">
+				<div names="image" class="view_contents">
+					<div class="imgStyle CompatibleImg">
+	
+		<a href="javascript:;" target="">
+	
+			<img class="picSet link-type-" src="./block6.jpg" title="" alt="描述" id="imageModeShow">
+	
+		</a>
+	
+</div>
+
+
+
+
+
+
+<!-- 新加的js  -->
+
+				</div>
+			</div>
+					<div id="text_style_01_1515571606202" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					茶品人生
+
+				</div>
+			</div>
+					<div id="text_style_01_1515571606196" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					通过沏茶、赏茶、闻茶、饮茶、增进友谊，美心修德，学习礼法，领略传统美德。
+
+				</div>
+			</div>
+					<div id="text_style_01_1515571606208" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					<a href="http://demo.nicebox.cn/6c17d1355bb2b62f/tea.html?pageid=118129" target="" style="color:inherit" class="link-type-1-">预约品茶包间</a>
+
+				</div>
+			</div>
+						</div>
+			</div>
+						</div>
+			</div>
+					<div id="layout_1515571705965" class="layout  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1" style="height: 533.499px;">
+				<div class="view_contents">
+								<div id="div_a_includeBlock_1515572142406" class="view a_includeBlock div  none wow rotateInDownLeft includeView animated" data-wow-duration="1s" data-wow-delay="0.25s" data-wow-offset="0" data-wow-iteration="1" style="visibility: visible; animation-duration: 1s; animation-delay: 0.25s; animation-iteration-count: 1; animation-name: rotateInDownLeft; height: 502.273px;">
+				<div names="div" class="view_contents">
+								<div id="div_a_includeBlock_1515572186357" class="view a_includeBlock div  none includeView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1" style="height: 52.5615px;">
+				<div names="div" class="view_contents">
+								<div id="image_style_01_1515572202570" class="view style_01 image  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="image" class="view_contents">
+					<div class="imgStyle CompatibleImg">
+	
+		<a href="javascript:;" target="">
+	
+			<img class="picSet link-type-" src="./icon3.png" title="" alt="描述" id="imageModeShow">
+	
+		</a>
+	
+</div>
+
+
+
+
+
+
+<!-- 新加的js  -->
+
+				</div>
+			</div>
+					<div id="text_style_01_1515572376163" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					品茶最新资讯
+
+				</div>
+			</div>
+					<div id="newsList_style_06_1517037934520" class="view style_06 newsList  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="newsList" class="view_contents"><!---新闻列表区域-->
+<div class="boxNewsListStyle_6">
+	<ul id="boxNewsList">
+		
+		<li class="sumary_list modSet">
+			<div class="newCont">
+				
+
+				<div class="newTitle " style="width: 100%;">
+					<div class="newName titleSet">
+						
+						
+							<a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news_details.html?newsid=109164" target="_self">皇茶——青青草原的皇家御用茶</a>
+						
+	                
+						<span class="newsTime timesSet"><span class="nDate">2018-01-27</span></span>
+					
+					</div>
+				</div>
+
+	            
+					<div class="newDetail detailSet pc" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅精美的画卷：...</div>
+					<div class="newDetail detailSet pad" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅精美的画卷：...</div>
+					<div class="newDetail detailSet mobile" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅精美的画卷：...</div>
+					
+				
+				
+				
+		           <div class="show_all">
+		               <a class="btnaSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news_details.html?newsid=109164" target="_self">查看全文</a>
+		           </div>
+	            
+
+				
+			</div>
+			<hr style="width:100%;clear:both;border:none;">
+		</li>
+		
+		<li class="sumary_list modSet">
+			<div class="newCont">
+				
+
+				<div class="newTitle " style="width: 100%;">
+					<div class="newName titleSet">
+						
+						
+							<a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news_details.html?newsid=109163" target="_self">上海茶馆设计——意象江南俏春色</a>
+						
+	                
+						<span class="newsTime timesSet"><span class="nDate">2018-01-27</span></span>
+					
+					</div>
+				</div>
+
+	            
+					<div class="newDetail detailSet pc" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅精美的画卷：...</div>
+					<div class="newDetail detailSet pad" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅精美的画卷：...</div>
+					<div class="newDetail detailSet mobile" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅精美的画卷：...</div>
+					
+				
+				
+				
+		           <div class="show_all">
+		               <a class="btnaSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news_details.html?newsid=109163" target="_self">查看全文</a>
+		           </div>
+	            
+
+				
+			</div>
+			<hr style="width:100%;clear:both;border:none;">
+		</li>
+		
+		<li class="sumary_list modSet">
+			<div class="newCont">
+				
+
+				<div class="newTitle " style="width: 100%;">
+					<div class="newName titleSet">
+						
+						
+							<a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news_details.html?newsid=109162" target="_self">京派古风——北京悠然一品茶楼</a>
+						
+	                
+						<span class="newsTime timesSet"><span class="nDate">2018-01-27</span></span>
+					
+					</div>
+				</div>
+
+	            
+					<div class="newDetail detailSet pc" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅精美的画卷：...</div>
+					<div class="newDetail detailSet pad" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅精美的画卷：...</div>
+					<div class="newDetail detailSet mobile" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅精美的画卷：...</div>
+					
+				
+				
+				
+		           <div class="show_all">
+		               <a class="btnaSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news_details.html?newsid=109162" target="_self">查看全文</a>
+		           </div>
+	            
+
+				
+			</div>
+			<hr style="width:100%;clear:both;border:none;">
+		</li>
+		
+	</ul>
+	
+</div>
+<!---新闻列表区域 结束--->
+ 
+
+<style>
+	#newsList_style_06_1517037934520 .newDetail.pc {display:block;}
+	#newsList_style_06_1517037934520 .newDetail.pad, #newsList_style_06_1517037934520 .newDetail.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+		#newsList_style_06_1517037934520 .newDetail.pad {display:block;}
+		#newsList_style_06_1517037934520 .newDetail.pc, #newsList_style_06_1517037934520 .newDetail.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+		#newsList_style_06_1517037934520 .newDetail.mobile {display:block;}
+		#newsList_style_06_1517037934520 .newDetail.pc, #newsList_style_06_1517037934520 .newDetail.pad {display:none;}
+	}
+</style>
+
+
+
+
+	
+
+
+</div>
+			</div>
+						</div>
+			</div>
+					<div id="newsList_style_06_1515572936527" class="view style_06 newsList  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="newsList" class="view_contents"><!---新闻列表区域-->
+<div class="boxNewsListStyle_6">
+	<ul id="boxNewsList">
+		
+		<li class="sumary_list modSet">
+			<div class="newCont">
+				
+
+				<div class="newTitle " style="width: 100%;">
+					<div class="newName titleSet">
+						
+						
+							<a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news_details.html?newsid=109164" target="_self">皇茶——青青草原的皇家御用茶</a>
+						
+	                
+						<span class="newsTime timesSet"><span class="nDate">2018-01-27</span></span>
+					
+					</div>
+				</div>
+
+	            
+					<div class="newDetail detailSet pc" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅精美的画卷：...</div>
+					<div class="newDetail detailSet pad" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅...</div>
+					<div class="newDetail detailSet mobile" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出...</div>
+					
+				
+				
+				
+		           <div class="show_all">
+		               <a class="btnaSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news_details.html?newsid=109164" target="_self">查看全文</a>
+		           </div>
+	            
+
+				
+			</div>
+			<hr style="width:100%;clear:both;border:none;">
+		</li>
+		
+		<li class="sumary_list modSet">
+			<div class="newCont">
+				
+
+				<div class="newTitle " style="width: 100%;">
+					<div class="newName titleSet">
+						
+						
+							<a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news_details.html?newsid=109163" target="_self">上海茶馆设计——意象江南俏春色</a>
+						
+	                
+						<span class="newsTime timesSet"><span class="nDate">2018-01-27</span></span>
+					
+					</div>
+				</div>
+
+	            
+					<div class="newDetail detailSet pc" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅精美的画卷：...</div>
+					<div class="newDetail detailSet pad" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅...</div>
+					<div class="newDetail detailSet mobile" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出...</div>
+					
+				
+				
+				
+		           <div class="show_all">
+		               <a class="btnaSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news_details.html?newsid=109163" target="_self">查看全文</a>
+		           </div>
+	            
+
+				
+			</div>
+			<hr style="width:100%;clear:both;border:none;">
+		</li>
+		
+		<li class="sumary_list modSet">
+			<div class="newCont">
+				
+
+				<div class="newTitle " style="width: 100%;">
+					<div class="newName titleSet">
+						
+						
+							<a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news_details.html?newsid=109162" target="_self">京派古风——北京悠然一品茶楼</a>
+						
+	                
+						<span class="newsTime timesSet"><span class="nDate">2018-01-27</span></span>
+					
+					</div>
+				</div>
+
+	            
+					<div class="newDetail detailSet pc" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅精美的画卷：...</div>
+					<div class="newDetail detailSet pad" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅...</div>
+					<div class="newDetail detailSet mobile" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出...</div>
+					
+				
+				
+				
+		           <div class="show_all">
+		               <a class="btnaSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news_details.html?newsid=109162" target="_self">查看全文</a>
+		           </div>
+	            
+
+				
+			</div>
+			<hr style="width:100%;clear:both;border:none;">
+		</li>
+		
+		<li class="sumary_list modSet">
+			<div class="newCont">
+				
+
+				<div class="newTitle " style="width: 100%;">
+					<div class="newName titleSet">
+						
+						
+							<a class="titleSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news_details.html?newsid=109161" target="_self">茶语清心——北京茶馆</a>
+						
+	                
+						<span class="newsTime timesSet"><span class="nDate">2018-01-27</span></span>
+					
+					</div>
+				</div>
+
+	            
+					<div class="newDetail detailSet pc" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅精美的画卷：...</div>
+					<div class="newDetail detailSet pad" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出一幅...</div>
+					<div class="newDetail detailSet mobile" style="width: 100%;">茗品香生凝雅韵，贵楼彩益聚佳宾！走进中式茶楼，眼前呈现出...</div>
+					
+				
+				
+				
+		           <div class="show_all">
+		               <a class="btnaSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news_details.html?newsid=109161" target="_self">查看全文</a>
+		           </div>
+	            
+
+				
+			</div>
+			<hr style="width:100%;clear:both;border:none;">
+		</li>
+		
+	</ul>
+	
+</div>
+<!---新闻列表区域 结束--->
+ 
+
+<style>
+	#newsList_style_06_1515572936527 .newDetail.pc {display:block;}
+	#newsList_style_06_1515572936527 .newDetail.pad, #newsList_style_06_1515572936527 .newDetail.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+		#newsList_style_06_1515572936527 .newDetail.pad {display:block;}
+		#newsList_style_06_1515572936527 .newDetail.pc, #newsList_style_06_1515572936527 .newDetail.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+		#newsList_style_06_1515572936527 .newDetail.mobile {display:block;}
+		#newsList_style_06_1515572936527 .newDetail.pc, #newsList_style_06_1515572936527 .newDetail.pad {display:none;}
+	}
+</style>
+
+
+
+
+	
+
+
+</div>
+			</div>
+						</div>
+			</div>
+					<div id="div_a_includeBlock_1515573260017" class="view a_includeBlock div  none wow rotateInDownRight includeView animated" data-wow-duration="1s" data-wow-delay="0.25s" data-wow-offset="0" data-wow-iteration="1" style="visibility: visible; animation-duration: 1s; animation-delay: 0.25s; animation-iteration-count: 1; animation-name: rotateInDownRight; height: 507.554px;">
+				<div names="div" class="view_contents">
+								<div id="div_a_includeBlock_1515573260373" class="view a_includeBlock div  none includeView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+								<div id="image_style_01_1515573260789" class="view style_01 image  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="image" class="view_contents">
+					<div class="imgStyle CompatibleImg">
+	
+		<a href="javascript:;" target="">
+	
+			<img class="picSet link-type-" src="./icon3.png" title="" alt="描述" id="imageModeShow">
+	
+		</a>
+	
+</div>
+
+
+
+
+
+
+<!-- 新加的js  -->
+
+				</div>
+			</div>
+					<div id="text_style_01_1515573260813" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					茶色评论
+
+				</div>
+			</div>
+						</div>
+			</div>
+					<div id="prodEstimate_style_01_1515573316041" class="view style_01 prodEstimate  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="prodEstimate" class="view_contents"><link rel="stylesheet" type="text/css" href="./smartphoto.min.css">
+
+<div class="prodEstimate_default">
+	<ul class="prodEstimate_ul">
+		
+		<li class="modSet">
+			<div class="prodEstimate_list">
+				
+				<div class="prodEstimate_profilePic">
+					<img src="./profilePic_default.png">
+				</div>
+				
+				<div class="prodEstimate_detail">
+					
+					<div class="prodEstimate_top">
+						
+						<div class="prodEstimate_user titleEaSet"></div>
+						
+						
+						<div class="prodEstimate_core prodIcoSet"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+						
+						
+						<div class="prodEstimate_prod titleEbSet">
+						<a href="http://demo.nicebox.cn/6c17d1355bb2b62f/index.html?pid=242752" target="_self">顶级乌龙</a>
+						</div>
+						
+					</div>
+					
+					
+					
+					
+					<div class="prodEstimate_content guecontsSet">茶质量很高环境舒适~</div>
+					
+					<!-- 产品评论图片 -->
+					<div class="prodEstimate_enlarge prodEstimate_enlarge0">
+						<img src="http://demo.nicebox.cn/6c17d1355bb2b62f/">
+						<div class="prodEstimate_change prodEstimate_left">
+							<button type="button" class="btnbSet">
+								<i class="fa fa-angle-left"></i>
+							</button>
+						</div>
+						<div class="prodEstimate_change prodEstimate_right">
+							<button type="button" class="btnbSet">
+								<i class="fa fa-angle-right"></i>
+							</button>
+						</div>
+					</div>
+									
+					<ul id="prod_Ulist" class="prod_Ulist">
+						
+						
+						
+						
+						
+						<li></li>
+						<li></li>
+					</ul>
+					
+					
+				</div>
+			</div>
+		</li>
+		
+		<li class="modSet">
+			<div class="prodEstimate_list">
+				
+				<div class="prodEstimate_profilePic">
+					<img src="./9.jpg">
+				</div>
+				
+				<div class="prodEstimate_detail">
+					
+					<div class="prodEstimate_top">
+						
+						<div class="prodEstimate_user titleEaSet">宇宙第一超人</div>
+						
+						
+						<div class="prodEstimate_core prodIcoSet"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+						
+						
+						<div class="prodEstimate_prod titleEbSet">
+						<a href="http://demo.nicebox.cn/6c17d1355bb2b62f/index.html?pid=242752" target="_self">顶级乌龙</a>
+						</div>
+						
+					</div>
+					
+					
+					
+					
+					<div class="prodEstimate_content guecontsSet">绿茶好好喝，周边环境不错，很棒棒</div>
+					
+					<!-- 产品评论图片 -->
+					<div class="prodEstimate_enlarge prodEstimate_enlarge1">
+						<img src="http://demo.nicebox.cn/6c17d1355bb2b62f/">
+						<div class="prodEstimate_change prodEstimate_left">
+							<button type="button" class="btnbSet">
+								<i class="fa fa-angle-left"></i>
+							</button>
+						</div>
+						<div class="prodEstimate_change prodEstimate_right">
+							<button type="button" class="btnbSet">
+								<i class="fa fa-angle-right"></i>
+							</button>
+						</div>
+					</div>
+									
+					<ul id="prod_Ulist" class="prod_Ulist">
+						
+						
+						
+						
+						
+						<li></li>
+						<li></li>
+					</ul>
+					
+					
+				</div>
+			</div>
+		</li>
+		
+		<li class="modSet">
+			<div class="prodEstimate_list">
+				
+				<div class="prodEstimate_profilePic">
+					<img src="./12.jpg">
+				</div>
+				
+				<div class="prodEstimate_detail">
+					
+					<div class="prodEstimate_top">
+						
+						<div class="prodEstimate_user titleEaSet">大大大泡泡</div>
+						
+						
+						<div class="prodEstimate_core prodIcoSet"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+						
+						
+						<div class="prodEstimate_prod titleEbSet">
+						<a href="http://demo.nicebox.cn/6c17d1355bb2b62f/index.html?pid=242747" target="_self">优质乌龙</a>
+						</div>
+						
+					</div>
+					
+					
+					
+					
+					<div class="prodEstimate_content guecontsSet">优质的产品，合理的价格，好评</div>
+					
+					<!-- 产品评论图片 -->
+					<div class="prodEstimate_enlarge prodEstimate_enlarge2">
+						<img src="http://demo.nicebox.cn/6c17d1355bb2b62f/">
+						<div class="prodEstimate_change prodEstimate_left">
+							<button type="button" class="btnbSet">
+								<i class="fa fa-angle-left"></i>
+							</button>
+						</div>
+						<div class="prodEstimate_change prodEstimate_right">
+							<button type="button" class="btnbSet">
+								<i class="fa fa-angle-right"></i>
+							</button>
+						</div>
+					</div>
+									
+					<ul id="prod_Ulist" class="prod_Ulist">
+						
+						
+						
+						
+						
+						<li></li>
+						<li></li>
+					</ul>
+					
+					
+				</div>
+			</div>
+		</li>
+		
+	</ul>
+	
+</div>
+
+<!-- <script type="text/javascript">
+	// $(".p_price2").hide();
+	// if($(" .zhekou").length && $(" .zhekou").length>0){
+	// 	$(".p_price").hide();
+	// 	$(".p_price2").show();
+	// }
+	// console.log($(".prod_Item"));
+</script> -->
+
+<style>
+/*pc*/
+#prodEstimate_style_01_1515573316041 li{width: 24.25%;}
+#prodEstimate_style_01_1515573316041 li.prod_Item{margin-bottom:1%;}
+@media screen and (max-width: 1024px){/*ipad*/
+	#prodEstimate_style_01_1515573316041 li{width: 32.6666666667%;}
+	#prodEstimate_style_01_1515573316041 li.prod_Item{margin-bottom:1%;}
+}
+@media screen and (max-width: 768px){/*mobi*/
+	#prodEstimate_style_01_1515573316041 li{width: 49.5%;}
+	#prodEstimate_style_01_1515573316041 li.prod_Item{margin-bottom:1%;}
+}
+</style>
+
+<style>
+#prodEstimate_style_01_1515573316041 .p_detail.pc {display:block;}
+#prodEstimate_style_01_1515573316041 .p_detail.pad, #prodEstimate_style_01_1515573316041 .p_detail.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+	#prodEstimate_style_01_1515573316041 .p_detail.pad {display:block;}
+	#prodEstimate_style_01_1515573316041 .p_detail.pc, #prodEstimate_style_01_1515573316041 .p_detail.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+	#prodEstimate_style_01_1515573316041 .p_detail.mobile {display:block;}
+	#prodEstimate_style_01_1515573316041 .p_detail.pc, #prodEstimate_style_01_1515573316041 .p_detail.pad {display:none;}
+	}
+</style>
+
+<style>
+#prodEstimate_style_01_1515573316041 .p_name.pc {display:block;}
+#prodEstimate_style_01_1515573316041 .p_name.pad, #prodEstimate_style_01_1515573316041 .p_name.mobile {display:none;}
+	@media screen and (min-width:641px) and (max-width:1200px) {
+	#prodEstimate_style_01_1515573316041 .p_name.pad {display:block;}
+	#prodEstimate_style_01_1515573316041 .p_name.pc, #prodEstimate_style_01_1515573316041 .p_name.mobile {display:none;}
+	}
+	@media screen and (max-width:640px) {
+	#prodEstimate_style_01_1515573316041 .p_name.mobile {display:block;}
+	#prodEstimate_style_01_1515573316041 .p_name.pc, #prodEstimate_style_01_1515573316041 .p_name.pad {display:none;}
+	}
+</style>
+
+</div>
+			</div>
+						</div>
+			</div>
+						</div>
+			</div>
+					<div id="layout_1515642927869" class="layout  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div class="view_contents">
+									</div>
+			</div>
+					<div id="comm_layout_footer" class="layout  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div class="view_contents">
+								<div id="div_includeBlock_1499359846520" class="view includeBlock div  none includeView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+								<div id="div_a_includeBlock_1515575821992" class="view a_includeBlock div  none includeView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+								<div id="text_style_01_1515563641587" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					品茶之境——静坐思茶
+
+				</div>
+			</div>
+					<div id="image_style_01_1515575850905" class="view style_01 image  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="image" class="view_contents">
+					<div class="imgStyle CompatibleImg">
+	
+		<a href="javascript:;" target="">
+	
+			<img class="picSet link-type-" src="./bg.jpg" title="" alt="描述" id="imageModeShow">
+	
+		</a>
+	
+</div>
+
+
+
+
+
+
+<!-- 新加的js  -->
+
+				</div>
+			</div>
+					<div id="text_style_01_1515563731656" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					<div style="display:none;">店铺地址：北京市四环区五环路106号</div>
+
+				</div>
+			</div>
+					<div id="text_style_01_1515563722513" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					联系方式：156********
+
+				</div>
+			</div>
+					<div id="text_style_01_1515563679012" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					联系人：刘*
+
+				</div>
+			</div>
+						</div>
+			</div>
+					<div id="div_includeBlock_1499359846763" class="view includeBlock div  none includeView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+								<div id="div_blank_1515563039988" class="view blank div  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="div" class="view_contents">
+					<!-- 
+	<a href="javascript:;" style="display:block;width:100%;height:100%;" id="divnet"></a>
+ -->
+
+
+
+				</div>
+			</div>
+					<div id="text_style_01_1515563173620" class="view style_01 text  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="text" class="view_contents">
+					Copyright2017 © PINSE All rights reserved.
+
+				</div>
+			</div>
+					<div id="dh_style_01_1499359847466" class="view style_01 dh  none lockHeightView" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="dh" class="view_contents">
+					<script></script>
+<div id="menu" class="menu menuStyle_1">
+	<div class="menuLayout">
+		<ul class="miniMenu columnSet showmobile">
+			<li class="leftBox">
+				<div class="nav"></div>
+				<div class="sidebar icoMenuSet" onclick="setDhListen(&#39;style_01&#39;,this)">=</div>
+				<div class="menuScroll">
+					<ul class="menuUlCopy">
+	                	
+						 
+	                  		 
+		                    	<li id="hot" class="rflex" pageid="118123" showmobile=""><a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/index.html">首页</a>
+		                 	
+							
+								
+								 
+		                    	</li>
+								
+	                 	
+						 
+	                  		 
+		                    	<li class="rflex" pageid="118129" showmobile=""><a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/tea.html">茶类预约</a>
+							
+							
+								
+								 
+		                    	</li>
+								
+	                 	
+						 
+	                  		 
+		                    	<li class="rflex" pageid="118124" showmobile=""><a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/about.html">关于我们</a>
+							
+							
+								
+								 
+		                    	</li>
+								
+	                 	
+						 
+	                  		 
+		                    	<li class="rflex" pageid="118127" showmobile=""><a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news.html">最新资讯</a>
+							
+							
+								
+								 
+		                    	</li>
+								
+	                 	
+						 
+	                  		 
+		                    	<li class="rflex" pageid="118128" showmobile=""><a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/contact.html">联系我们</a>
+							
+							
+								
+								 
+		                    	</li>
+								
+	                 	
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="menuUl_box columnSet showpc">
+			<ul class="menuUl dflex">
+            	
+				 
+				<!-- 1118123 -->
+                    
+                        <li id="hot" class="rflex" pageid="118123" showpc="">
+                    
+				
+						 
+		                    <a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/index.html">首页</a>
+						
+							
+					 
+		                </li>
+					
+              	
+				 
+				<!-- 1118129 -->
+                    
+                    	<li class="rflex" pageid="118129" showpc="">
+					
+				
+						 
+		                    <a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/tea.html">茶类预约</a>
+						
+							
+					 
+		                </li>
+					
+              	
+				 
+				<!-- 1118124 -->
+                    
+                    	<li class="rflex" pageid="118124" showpc="">
+					
+				
+						 
+		                    <a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/about.html">关于我们</a>
+						
+							
+					 
+		                </li>
+					
+              	
+				 
+				<!-- 1118127 -->
+                    
+                    	<li class="rflex" pageid="118127" showpc="">
+					
+				
+						 
+		                    <a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/news.html">最新资讯</a>
+						
+							
+					 
+		                </li>
+					
+              	
+				 
+				<!-- 1118128 -->
+                    
+                    	<li class="rflex" pageid="118128" showpc="">
+					
+				
+						 
+		                    <a class="mainMenuSet" href="http://demo.nicebox.cn/6c17d1355bb2b62f/contact.html">联系我们</a>
+						
+							
+					 
+		                </li>
+					
+              	
+			</ul>
+		</div>
+	</div>
+</div>
+<!-- 菜单区域 End-->
+
+
+
+
+
+
+				</div>
+			</div>
+					<div id="image_style_01_1515562832553" class="view style_01 image  none" data-wow-duration="0s" data-wow-delay="0s" data-wow-offset="0" data-wow-iteration="1">
+				<div names="image" class="view_contents">
+					<div class="imgStyle CompatibleImg">
+	
+		<a href="javascript:;" target="">
+	
+			<img class="picSet link-type-" src="./005.png" title="" alt="描述" id="imageModeShow">
+	
+		</a>
+	
+</div>
+
+
+
+
+
+
+<!-- 新加的js  -->
+
+				</div>
+			</div>
+						</div>
+			</div>
+						</div>
+			</div>
+						</div>
+			</div>
+		<div class="online-service qqol-qqol_style_01_1499567168427 left" style="display: block; height: auto; position: fixed; z-index: 100000000; top: 132px; width: 251px; left: -251px;">
+    <div class="wrapper" style="border: 5px solid rgb(98, 140, 116); border-radius: 10px;">
+        
+ </div>
+   
+</div></body></html>

@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>執筆畫青春</title>
+  
+  <subtitle>行如逆水行舟</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.myblogs.work/"/>
+  <updated>2018-12-25T14:58:49.876Z</updated>
+  <id>http://www.myblogs.work/</id>
+  
+  <author>
+    <name>Liu Wang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>spring-cloud使用的一些技巧、心得</title>
+    <link href="http://www.myblogs.work/spring-cloud/spring-cloud-tip/"/>
+    <id>http://www.myblogs.work/spring-cloud/spring-cloud-tip/</id>
+    <published>2018-03-19T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.876Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;技巧的总结&lt;/p&gt;
+&lt;h2 id=&quot;使用主机名而不是ip地址&quot;&gt;&lt;a href=&quot;#使用主机名而不是ip地址&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/categories/spring-cloud/"/>
+    
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/tags/spring-cloud/"/>
+    
+      <category term="tip" scheme="http://www.myblogs.work/tags/tip/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>高可用服务注册中心</title>
+    <link href="http://www.myblogs.work/spring-cloud/spring-cloud-eureka-1/"/>
+    <id>http://www.myblogs.work/spring-cloud/spring-cloud-eureka-1/</id>
+    <published>2018-03-18T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.874Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;之前&lt;a href=&quot;/spring-cloud/spring-cloud-eureka&quot; target=&quot;_blank&quot;&gt;服务注册中心
+        
+      
+    
+    </summary>
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/categories/spring-cloud/"/>
+    
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/tags/spring-cloud/"/>
+    
+      <category term="eureka" scheme="http://www.myblogs.work/tags/eureka/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>配置中心高可用</title>
+    <link href="http://www.myblogs.work/spring-cloud/spring-cloud-config-1/"/>
+    <id>http://www.myblogs.work/spring-cloud/spring-cloud-config-1/</id>
+    <published>2018-03-17T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.873Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; 之前&lt;a href=&quot;/spring-cloud/spring-cloud-config&quot; target=&quot;_blank&quot;&gt;配置中心&lt;/a&gt;中主要说明了使用配置中心以及客户端的用法，这个配置中心是单点的，可以借助Eureka
+        
+      
+    
+    </summary>
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/categories/spring-cloud/"/>
+    
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/tags/spring-cloud/"/>
+    
+      <category term="config-server" scheme="http://www.myblogs.work/tags/config-server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务网关</title>
+    <link href="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/"/>
+    <id>http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/</id>
+    <published>2018-03-16T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.873Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-目标&quot;&gt;&lt;a href=&quot;#1-目标&quot; class=&quot;headerlink&quot; title=&quot;1. 目标&quot;&gt;&lt;/a&gt;1.
+        
+      
+    
+    </summary>
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/categories/spring-cloud/"/>
+    
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/tags/spring-cloud/"/>
+    
+      <category term="api-gateway" scheme="http://www.myblogs.work/tags/api-gateway/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>配置中心</title>
+    <link href="http://www.myblogs.work/spring-cloud/spring-cloud-config/"/>
+    <id>http://www.myblogs.work/spring-cloud/spring-cloud-config/</id>
+    <published>2018-03-15T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.873Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-本地仓库管理配置&quot;&gt;&lt;a href=&quot;#1-本地仓库管理配置&quot; class=&quot;headerlink&quot; title=&quot;1. 本地仓库管理配置&quot;&gt;&lt;/a&gt;1. 本地仓库管理配置&lt;/h2&gt;&lt;h3 id=&quot;1-1-配置中心服务端&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/categories/spring-cloud/"/>
+    
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/tags/spring-cloud/"/>
+    
+      <category term="config-server" scheme="http://www.myblogs.work/tags/config-server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务消费与断路器</title>
+    <link href="http://www.myblogs.work/spring-cloud/spring-cloud-feign/"/>
+    <id>http://www.myblogs.work/spring-cloud/spring-cloud-feign/</id>
+    <published>2018-03-14T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.875Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt; 客户端消费者，ribbon与feign，我更新换feign。&lt;/p&gt;
+&lt;p&gt;Feign使编写Web Service客户端变得非常简单。调用外部接口跟调用本地接口一样方便！&lt;/p&gt;
+&lt;h2 id=&quot;一-负载均衡&quot;&gt;&lt;a href=&quot;#一-负载均衡&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/categories/spring-cloud/"/>
+    
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/tags/spring-cloud/"/>
+    
+      <category term="feign" scheme="http://www.myblogs.work/tags/feign/"/>
+    
+      <category term="hystrix" scheme="http://www.myblogs.work/tags/hystrix/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>服务注册中心</title>
+    <link href="http://www.myblogs.work/spring-cloud/spring-cloud-eureka/"/>
+    <id>http://www.myblogs.work/spring-cloud/spring-cloud-eureka/</id>
+    <published>2018-03-13T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.874Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-共有jar&quot;&gt;&lt;a href=&quot;#1-共有jar&quot; class=&quot;headerlink&quot; title=&quot;1. 共有jar&quot;&gt;&lt;/a&gt;1. 共有jar&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-xml&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/categories/spring-cloud/"/>
+    
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/tags/spring-cloud/"/>
+    
+      <category term="eureka" scheme="http://www.myblogs.work/tags/eureka/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>spring-cloud-helloworld</title>
+    <link href="http://www.myblogs.work/spring-cloud/spring-cloud-version/"/>
+    <id>http://www.myblogs.work/spring-cloud/spring-cloud-version/</id>
+    <published>2018-03-12T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.876Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;SpringCloud版本号&quot;&gt;&lt;a href=&quot;#SpringCloud版本号&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/categories/spring-cloud/"/>
+    
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/tags/spring-cloud/"/>
+    
+      <category term="version" scheme="http://www.myblogs.work/tags/version/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>spring-cloud前言</title>
+    <link href="http://www.myblogs.work/spring-cloud/spring-cloud-preface/"/>
+    <id>http://www.myblogs.work/spring-cloud/spring-cloud-preface/</id>
+    <published>2018-03-11T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.875Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;开始梳理SpringCloud的学习笔记和代码，并做一个简单的分享&lt;/p&gt;
+&lt;p&gt;学习SpringCloud前，最好先学习springboot&lt;/p&gt;
+&lt;h2 id=&quot;1-目标&quot;&gt;&lt;a href=&quot;#1-目标&quot; class=&quot;headerlink&quot; title=&quot;1.
+        
+      
+    
+    </summary>
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/categories/spring-cloud/"/>
+    
+    
+      <category term="spring-cloud" scheme="http://www.myblogs.work/tags/spring-cloud/"/>
+    
+      <category term="preface" scheme="http://www.myblogs.work/tags/preface/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自定义服务开启标语banner</title>
+    <link href="http://www.myblogs.work/spring-boot/spring-boot-banner/"/>
+    <id>http://www.myblogs.work/spring-boot/spring-boot-banner/</id>
+    <published>2018-03-01T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.871Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;操作&quot;&gt;&lt;a href=&quot;#操作&quot; class=&quot;headerlink&quot; title=&quot;操作&quot;&gt;&lt;/a&gt;操作&lt;/h2&gt;&lt;p&gt;在 &lt;font
+        
+      
+    
+    </summary>
+    
+      <category term="spring-boot" scheme="http://www.myblogs.work/categories/spring-boot/"/>
+    
+    
+      <category term="spring-boot" scheme="http://www.myblogs.work/tags/spring-boot/"/>
+    
+      <category term="banner" scheme="http://www.myblogs.work/tags/banner/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot使用SwaggerUI构建API文档服务</title>
+    <link href="http://www.myblogs.work/spring-boot/spring-boot-swagger/"/>
+    <id>http://www.myblogs.work/spring-boot/spring-boot-swagger/</id>
+    <published>2018-02-28T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.872Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="spring-boot" scheme="http://www.myblogs.work/categories/spring-boot/"/>
+    
+    
+      <category term="spring-boot" scheme="http://www.myblogs.work/tags/spring-boot/"/>
+    
+      <category term="swagger" scheme="http://www.myblogs.work/tags/swagger/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本地预览Jekll博客</title>
+    <link href="http://www.myblogs.work/jekyll/local-server/"/>
+    <id>http://www.myblogs.work/jekyll/local-server/</id>
+    <published>2018-02-24T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.870Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;之前一直都是将代码提交到github然后刷新页面看效果，这样一个小问题很多时候得重复提交好多次才解决&lt;/p&gt;
+&lt;p&gt;为了解决这个问题，需要现在本地调试预览&lt;/p&gt;
+&lt;p&gt;这其中，经历的东西全都是没用过的，各种找教程，也几次快要放弃，最终辛亏是搭起来了&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="jekyll" scheme="http://www.myblogs.work/categories/jekyll/"/>
+    
+    
+      <category term="jekyll" scheme="http://www.myblogs.work/tags/jekyll/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot监控服务</title>
+    <link href="http://www.myblogs.work/spring-boot/spring-boot-admin/"/>
+    <id>http://www.myblogs.work/spring-boot/spring-boot-admin/</id>
+    <published>2018-02-22T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.871Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;通过spring-boot-admin来监控SpringBoot服务&lt;/p&gt;
+&lt;p&gt;使用Spring Boot
+        
+      
+    
+    </summary>
+    
+      <category term="spring-boot" scheme="http://www.myblogs.work/categories/spring-boot/"/>
+    
+    
+      <category term="spring-boot" scheme="http://www.myblogs.work/tags/spring-boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>邮件服务</title>
+    <link href="http://www.myblogs.work/spring-boot/spring-boot-mail/"/>
+    <id>http://www.myblogs.work/spring-boot/spring-boot-mail/</id>
+    <published>2018-02-06T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.871Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;由于密码等信息写在配置文件中可能泄露，因此这里示例自定义配置,。&lt;/p&gt;
+&lt;p&gt;使用Spring提供的自动配置，这里不做详述，详情参考&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="spring-boot" scheme="http://www.myblogs.work/categories/spring-boot/"/>
+    
+    
+      <category term="spring-boot" scheme="http://www.myblogs.work/tags/spring-boot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么？网页不能显示最新的?</title>
+    <link href="http://www.myblogs.work/blog/github-page/"/>
+    <id>http://www.myblogs.work/blog/github-page/</id>
+    <published>2018-02-02T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.867Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="http://www.myblogs.work/categories/blog/"/>
+    
+    
+      <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的网站</title>
+    <link href="http://www.myblogs.work/blog/website/"/>
+    <id>http://www.myblogs.work/blog/website/</id>
+    <published>2018-02-01T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.868Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;网址&quot;&gt;&lt;a href=&quot;#网址&quot; class=&quot;headerlink&quot; title=&quot;网址&quot;&gt;&lt;/a&gt;网址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.myblogs.work&quot;&gt;www.myblogs.work&lt;/a&gt;&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="http://www.myblogs.work/categories/blog/"/>
+    
+    
+      <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用git同步</title>
+    <link href="http://www.myblogs.work/git/git-index/"/>
+    <id>http://www.myblogs.work/git/git-index/</id>
+    <published>2018-02-01T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.869Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;git的理念&quot;&gt;&lt;a href=&quot;#git的理念&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="git" scheme="http://www.myblogs.work/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://www.myblogs.work/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jekyll使用</title>
+    <link href="http://www.myblogs.work/jekyll/jekyll-help/"/>
+    <id>http://www.myblogs.work/jekyll/jekyll-help/</id>
+    <published>2018-02-01T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.870Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;参考文档&quot;&gt;&lt;a href=&quot;#参考文档&quot; class=&quot;headerlink&quot; title=&quot;参考文档&quot;&gt;&lt;/a&gt;参考文档&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.jekyll.com.cn/docs/configuration/&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="jekyll" scheme="http://www.myblogs.work/categories/jekyll/"/>
+    
+    
+      <category term="jekyll" scheme="http://www.myblogs.work/tags/jekyll/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://www.myblogs.work/blog/hello-world/"/>
+    <id>http://www.myblogs.work/blog/hello-world/</id>
+    <published>2018-01-31T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.867Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;个人博客&quot;&gt;&lt;a href=&quot;#个人博客&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="http://www.myblogs.work/categories/blog/"/>
+    
+    
+      <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>post blog demo</title>
+    <link href="http://www.myblogs.work/demo/blog-demo/"/>
+    <id>http://www.myblogs.work/demo/blog-demo/</id>
+    <published>2016-04-21T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.868Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Quick note about CSS animation. &lt;/p&gt;
+&lt;h2 id=&quot;CSS-Animation&quot;&gt;&lt;a href=&quot;#CSS-Animation&quot; class=&quot;headerlink&quot; title=&quot;CSS Animation&quot;&gt;&lt;/a&gt;CSS
+        
+      
+    
+    </summary>
+    
+      <category term="demo" scheme="http://www.myblogs.work/categories/demo/"/>
+    
+    
+      <category term="demo" scheme="http://www.myblogs.work/tags/demo/"/>
+    
+  </entry>
+  
+</feed>

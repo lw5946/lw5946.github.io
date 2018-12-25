@@ -2,17 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>執筆畫青春</title>
   
-  <subtitle>行如逆水行舟</subtitle>
+  <subtitle>诗和远方</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.myblogs.work/"/>
   <updated>2018-12-25T14:58:49.876Z</updated>
   <id>http://www.myblogs.work/</id>
-  
-  <author>
-    <name>Liu Wang</name>
-    
-  </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
@@ -441,33 +436,6 @@
   </entry>
   
   <entry>
-    <title>我的网站</title>
-    <link href="http://www.myblogs.work/blog/website/"/>
-    <id>http://www.myblogs.work/blog/website/</id>
-    <published>2018-02-01T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.868Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;网址&quot;&gt;&lt;a href=&quot;#网址&quot; class=&quot;headerlink&quot; title=&quot;网址&quot;&gt;&lt;/a&gt;网址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.myblogs.work&quot;&gt;www.myblogs.work&lt;/a&gt;&lt;/p&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-      <category term="blog" scheme="http://www.myblogs.work/categories/blog/"/>
-    
-    
-      <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
     <title>使用git同步</title>
     <link href="http://www.myblogs.work/git/git-index/"/>
     <id>http://www.myblogs.work/git/git-index/</id>
@@ -516,6 +484,33 @@
     
     
       <category term="jekyll" scheme="http://www.myblogs.work/tags/jekyll/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的网站</title>
+    <link href="http://www.myblogs.work/blog/website/"/>
+    <id>http://www.myblogs.work/blog/website/</id>
+    <published>2018-02-01T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.868Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;网址&quot;&gt;&lt;a href=&quot;#网址&quot; class=&quot;headerlink&quot; title=&quot;网址&quot;&gt;&lt;/a&gt;网址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.myblogs.work&quot;&gt;www.myblogs.work&lt;/a&gt;&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="http://www.myblogs.work/categories/blog/"/>
+    
+    
+      <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
     
   </entry>
   

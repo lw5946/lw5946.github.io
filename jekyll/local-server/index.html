@@ -74,7 +74,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="執筆畫青春" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="诗和远方" type="application/atom+xml">
 
 
 
@@ -86,7 +86,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="本地预览Jekll博客">
 <meta property="og:url" content="http://www.myblogs.work/jekyll/local-server/index.html">
-<meta property="og:site_name" content="執筆畫青春">
+<meta property="og:site_name" content="诗和远方">
 <meta property="og:description" content="之前一直都是将代码提交到github然后刷新页面看效果，这样一个小问题很多时候得重复提交好多次才解决 为了解决这个问题，需要现在本地调试预览 这其中，经历的东西全都是没用过的，各种找教程，也几次快要放弃，最终辛亏是搭起来了 知识储备这一方面是看的教程，一方面是对应的总结，知道这些，对于博客的搭建过程，知道如何去排错，解决问题 ruby与rubygem、jekyll、bundle、rvm的关系 ru">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-12-25T14:58:49.870Z">
@@ -105,7 +105,7 @@
     sidebar: {"position":"right","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '作者'
@@ -128,7 +128,7 @@
 
 
 
-  <title>本地预览Jekll博客 | 執筆畫青春</title>
+  <title>本地预览Jekll博客 | 诗和远方</title>
   
 
 
@@ -159,12 +159,12 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">執筆畫青春</span>
+        <span class="site-title">诗和远方</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">诗和远方</p>
+        <p class="site-subtitle">執筆畫青春</p>
       
   </div>
 
@@ -195,7 +195,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
@@ -259,13 +259,13 @@
     <link itemprop="mainEntityOfPage" href="http://www.myblogs.work/jekyll/local-server/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
+      <meta itemprop="name" content="執筆畫青春">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="執筆畫青春">
+      <meta itemprop="name" content="诗和远方">
     </span>
 
     
@@ -325,9 +325,51 @@
 
           
           
+             <span id="/jekyll/local-server/" class="leancloud_visitors" data-flag-title="本地预览Jekll博客">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
           
 
           
@@ -376,9 +418,7 @@
 <li>下载 <code>cacert.pem</code> file  <a href="http://curl.haxx.se/ca/cacert.pem" target="_blank">证书下载</a></li>
 <li>在命令行中输入</li>
 </ol>
-<pre class="line-numbers language-shell"><code class="language-shell">rem 将SSL_CERT_FILE设置为pem的路径
-set SSL_CERT_FILE=E:\rubyDevkit\lib\ssl_book\cacert.pem
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rem 将SSL_CERT_FILE设置为pem的路径</span><br><span class="line">set SSL_CERT_FILE=E:\rubyDevkit\lib\ssl_book\cacert.pem</span><br></pre></td></tr></table></figure>
 <h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><ol>
 <li>每次运行都要执行步骤2，貌似可以将SSL_CERT_FILE设置为环境变量来解决，我是直接将“SSL证书”中步骤2的命令写在shell脚本中</li>
 <li>通过<a href="http://localhost:4000访问，更新完刷新页面" target="_blank" rel="noopener">http://localhost:4000访问，更新完刷新页面</a></li>
@@ -456,6 +496,11 @@ set SSL_CERT_FILE=E:\rubyDevkit\lib\ssl_book\cacert.pem
           
 
   
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTU0Mi8xODA4OQ=="></div>
+    </div>
+
+  
 
 
 
@@ -492,9 +537,9 @@ set SSL_CERT_FILE=E:\rubyDevkit\lib\ssl_book\cacert.pem
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="">
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="執筆畫青春">
             
-              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-author-name" itemprop="name">執筆畫青春</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -505,7 +550,7 @@ set SSL_CERT_FILE=E:\rubyDevkit\lib\ssl_book\cacert.pem
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -544,6 +589,22 @@ set SSL_CERT_FILE=E:\rubyDevkit\lib\ssl_book\cacert.pem
             </div>
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/lw5946" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:732506298@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -591,21 +652,24 @@ set SSL_CERT_FILE=E:\rubyDevkit\lib\ssl_book\cacert.pem
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder"></span>
+  <span class="author" itemprop="copyrightHolder">Liu Wang</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
@@ -748,6 +812,17 @@ set SSL_CERT_FILE=E:\rubyDevkit\lib\ssl_book\cacert.pem
 
 
   
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
 
 
 
@@ -769,18 +844,122 @@ set SSL_CERT_FILE=E:\rubyDevkit\lib\ssl_book\cacert.pem
   
 
   
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("BqftNhq3QU35wJHaCxKWG0Ii-gzGzoHsz", "TNxW1qGnwhjvRuosbOyxtHOK");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
   
+
+  
   
 
   
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
-
 
   
 

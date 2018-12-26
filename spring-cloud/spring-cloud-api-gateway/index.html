@@ -74,28 +74,28 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="執筆畫青春" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="诗和远方" type="application/atom+xml">
 
 
 
 
 
 
-<meta name="description" content="1. 目标服务网关是微服务中不可或缺的一部分，是服务暴露在外的前锋。 一些功能提取到服务网关中，是内部服务更注重于业务功能 网关功能如下：  统一多个服务路由、负载均衡 统一对外暴露接口、内部服务变化尽量不影响外部的调用 统一权限控制，分离非业务的功能  2. 服务路由2.1 pom&amp;lt;dependency&amp;gt;     &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;">
+<meta name="description" content="使用服务网关统一管理对外暴露的服务">
 <meta name="keywords" content="spring-cloud,api-gateway">
 <meta property="og:type" content="article">
 <meta property="og:title" content="服务网关">
 <meta property="og:url" content="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/index.html">
-<meta property="og:site_name" content="執筆畫青春">
-<meta property="og:description" content="1. 目标服务网关是微服务中不可或缺的一部分，是服务暴露在外的前锋。 一些功能提取到服务网关中，是内部服务更注重于业务功能 网关功能如下：  统一多个服务路由、负载均衡 统一对外暴露接口、内部服务变化尽量不影响外部的调用 统一权限控制，分离非业务的功能  2. 服务路由2.1 pom&amp;lt;dependency&amp;gt;     &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;">
+<meta property="og:site_name" content="诗和远方">
+<meta property="og:description" content="使用服务网关统一管理对外暴露的服务">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/!--￼0--%3E/assets/images/spring-cloud/api-gateway/gateway_1.jpg">
-<meta property="og:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/!--￼1--%3E/assets/images/spring-cloud/api-gateway/gateway_2.png">
-<meta property="og:updated_time" content="2018-12-25T14:58:49.873Z">
+<meta property="og:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/!--￼7--%3E/assets/images/spring-cloud/api-gateway/gateway_1.jpg">
+<meta property="og:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/!--￼8--%3E/assets/images/spring-cloud/api-gateway/gateway_2.png">
+<meta property="og:updated_time" content="2018-12-26T14:23:38.369Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务网关">
-<meta name="twitter:description" content="1. 目标服务网关是微服务中不可或缺的一部分，是服务暴露在外的前锋。 一些功能提取到服务网关中，是内部服务更注重于业务功能 网关功能如下：  统一多个服务路由、负载均衡 统一对外暴露接口、内部服务变化尽量不影响外部的调用 统一权限控制，分离非业务的功能  2. 服务路由2.1 pom&amp;lt;dependency&amp;gt;     &amp;lt;groupId&amp;gt;org.springframework.cloud&amp;">
-<meta name="twitter:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/!--￼0--%3E/assets/images/spring-cloud/api-gateway/gateway_1.jpg">
+<meta name="twitter:description" content="使用服务网关统一管理对外暴露的服务">
+<meta name="twitter:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/!--￼7--%3E/assets/images/spring-cloud/api-gateway/gateway_1.jpg">
 
 
 
@@ -108,7 +108,7 @@
     sidebar: {"position":"right","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '作者'
@@ -131,7 +131,7 @@
 
 
 
-  <title>服务网关 | 執筆畫青春</title>
+  <title>服务网关 | 诗和远方</title>
   
 
 
@@ -162,12 +162,12 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">執筆畫青春</span>
+        <span class="site-title">诗和远方</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">诗和远方</p>
+        <p class="site-subtitle">執筆畫青春</p>
       
   </div>
 
@@ -198,7 +198,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
@@ -262,13 +262,13 @@
     <link itemprop="mainEntityOfPage" href="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
+      <meta itemprop="name" content="執筆畫青春">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="執筆畫青春">
+      <meta itemprop="name" content="诗和远方">
     </span>
 
     
@@ -328,11 +328,57 @@
 
           
           
-
+             <span id="/spring-cloud/spring-cloud-api-gateway/" class="leancloud_visitors" data-flag-title="服务网关">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
 
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  使用服务网关统一管理对外暴露的服务
+              </div>
           
 
         </div>
@@ -356,46 +402,9 @@
 <li>统一对外暴露接口、内部服务变化尽量不影响外部的调用</li>
 <li>统一权限控制，分离非业务的功能</li>
 </ol>
-<h2 id="2-服务路由"><a href="#2-服务路由" class="headerlink" title="2. 服务路由"></a>2. 服务路由</h2><h3 id="2-1-pom"><a href="#2-1-pom" class="headerlink" title="2.1 pom"></a>2.1 pom</h3><pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-starter-netflix-zuul<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-<span class="token comment" spellcheck="true">&lt;!-- 需要注册到服务中心，所以需要eureka --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.cloud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-cloud-starter-netflix-eureka-client<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="2-2-yaml"><a href="#2-2-yaml" class="headerlink" title="2.2 yaml"></a>2.2 yaml</h3><pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># application.yaml</span>
-<span class="token key atrule">server</span><span class="token punctuation">:</span>
-  <span class="token key atrule">port</span><span class="token punctuation">:</span> <span class="token number">5555</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token key atrule">spring</span><span class="token punctuation">:</span>
-  <span class="token key atrule">application</span><span class="token punctuation">:</span>
-    <span class="token key atrule">name</span><span class="token punctuation">:</span> api<span class="token punctuation">-</span>gateway
-<span class="token key atrule">zuul</span><span class="token punctuation">:</span>
-  <span class="token key atrule">routes</span><span class="token punctuation">:</span>
-  <span class="token comment" spellcheck="true"># rotes to url</span>
-    <span class="token key atrule">api-a-url</span><span class="token punctuation">:</span>
-      <span class="token key atrule">path</span><span class="token punctuation">:</span> /api<span class="token punctuation">-</span>a<span class="token punctuation">-</span>url/**
-      <span class="token key atrule">url</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//127.0.0.1<span class="token punctuation">:</span>8080/
-  <span class="token comment" spellcheck="true"># rotes to serviceId</span>
-  <span class="token comment" spellcheck="true"># 如果多个服务在服务中心注册的serviceId(单个应用的spring.application.name)一样，</span>
-  <span class="token comment" spellcheck="true"># 就可以实现负载均衡</span>
-    <span class="token key atrule">api-a</span><span class="token punctuation">:</span>
-      <span class="token key atrule">path</span><span class="token punctuation">:</span> /api<span class="token punctuation">-</span>a/**
-      <span class="token key atrule">serviceId</span><span class="token punctuation">:</span> spring<span class="token punctuation">-</span>cloud<span class="token punctuation">-</span>base<span class="token punctuation">-</span>service
-    <span class="token key atrule">api-b</span><span class="token punctuation">:</span>
-      <span class="token key atrule">path</span><span class="token punctuation">:</span> /api<span class="token punctuation">-</span>b/**
-      <span class="token key atrule">serviceId</span><span class="token punctuation">:</span> demo<span class="token punctuation">-</span>b
-    <span class="token comment" spellcheck="true"># zuul.routes.&lt;serviceId>=&lt;path>  </span>
-    <span class="token key atrule">spring-cloud-base-service</span><span class="token punctuation">:</span> /demo/**
-<span class="token key atrule">eureka</span><span class="token punctuation">:</span>
-  <span class="token key atrule">client</span><span class="token punctuation">:</span>
-    <span class="token key atrule">service-url</span><span class="token punctuation">:</span>
-      <span class="token key atrule">defaultZone</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//127.0.0.1<span class="token punctuation">:</span>1111/eureka/
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="2-服务路由"><a href="#2-服务路由" class="headerlink" title="2. 服务路由"></a>2. 服务路由</h2><h3 id="2-1-pom"><a href="#2-1-pom" class="headerlink" title="2.1 pom"></a>2.1 pom</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-zuul<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 需要注册到服务中心，所以需要eureka --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-netflix-eureka-client<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-2-yaml"><a href="#2-2-yaml" class="headerlink" title="2.2 yaml"></a>2.2 yaml</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># application.yaml</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="attr">  port:</span> <span class="number">5555</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">  application:</span></span><br><span class="line"><span class="attr">    name:</span> <span class="string">api-gateway</span></span><br><span class="line"><span class="attr">zuul:</span></span><br><span class="line"><span class="attr">  routes:</span></span><br><span class="line">  <span class="comment"># rotes to url</span></span><br><span class="line"><span class="attr">    api-a-url:</span></span><br><span class="line"><span class="attr">      path:</span> <span class="string">/api-a-url/**</span></span><br><span class="line"><span class="attr">      url:</span> <span class="attr">http://127.0.0.1:8080/</span></span><br><span class="line">  <span class="comment"># rotes to serviceId</span></span><br><span class="line">  <span class="comment"># 如果多个服务在服务中心注册的serviceId(单个应用的spring.application.name)一样，</span></span><br><span class="line">  <span class="comment"># 就可以实现负载均衡</span></span><br><span class="line"><span class="attr">    api-a:</span></span><br><span class="line"><span class="attr">      path:</span> <span class="string">/api-a/**</span></span><br><span class="line"><span class="attr">      serviceId:</span> <span class="string">spring-cloud-base-service</span></span><br><span class="line"><span class="attr">    api-b:</span></span><br><span class="line"><span class="attr">      path:</span> <span class="string">/api-b/**</span></span><br><span class="line"><span class="attr">      serviceId:</span> <span class="string">demo-b</span></span><br><span class="line">    <span class="comment"># zuul.routes.&lt;serviceId&gt;=&lt;path&gt;  </span></span><br><span class="line"><span class="attr">    spring-cloud-base-service:</span> <span class="string">/demo/**</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line"><span class="attr">  client:</span></span><br><span class="line"><span class="attr">    service-url:</span></span><br><span class="line"><span class="attr">      defaultZone:</span> <span class="attr">http://127.0.0.1:1111/eureka/</span></span><br></pre></td></tr></table></figure>
 <p>路由配置规则：</p>
 <ol>
 <li><code>zuul.routes.&lt;route&gt;.path</code> 与 <code>zuul.routes.&lt;route&gt;.serviceId</code>（或<code>zuul.routes.&lt;route&gt;.url</code>）</li>
@@ -429,27 +438,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="2-3-java"><a href="#2-3-java" class="headerlink" title="2.3 java"></a>2.3 java</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>lw<span class="token punctuation">.</span>apigateway<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token punctuation">.</span>SpringApplication<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>cloud<span class="token punctuation">.</span>client<span class="token punctuation">.</span>SpringCloudApplication<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>cloud<span class="token punctuation">.</span>netflix<span class="token punctuation">.</span>zuul<span class="token punctuation">.</span>EnableZuulProxy<span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">/**
- * @EnableZuulProxy 注解开启Zuul
- * @author LiuWang
- * @date 2018/3/19 19:26
- */</span>
-<span class="token annotation punctuation">@EnableZuulProxy</span>
-<span class="token annotation punctuation">@SpringCloudApplication</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ApiGatewayApplication</span> <span class="token punctuation">{</span>
-
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        SpringApplication<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>ApiGatewayApplication<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">,</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-3-java"><a href="#2-3-java" class="headerlink" title="2.3 java"></a>2.3 java</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.lw.apigateway;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.client.SpringCloudApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.zuul.EnableZuulProxy;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@EnableZuulProxy</span> 注解开启Zuul</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LiuWang</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2018/3/19 19:26</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@EnableZuulProxy</span></span><br><span class="line"><span class="meta">@SpringCloudApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ApiGatewayApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(ApiGatewayApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>@SpringCloudApplication相当于:@SpringBootApplication、@EnableDiscoveryClient、@EnableCircuitBreaker的组合</p>
 <h3 id="2-4-使用"><a href="#2-4-使用" class="headerlink" title="2.4 使用"></a>2.4 使用</h3><ol>
 <li>开启服务注册中心</li>
@@ -461,60 +450,8 @@
 <li>当访问<a href="http://127.0.0.1:5555/api-a/add时会路由到http://127.0.0.1:8080/add或http://127.0.0.1:8081/add或http://127.0.0.1:8082/add，多次请求，会发现各个服务窗口都有打印请求到的信息。负载均衡成功实现！" target="_blank" rel="noopener">http://127.0.0.1:5555/api-a/add时会路由到http://127.0.0.1:8080/add或http://127.0.0.1:8081/add或http://127.0.0.1:8082/add，多次请求，会发现各个服务窗口都有打印请求到的信息。负载均衡成功实现！</a></li>
 <li>当访问<a href="http://127.0.0.1:5555/api-b/add会路由到spring.application.name为demo-service的addcontroller上" target="_blank" rel="noopener">http://127.0.0.1:5555/api-b/add会路由到spring.application.name为demo-service的addcontroller上</a></li>
 </ul>
-<p><img src="!--￼0--&gt;/assets/images/spring-cloud/api-gateway/gateway_1.jpg" alt=""></p>
-<h2 id="3-服务过滤"><a href="#3-服务过滤" class="headerlink" title="3. 服务过滤"></a>3. 服务过滤</h2><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>lw<span class="token punctuation">.</span>apigateway<span class="token punctuation">.</span>filter<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> com<span class="token punctuation">.</span>netflix<span class="token punctuation">.</span>zuul<span class="token punctuation">.</span>ZuulFilter<span class="token punctuation">;</span>
-<span class="token keyword">import</span> com<span class="token punctuation">.</span>netflix<span class="token punctuation">.</span>zuul<span class="token punctuation">.</span>context<span class="token punctuation">.</span>RequestContext<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>commons<span class="token punctuation">.</span>lang<span class="token punctuation">.</span>StringUtils<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>slf4j<span class="token punctuation">.</span>Logger<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>slf4j<span class="token punctuation">.</span>LoggerFactory<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span>HttpServletRequest<span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">/**
- * @author LiuWang
- * @date 2018/3/20
- */</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AccessFilter</span> <span class="token keyword">extends</span> <span class="token class-name">ZuulFilter</span> <span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> Logger LOGGER <span class="token operator">=</span> LoggerFactory<span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span>AccessFilter<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> String <span class="token function">filterType</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token string">"pre"</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">filterOrder</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">shouldFilter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> Object <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        RequestContext ctx <span class="token operator">=</span> RequestContext<span class="token punctuation">.</span><span class="token function">getCurrentContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        HttpServletRequest request <span class="token operator">=</span> ctx<span class="token punctuation">.</span><span class="token function">getRequest</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        LOGGER<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>String<span class="token punctuation">.</span><span class="token function">format</span><span class="token punctuation">(</span><span class="token string">"%s request to %s"</span><span class="token punctuation">,</span> request<span class="token punctuation">.</span><span class="token function">getMethod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> request<span class="token punctuation">.</span><span class="token function">getRequestURL</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        String token <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"token"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>StringUtils<span class="token punctuation">.</span><span class="token function">isBlank</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            LOGGER<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">"token is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token comment" spellcheck="true">//未通过验证的返回信息</span>
-            ctx<span class="token punctuation">.</span><span class="token function">setSendZuulResponse</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            ctx<span class="token punctuation">.</span><span class="token function">setResponseStatusCode</span><span class="token punctuation">(</span><span class="token number">401</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            ctx<span class="token punctuation">.</span><span class="token function">setResponseBody</span><span class="token punctuation">(</span><span class="token string">"token is empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">return</span> null<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        LOGGER<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"token is ok"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">//通过验证，则继续请求的流程</span>
-        <span class="token keyword">return</span> null<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="!--￼7--&gt;/assets/images/spring-cloud/api-gateway/gateway_1.jpg" alt=""></p>
+<h2 id="3-服务过滤"><a href="#3-服务过滤" class="headerlink" title="3. 服务过滤"></a>3. 服务过滤</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.lw.apigateway.filter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.netflix.zuul.ZuulFilter;</span><br><span class="line"><span class="keyword">import</span> com.netflix.zuul.context.RequestContext;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.lang.StringUtils;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LiuWang</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2018/3/20</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AccessFilter</span> <span class="keyword">extends</span> <span class="title">ZuulFilter</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger LOGGER = LoggerFactory.getLogger(AccessFilter.class);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">filterType</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"pre"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">filterOrder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">shouldFilter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        RequestContext ctx = RequestContext.getCurrentContext();</span><br><span class="line">        HttpServletRequest request = ctx.getRequest();</span><br><span class="line">        LOGGER.info(String.format(<span class="string">"%s request to %s"</span>, request.getMethod(), request.getRequestURL().toString()));</span><br><span class="line">        String token = request.getParameter(<span class="string">"token"</span>);</span><br><span class="line">        <span class="keyword">if</span> (StringUtils.isBlank(token))&#123;</span><br><span class="line">            LOGGER.warn(<span class="string">"token is empty"</span>);</span><br><span class="line">            <span class="comment">//未通过验证的返回信息</span></span><br><span class="line">            ctx.setSendZuulResponse(<span class="keyword">false</span>);</span><br><span class="line">            ctx.setResponseStatusCode(<span class="number">401</span>);</span><br><span class="line">            ctx.setResponseBody(<span class="string">"token is empty"</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        LOGGER.info(<span class="string">"token is ok"</span>);</span><br><span class="line">        <span class="comment">//通过验证，则继续请求的流程</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>自定义过滤器的实现，需要继承<code>ZuulFilter</code>，需要重写实现下面四个方法：</p>
 <ol>
 <li><code>filterType</code>：返回一个字符串代表过滤器的类型，在zuul中定义了四种不同生命周期的过滤器类型，具体如下：</li>
@@ -531,36 +468,16 @@
 <li><code>run</code>：过滤器的具体逻辑。需要注意，这里我们通过<code>ctx.setSendZuulResponse(false)</code>令zuul过滤该请求，不对其进行路由，然后通过<code>ctx.setResponseStatusCode(401)</code>设置了其返回的错误码，当然我们也可以进一步优化我们的返回，比如，通过<code>ctx.setResponseBody(body)</code>对返回body内容进行编辑等。</li>
 </ol>
 <p>在实现了自定义过滤器之后，还需要实例化该过滤器才能生效，我们只需要在应用主类中增加如下内容：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token annotation punctuation">@Bean</span>
-<span class="token keyword">public</span> AccessFilter <span class="token function">accessFilter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">AccessFilter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> AccessFilter <span class="title">accessFilter</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> AccessFilter();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>启动该服务网关后，访问：</p>
 <ul>
 <li><code>http://localhost:5555/api-a/add?a=1&amp;b=2</code>：返回401错误，页面显示token is empty</li>
 <li><code>http://localhost:5555/api-a/add?a=1&amp;b=2&amp;accessToken=token</code>：正确路由到spring-cloud-base-service，并返回计算内容</li>
 </ul>
 <p>filterType的其他类型以及生命周期如下：</p>
-<p><img src="!--￼1--&gt;/assets/images/spring-cloud/api-gateway/gateway_2.png" alt=""></p>
+<p><img src="!--￼8--&gt;/assets/images/spring-cloud/api-gateway/gateway_2.png" alt=""></p>
 <h2 id="4-其他配置"><a href="#4-其他配置" class="headerlink" title="4. 其他配置"></a>4. 其他配置</h2><p>设置超时</p>
-<pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true"># 断路器超时要 大于 负载均衡器超时总和</span>
-<span class="token comment" spellcheck="true"># 负载均衡器超时总和不是 ReadTimeout + ConnectTimeout</span>
-<span class="token comment" spellcheck="true"># 断路器设置</span>
-<span class="token key atrule">hystrix</span><span class="token punctuation">:</span>
-  <span class="token key atrule">command</span><span class="token punctuation">:</span>
-    <span class="token key atrule">default</span><span class="token punctuation">:</span>
-      <span class="token key atrule">execution</span><span class="token punctuation">:</span>
-        <span class="token key atrule">isolation</span><span class="token punctuation">:</span>
-          <span class="token key atrule">thread</span><span class="token punctuation">:</span>
-            <span class="token key atrule">timeoutInMilliseconds</span><span class="token punctuation">:</span> <span class="token number">30000</span>
-<span class="token comment" spellcheck="true"># 负载均衡器设置</span>
-<span class="token key atrule">ribbon</span><span class="token punctuation">:</span>
-  <span class="token comment" spellcheck="true"># 请求处理的超时时间</span>
-  <span class="token key atrule">ReadTimeout</span><span class="token punctuation">:</span> <span class="token number">1000</span>
-  <span class="token comment" spellcheck="true"># 请求连接的超时时间</span>
-  <span class="token key atrule">ConnectTimeout</span><span class="token punctuation">:</span> <span class="token number">1000</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 断路器超时要 大于 负载均衡器超时总和</span></span><br><span class="line"><span class="comment"># 负载均衡器超时总和不是 ReadTimeout + ConnectTimeout</span></span><br><span class="line"><span class="comment"># 断路器设置</span></span><br><span class="line"><span class="attr">hystrix:</span></span><br><span class="line"><span class="attr">  command:</span></span><br><span class="line"><span class="attr">    default:</span></span><br><span class="line"><span class="attr">      execution:</span></span><br><span class="line"><span class="attr">        isolation:</span></span><br><span class="line"><span class="attr">          thread:</span></span><br><span class="line"><span class="attr">            timeoutInMilliseconds:</span> <span class="number">30000</span></span><br><span class="line"><span class="comment"># 负载均衡器设置</span></span><br><span class="line"><span class="attr">ribbon:</span></span><br><span class="line">  <span class="comment"># 请求处理的超时时间</span></span><br><span class="line"><span class="attr">  ReadTimeout:</span> <span class="number">1000</span></span><br><span class="line">  <span class="comment"># 请求连接的超时时间</span></span><br><span class="line"><span class="attr">  ConnectTimeout:</span> <span class="number">1000</span></span><br></pre></td></tr></table></figure>
 <h2 id="5-问题"><a href="#5-问题" class="headerlink" title="5. 问题"></a>5. 问题</h2><ol start="2">
 <li>如何在网关中设置统一的异常处理？</li>
 </ol>
@@ -651,6 +568,11 @@
           
 
   
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTU0Mi8xODA4OQ=="></div>
+    </div>
+
+  
 
 
 
@@ -687,9 +609,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="">
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="執筆畫青春">
             
-              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-author-name" itemprop="name">執筆畫青春</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -700,7 +622,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -739,6 +661,22 @@
             </div>
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/lw5946" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:732506298@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -786,21 +724,24 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder"></span>
+  <span class="author" itemprop="copyrightHolder">Liu Wang</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
@@ -943,6 +884,17 @@
 
 
   
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
 
 
 
@@ -964,18 +916,122 @@
   
 
   
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("BqftNhq3QU35wJHaCxKWG0Ii-gzGzoHsz", "TNxW1qGnwhjvRuosbOyxtHOK");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
   
+
+  
   
 
   
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
-
 
   
 

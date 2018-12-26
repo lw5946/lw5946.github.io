@@ -1,15 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>執筆畫青春</title>
+  <title>诗和远方</title>
   
-  <subtitle>诗和远方</subtitle>
+  <subtitle>執筆畫青春</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.myblogs.work/"/>
-  <updated>2018-12-25T14:58:49.876Z</updated>
+  <updated>2018-12-26T16:18:01.794Z</updated>
   <id>http://www.myblogs.work/</id>
   
+  <author>
+    <name>執筆畫青春</name>
+    
+  </author>
+  
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网站由jekyll迁移到hexo</title>
+    <link href="http://www.myblogs.work/blog/hexo_install/"/>
+    <id>http://www.myblogs.work/blog/hexo_install/</id>
+    <published>2018-12-25T16:00:00.000Z</published>
+    <updated>2018-12-26T16:18:01.794Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;安装git与node：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="http://www.myblogs.work/categories/blog/"/>
+    
+    
+      <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网站由jekyll迁移到hexo</title>
+    <link href="http://www.myblogs.work/blog/hexo-install/"/>
+    <id>http://www.myblogs.work/blog/hexo-install/</id>
+    <published>2018-12-25T16:00:00.000Z</published>
+    <updated>2018-12-26T14:23:38.478Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;安装git与node：&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="http://www.myblogs.work/categories/blog/"/>
+    
+    
+      <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
+    
+  </entry>
   
   <entry>
     <title>spring-cloud使用的一些技巧、心得</title>
@@ -101,17 +160,11 @@
     <link href="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/"/>
     <id>http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/</id>
     <published>2018-03-16T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.873Z</updated>
+    <updated>2018-12-26T14:23:38.369Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-目标&quot;&gt;&lt;a href=&quot;#1-目标&quot; class=&quot;headerlink&quot; title=&quot;1. 目标&quot;&gt;&lt;/a&gt;1.
-        
-      
+      使用服务网关统一管理对外暴露的服务
     
     </summary>
     
@@ -197,7 +250,7 @@
       
         
         
-          &lt;h2 id=&quot;1-共有jar&quot;&gt;&lt;a href=&quot;#1-共有jar&quot; class=&quot;headerlink&quot; title=&quot;1. 共有jar&quot;&gt;&lt;/a&gt;1. 共有jar&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-xml&quot;&gt;&lt;code
+          &lt;h2 id=&quot;1-共有jar&quot;&gt;&lt;a href=&quot;#1-共有jar&quot; class=&quot;headerlink&quot; title=&quot;1. 共有jar&quot;&gt;&lt;/a&gt;1. 共有jar&lt;/h2&gt;&lt;figure class=&quot;highlight xml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
         
       
     
@@ -436,32 +489,6 @@
   </entry>
   
   <entry>
-    <title>使用git同步</title>
-    <link href="http://www.myblogs.work/git/git-index/"/>
-    <id>http://www.myblogs.work/git/git-index/</id>
-    <published>2018-02-01T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.869Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;git的理念&quot;&gt;&lt;a href=&quot;#git的理念&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="git" scheme="http://www.myblogs.work/categories/git/"/>
-    
-    
-      <category term="git" scheme="http://www.myblogs.work/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Jekyll使用</title>
     <link href="http://www.myblogs.work/jekyll/jekyll-help/"/>
     <id>http://www.myblogs.work/jekyll/jekyll-help/</id>
@@ -484,6 +511,32 @@
     
     
       <category term="jekyll" scheme="http://www.myblogs.work/tags/jekyll/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用git同步</title>
+    <link href="http://www.myblogs.work/git/git-index/"/>
+    <id>http://www.myblogs.work/git/git-index/</id>
+    <published>2018-02-01T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.869Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;git的理念&quot;&gt;&lt;a href=&quot;#git的理念&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="git" scheme="http://www.myblogs.work/categories/git/"/>
+    
+    
+      <category term="git" scheme="http://www.myblogs.work/tags/git/"/>
     
   </entry>
   
@@ -511,59 +564,6 @@
     
     
       <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://www.myblogs.work/blog/hello-world/"/>
-    <id>http://www.myblogs.work/blog/hello-world/</id>
-    <published>2018-01-31T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.867Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;个人博客&quot;&gt;&lt;a href=&quot;#个人博客&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="blog" scheme="http://www.myblogs.work/categories/blog/"/>
-    
-    
-      <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>post blog demo</title>
-    <link href="http://www.myblogs.work/demo/blog-demo/"/>
-    <id>http://www.myblogs.work/demo/blog-demo/</id>
-    <published>2016-04-21T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.868Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Quick note about CSS animation. &lt;/p&gt;
-&lt;h2 id=&quot;CSS-Animation&quot;&gt;&lt;a href=&quot;#CSS-Animation&quot; class=&quot;headerlink&quot; title=&quot;CSS Animation&quot;&gt;&lt;/a&gt;CSS
-        
-      
-    
-    </summary>
-    
-      <category term="demo" scheme="http://www.myblogs.work/categories/demo/"/>
-    
-    
-      <category term="demo" scheme="http://www.myblogs.work/tags/demo/"/>
     
   </entry>
   

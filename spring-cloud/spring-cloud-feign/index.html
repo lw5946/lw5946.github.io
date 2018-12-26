@@ -74,7 +74,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="執筆畫青春" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="诗和远方" type="application/atom+xml">
 
 
 
@@ -86,7 +86,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="服务消费与断路器">
 <meta property="og:url" content="http://www.myblogs.work/spring-cloud/spring-cloud-feign/index.html">
-<meta property="og:site_name" content="執筆畫青春">
+<meta property="og:site_name" content="诗和远方">
 <meta property="og:description" content="客户端消费者，ribbon与feign，我更新换feign。 Feign使编写Web Service客户端变得非常简单。调用外部接口跟调用本地接口一样方便！ 一. 负载均衡1. 问题Q：曾经使用cloud的Brixton.RELEASE(spring-boot:1.3.5)版本用feign实现过负载均衡，现在使用Edgware.SR2(spring-boot:1.5.9.RELEASE)却不行了">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-12-25T14:58:49.875Z">
@@ -105,7 +105,7 @@
     sidebar: {"position":"right","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '作者'
@@ -128,7 +128,7 @@
 
 
 
-  <title>服务消费与断路器 | 執筆畫青春</title>
+  <title>服务消费与断路器 | 诗和远方</title>
   
 
 
@@ -159,12 +159,12 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">執筆畫青春</span>
+        <span class="site-title">诗和远方</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">诗和远方</p>
+        <p class="site-subtitle">執筆畫青春</p>
       
   </div>
 
@@ -195,7 +195,7 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
@@ -259,13 +259,13 @@
     <link itemprop="mainEntityOfPage" href="http://www.myblogs.work/spring-cloud/spring-cloud-feign/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
+      <meta itemprop="name" content="執筆畫青春">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="執筆畫青春">
+      <meta itemprop="name" content="诗和远方">
     </span>
 
     
@@ -325,9 +325,51 @@
 
           
           
+             <span id="/spring-cloud/spring-cloud-feign/" class="leancloud_visitors" data-flag-title="服务消费与断路器">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
           
 
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
           
 
           
@@ -356,158 +398,14 @@
 <hr>
 <p>Q: 之前实现的形式，看到是对接口的负载均衡，也就是说要负载均衡的接口需要在负载均衡器里写一个个方法对应，这样势必非常麻烦，如何解决呢？</p>
 <p>A: 服务间的负载均衡可以使用zuul</p>
-<h3 id="2-操作"><a href="#2-操作" class="headerlink" title="2. 操作"></a>2. 操作</h3><h4 id="yaml配置"><a href="#yaml配置" class="headerlink" title="yaml配置"></a>yaml配置</h4><pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token key atrule">spring</span><span class="token punctuation">:</span>
-  <span class="token key atrule">application</span><span class="token punctuation">:</span>
-    <span class="token key atrule">name</span><span class="token punctuation">:</span> loadbalance
-<span class="token comment" spellcheck="true">## 负载均衡器也注册到服务中心</span>
-<span class="token key atrule">eureka</span><span class="token punctuation">:</span>
-  <span class="token key atrule">client</span><span class="token punctuation">:</span>
-    <span class="token key atrule">service-url.defaultZone</span><span class="token punctuation">:</span> http<span class="token punctuation">:</span>//localhost<span class="token punctuation">:</span>1111/eureka
-<span class="token key atrule">feign</span><span class="token punctuation">:</span>
-  <span class="token key atrule">hystrix</span><span class="token punctuation">:</span>
-    <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-<span class="token key atrule">hystrix</span><span class="token punctuation">:</span>
-  <span class="token key atrule">command</span><span class="token punctuation">:</span>
-    <span class="token key atrule">default</span><span class="token punctuation">:</span>
-      <span class="token key atrule">execution</span><span class="token punctuation">:</span>
-        <span class="token key atrule">isolation</span><span class="token punctuation">:</span>
-          <span class="token key atrule">thread</span><span class="token punctuation">:</span>
-            <span class="token key atrule">timeoutInMilliseconds</span><span class="token punctuation">:</span> <span class="token number">3000000</span>
-<span class="token key atrule">ribbon</span><span class="token punctuation">:</span>
-  <span class="token comment" spellcheck="true"># 请求处理的超时时间</span>
-  <span class="token key atrule">ReadTimeout</span><span class="token punctuation">:</span> <span class="token number">3000</span>
-  <span class="token comment" spellcheck="true"># 请求连接的超时时间</span>
-  <span class="token key atrule">ConnectTimeout</span><span class="token punctuation">:</span> <span class="token number">3000</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-操作"><a href="#2-操作" class="headerlink" title="2. 操作"></a>2. 操作</h3><h4 id="yaml配置"><a href="#yaml配置" class="headerlink" title="yaml配置"></a>yaml配置</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">  application:</span></span><br><span class="line"><span class="attr">    name:</span> <span class="string">loadbalance</span></span><br><span class="line"><span class="comment">## 负载均衡器也注册到服务中心</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line"><span class="attr">  client:</span></span><br><span class="line">    <span class="string">service-url.defaultZone:</span> <span class="attr">http://localhost:1111/eureka</span></span><br><span class="line"><span class="attr">feign:</span></span><br><span class="line"><span class="attr">  hystrix:</span></span><br><span class="line"><span class="attr">    enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">hystrix:</span></span><br><span class="line"><span class="attr">  command:</span></span><br><span class="line"><span class="attr">    default:</span></span><br><span class="line"><span class="attr">      execution:</span></span><br><span class="line"><span class="attr">        isolation:</span></span><br><span class="line"><span class="attr">          thread:</span></span><br><span class="line"><span class="attr">            timeoutInMilliseconds:</span> <span class="number">3000000</span></span><br><span class="line"><span class="attr">ribbon:</span></span><br><span class="line">  <span class="comment"># 请求处理的超时时间</span></span><br><span class="line"><span class="attr">  ReadTimeout:</span> <span class="number">3000</span></span><br><span class="line">  <span class="comment"># 请求连接的超时时间</span></span><br><span class="line"><span class="attr">  ConnectTimeout:</span> <span class="number">3000</span></span><br></pre></td></tr></table></figure>
 <h4 id="application主类"><a href="#application主类" class="headerlink" title="application主类"></a>application主类</h4><p>添加<code>@EnableDiscoveryClient`</code>@EnableFeignClients`注解</p>
-<h4 id="feignClient及hystrix"><a href="#feignClient及hystrix" class="headerlink" title="feignClient及hystrix"></a>feignClient及hystrix</h4><pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>career<span class="token punctuation">.</span>api<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> com<span class="token punctuation">.</span>career<span class="token punctuation">.</span>api<span class="token punctuation">.</span>hystrix<span class="token punctuation">.</span>ComputeClientHystrix<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>cloud<span class="token punctuation">.</span>netflix<span class="token punctuation">.</span>feign<span class="token punctuation">.</span>FeignClient<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RequestMapping<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RequestMethod<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RequestParam<span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">/**
- * Created by LiuWang on 2017/10/31.
- */</span>
-<span class="token comment" spellcheck="true">// 注意：这里使用value对应服务名</span>
-<span class="token annotation punctuation">@FeignClient</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"spring-cloud-base-service"</span><span class="token punctuation">,</span> fallback <span class="token operator">=</span> ComputeClientHystrix<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
-<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">ComputeClient</span> <span class="token punctuation">{</span>
-
-    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"/add"</span><span class="token punctuation">,</span> method <span class="token operator">=</span> RequestMethod<span class="token punctuation">.</span>GET<span class="token punctuation">)</span>
-    Integer <span class="token function">add</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestParam</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span> Integer a<span class="token punctuation">,</span> <span class="token annotation punctuation">@RequestParam</span><span class="token punctuation">(</span><span class="token string">"b"</span><span class="token punctuation">)</span> Integer b<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>career<span class="token punctuation">.</span>api<span class="token punctuation">.</span>hystrix<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> com<span class="token punctuation">.</span>career<span class="token punctuation">.</span>api<span class="token punctuation">.</span>ComputeClient<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span>Component<span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">/**
- * Created by LiuWang on 2017/11/1.
- */</span>
-<span class="token annotation punctuation">@Component</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ComputeClientHystrix</span> <span class="token keyword">implements</span> <span class="token class-name">ComputeClient</span> <span class="token punctuation">{</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> Integer <span class="token function">add</span><span class="token punctuation">(</span>Integer a<span class="token punctuation">,</span> Integer b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Integer</span><span class="token punctuation">(</span><span class="token number">9999</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="feignClient及hystrix"><a href="#feignClient及hystrix" class="headerlink" title="feignClient及hystrix"></a>feignClient及hystrix</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.career.api;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.career.api.hystrix.ComputeClientHystrix;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.feign.FeignClient;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMethod;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestParam;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by LiuWang on 2017/10/31.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">// 注意：这里使用value对应服务名</span></span><br><span class="line"><span class="meta">@FeignClient</span>(value = <span class="string">"spring-cloud-base-service"</span>, fallback = ComputeClientHystrix.class)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">ComputeClient</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="meta">@RequestMapping</span>(value = <span class="string">"/add"</span>, method = RequestMethod.GET)</span><br><span class="line">    <span class="function">Integer <span class="title">add</span><span class="params">(@RequestParam(<span class="string">"a"</span>)</span> Integer a, @<span class="title">RequestParam</span><span class="params">(<span class="string">"b"</span>)</span> Integer b)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.career.api.hystrix;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.career.api.ComputeClient;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Created by LiuWang on 2017/11/1.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ComputeClientHystrix</span> <span class="keyword">implements</span> <span class="title">ComputeClient</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">add</span><span class="params">(Integer a, Integer b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Integer(<span class="number">9999</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="二-调用外部服务"><a href="#二-调用外部服务" class="headerlink" title="二. 调用外部服务"></a>二. 调用外部服务</h2><p>使用Feign调用其他服务的接口特别方便</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>sailing<span class="token punctuation">.</span>zunyi<span class="token punctuation">.</span>remoteapi<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> com<span class="token punctuation">.</span>sailing<span class="token punctuation">.</span>zunyi<span class="token punctuation">.</span>remoteapi<span class="token punctuation">.</span>hystrix<span class="token punctuation">.</span>CarClientHystrix<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>cloud<span class="token punctuation">.</span>netflix<span class="token punctuation">.</span>feign<span class="token punctuation">.</span>FeignClient<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>GetMapping<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span>RequestParam<span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">/**
- * 调用车辆大数据平台接口
- *
- * @author LiuWang
- * @date 2017/11/8
- */</span>
-<span class="token comment" spellcheck="true">// 注意：这里使用url</span>
-<span class="token comment" spellcheck="true">// ${remote-api.car}为application.yaml配置中的信息</span>
-<span class="token annotation punctuation">@FeignClient</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"car-api"</span><span class="token punctuation">,</span> url <span class="token operator">=</span> <span class="token string">"${remote-api.car}"</span><span class="token punctuation">,</span> fallback <span class="token operator">=</span> CarClientHystrix<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
-<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">CarBigData</span> <span class="token punctuation">{</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 从车辆大数据平台获取过车总数
-     *
-     * @author LiuWang
-     * @date 2017/11/9 9:51
-     */</span>
-    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"/clyp/gcxxtj/getGcxxTj"</span><span class="token punctuation">)</span>
-    String <span class="token function">carAmonut</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 车驾管信息
-     *
-     * @param hphm 车牌号
-     * @param hpzl 车牌种类(01,02,03等)
-     * @author LiuWang
-     * @date 2018/3/6 13:35
-     */</span>
-    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">"/clyp/cljbxx/getcljbxx"</span><span class="token punctuation">)</span>
-    String <span class="token function">carInfo</span><span class="token punctuation">(</span><span class="token annotation punctuation">@RequestParam</span><span class="token punctuation">(</span><span class="token string">"hphm"</span><span class="token punctuation">)</span> String hphm<span class="token punctuation">,</span> <span class="token annotation punctuation">@RequestParam</span><span class="token punctuation">(</span><span class="token string">"hpzl"</span><span class="token punctuation">)</span> String hpzl<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="三-断路器hystrix"><a href="#三-断路器hystrix" class="headerlink" title="三. 断路器hystrix"></a>三. 断路器hystrix</h2><pre class="line-numbers language-yaml"><code class="language-yaml"><span class="token comment" spellcheck="true">#开启断路器</span>
-<span class="token key atrule">feign</span><span class="token punctuation">:</span>
-  <span class="token key atrule">hystrix</span><span class="token punctuation">:</span>
-    <span class="token key atrule">enabled</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-<span class="token comment" spellcheck="true">#hystrix断路器超时(执行fallback方法)设置</span>
-<span class="token key atrule">hystrix</span><span class="token punctuation">:</span>
-  <span class="token key atrule">command</span><span class="token punctuation">:</span>
-    <span class="token key atrule">default</span><span class="token punctuation">:</span>
-      <span class="token key atrule">execution</span><span class="token punctuation">:</span>
-        <span class="token key atrule">isolation</span><span class="token punctuation">:</span>
-          <span class="token key atrule">thread</span><span class="token punctuation">:</span>
-            <span class="token key atrule">timeoutInMilliseconds</span><span class="token punctuation">:</span> <span class="token number">30000</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> com<span class="token punctuation">.</span>sailing<span class="token punctuation">.</span>zunyi<span class="token punctuation">.</span>remoteapi<span class="token punctuation">.</span>hystrix<span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> com<span class="token punctuation">.</span>sailing<span class="token punctuation">.</span>zunyi<span class="token punctuation">.</span>remoteapi<span class="token punctuation">.</span>CarBigData<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>slf4j<span class="token punctuation">.</span>Logger<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>slf4j<span class="token punctuation">.</span>LoggerFactory<span class="token punctuation">;</span>
-<span class="token keyword">import</span> org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span>Component<span class="token punctuation">;</span>
-
-<span class="token comment" spellcheck="true">/**
- * 调用车辆大数据平台接口的回调类
- *
- * @author LiuWang
- * @date 2017/11/11
- */</span>
-<span class="token annotation punctuation">@Component</span>
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CarClientHystrix</span> <span class="token keyword">implements</span> <span class="token class-name">CarBigData</span> <span class="token punctuation">{</span>
-    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> Logger LOGGER <span class="token operator">=</span> LoggerFactory<span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span>CarClientHystrix<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true">/**
-     * 查询过车总数接口调用失败时返回"-1"
-     *
-     * @author LiuWang
-     * @date 2017/11/11 15:17
-     */</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> String <span class="token function">carAmonut</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token string">"-1"</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">public</span> String <span class="token function">carInfo</span><span class="token punctuation">(</span>String hphm<span class="token punctuation">,</span> String hpzl<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        LOGGER<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"------查询车驾管信息失败-----hphm:{},hpzl:{}"</span><span class="token punctuation">,</span> hphm<span class="token punctuation">,</span> hpzl<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span> <span class="token string">"-1"</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.sailing.zunyi.remoteapi;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.sailing.zunyi.remoteapi.hystrix.CarClientHystrix;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.feign.FeignClient;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestParam;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 调用车辆大数据平台接口</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LiuWang</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2017/11/8</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">// 注意：这里使用url</span></span><br><span class="line"><span class="comment">// $&#123;remote-api.car&#125;为application.yaml配置中的信息</span></span><br><span class="line"><span class="meta">@FeignClient</span>(name = <span class="string">"car-api"</span>, url = <span class="string">"$&#123;remote-api.car&#125;"</span>, fallback = CarClientHystrix.class)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">CarBigData</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从车辆大数据平台获取过车总数</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@author</span> LiuWang</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span> 2017/11/9 9:51</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(value = <span class="string">"/clyp/gcxxtj/getGcxxTj"</span>)</span><br><span class="line">    <span class="function">String <span class="title">carAmonut</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 车驾管信息</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> hphm 车牌号</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> hpzl 车牌种类(01,02,03等)</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@author</span> LiuWang</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span> 2018/3/6 13:35</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(value = <span class="string">"/clyp/cljbxx/getcljbxx"</span>)</span><br><span class="line">    <span class="function">String <span class="title">carInfo</span><span class="params">(@RequestParam(<span class="string">"hphm"</span>)</span> String hphm, @<span class="title">RequestParam</span><span class="params">(<span class="string">"hpzl"</span>)</span> String hpzl)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="三-断路器hystrix"><a href="#三-断路器hystrix" class="headerlink" title="三. 断路器hystrix"></a>三. 断路器hystrix</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#开启断路器</span></span><br><span class="line"><span class="attr">feign:</span></span><br><span class="line"><span class="attr">  hystrix:</span></span><br><span class="line"><span class="attr">    enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment">#hystrix断路器超时(执行fallback方法)设置</span></span><br><span class="line"><span class="attr">hystrix:</span></span><br><span class="line"><span class="attr">  command:</span></span><br><span class="line"><span class="attr">    default:</span></span><br><span class="line"><span class="attr">      execution:</span></span><br><span class="line"><span class="attr">        isolation:</span></span><br><span class="line"><span class="attr">          thread:</span></span><br><span class="line"><span class="attr">            timeoutInMilliseconds:</span> <span class="number">30000</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.sailing.zunyi.remoteapi.hystrix;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.sailing.zunyi.remoteapi.CarBigData;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 调用车辆大数据平台接口的回调类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LiuWang</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2017/11/11</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CarClientHystrix</span> <span class="keyword">implements</span> <span class="title">CarBigData</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger LOGGER = LoggerFactory.getLogger(CarClientHystrix.class);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 查询过车总数接口调用失败时返回"-1"</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@author</span> LiuWang</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@date</span> 2017/11/11 15:17</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">carAmonut</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"-1"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">carInfo</span><span class="params">(String hphm, String hpzl)</span> </span>&#123;</span><br><span class="line">        LOGGER.info(<span class="string">"------查询车驾管信息失败-----hphm:&#123;&#125;,hpzl:&#123;&#125;"</span>, hphm, hpzl);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"-1"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -584,6 +482,11 @@
           
 
   
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTU0Mi8xODA4OQ=="></div>
+    </div>
+
+  
 
 
 
@@ -620,9 +523,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="">
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="執筆畫青春">
             
-              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-author-name" itemprop="name">執筆畫青春</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -633,7 +536,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -672,6 +575,22 @@
             </div>
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/lw5946" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:732506298@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -719,21 +638,24 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder"></span>
+  <span class="author" itemprop="copyrightHolder">Liu Wang</span>
 
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
   
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
@@ -876,6 +798,17 @@
 
 
   
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
 
 
 
@@ -897,18 +830,122 @@
   
 
   
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("BqftNhq3QU35wJHaCxKWG0Ii-gzGzoHsz", "TNxW1qGnwhjvRuosbOyxtHOK");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
   
+
+  
   
 
   
 
   
-  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
-  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
-
 
   
 

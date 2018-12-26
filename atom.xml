@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.myblogs.work/"/>
-  <updated>2018-12-26T16:18:01.794Z</updated>
+  <updated>2018-12-26T16:51:28.845Z</updated>
   <id>http://www.myblogs.work/</id>
   
   <author>
@@ -18,37 +18,10 @@
   
   <entry>
     <title>网站由jekyll迁移到hexo</title>
-    <link href="http://www.myblogs.work/blog/hexo_install/"/>
-    <id>http://www.myblogs.work/blog/hexo_install/</id>
-    <published>2018-12-25T16:00:00.000Z</published>
-    <updated>2018-12-26T16:18:01.794Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;安装git与node：&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="blog" scheme="http://www.myblogs.work/categories/blog/"/>
-    
-    
-      <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网站由jekyll迁移到hexo</title>
     <link href="http://www.myblogs.work/blog/hexo-install/"/>
     <id>http://www.myblogs.work/blog/hexo-install/</id>
     <published>2018-12-25T16:00:00.000Z</published>
-    <updated>2018-12-26T14:23:38.478Z</updated>
+    <updated>2018-12-26T16:51:28.845Z</updated>
     
     <summary type="html">
     
@@ -515,6 +488,33 @@
   </entry>
   
   <entry>
+    <title>我的网站</title>
+    <link href="http://www.myblogs.work/blog/website/"/>
+    <id>http://www.myblogs.work/blog/website/</id>
+    <published>2018-02-01T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.868Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;网址&quot;&gt;&lt;a href=&quot;#网址&quot; class=&quot;headerlink&quot; title=&quot;网址&quot;&gt;&lt;/a&gt;网址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.myblogs.work&quot;&gt;www.myblogs.work&lt;/a&gt;&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="http://www.myblogs.work/categories/blog/"/>
+    
+    
+      <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用git同步</title>
     <link href="http://www.myblogs.work/git/git-index/"/>
     <id>http://www.myblogs.work/git/git-index/</id>
@@ -541,11 +541,11 @@
   </entry>
   
   <entry>
-    <title>我的网站</title>
-    <link href="http://www.myblogs.work/blog/website/"/>
-    <id>http://www.myblogs.work/blog/website/</id>
-    <published>2018-02-01T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.868Z</updated>
+    <title>Hello World</title>
+    <link href="http://www.myblogs.work/blog/hello-world/"/>
+    <id>http://www.myblogs.work/blog/hello-world/</id>
+    <published>2018-01-31T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.867Z</updated>
     
     <summary type="html">
     
@@ -553,8 +553,7 @@
       
         
         
-          &lt;h2 id=&quot;网址&quot;&gt;&lt;a href=&quot;#网址&quot; class=&quot;headerlink&quot; title=&quot;网址&quot;&gt;&lt;/a&gt;网址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.myblogs.work&quot;&gt;www.myblogs.work&lt;/a&gt;&lt;/p&gt;
-&lt;h2
+          &lt;h2 id=&quot;个人博客&quot;&gt;&lt;a href=&quot;#个人博客&quot; class=&quot;headerlink&quot;
         
       
     

@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="诗和远方">
 <meta property="og:description" content="安装 安装git与node：https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo  npm\yarn配置node -&amp;gt; npm配置: https://blog.csdn.net/wanshaobo888/article/details/70254917   node -&amp;gt; yarn配置: https://blog.csdn.net/wa">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-26T16:51:28.845Z">
+<meta property="og:updated_time" content="2018-12-27T14:25:11.400Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网站由jekyll迁移到hexo">
 <meta name="twitter:description" content="安装 安装git与node：https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo  npm\yarn配置node -&amp;gt; npm配置: https://blog.csdn.net/wanshaobo888/article/details/70254917   node -&amp;gt; yarn配置: https://blog.csdn.net/wa">
@@ -137,6 +137,16 @@
 
 
 
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?e76b90a84346c8edd97a1acd57278563";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
 
 
 
@@ -166,7 +176,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">執筆畫青春</p>
+        <h1 class="site-subtitle" itemprop="description">執筆畫青春</h1>
       
   </div>
 
@@ -196,16 +206,6 @@
         </li>
       
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
@@ -227,9 +227,41 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -275,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">网站由jekyll迁移到hexo</h1>
+          <h2 class="post-title" itemprop="name headline">网站由jekyll迁移到hexo</h2>
         
 
         <div class="post-meta">
@@ -352,24 +384,12 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  388
+                  491
                 </span>
               
 
               
-                <span class="post-meta-divider">|</span>
-              
 
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1
-                </span>
               
             </div>
           
@@ -408,9 +428,26 @@
 <li><p>上传的是源码部分<br><a href="https://www.jianshu.com/p/67c57c70f275" target="_blank" rel="noopener">https://www.jianshu.com/p/67c57c70f275</a></p>
 </li>
 </ol>
-<h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><p><a href="https://www.jianshu.com/p/78c218f9d1e7" target="_blank" rel="noopener">https://www.jianshu.com/p/78c218f9d1e7</a></p>
+<h1 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h1><h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><ol>
+<li>尽量不修改主题的文件， 避免影响更新！！！</li>
+<li>修改样式，可以在themes\<code>使用的主题</code>\source\css_custom\custom.styl</li>
+</ol>
+<h2 id="资源链接"><a href="#资源链接" class="headerlink" title="资源链接"></a>资源链接</h2><p>首先参考官方说明</p>
+<p><a href="https://www.jianshu.com/p/78c218f9d1e7" target="_blank" rel="noopener">https://www.jianshu.com/p/78c218f9d1e7</a></p>
 <p><a href="https://www.jianshu.com/p/2640561e96f8" target="_blank" rel="noopener">https://www.jianshu.com/p/2640561e96f8</a></p>
 <p><a href="https://www.jianshu.com/p/c9de55660d1b" target="_blank" rel="noopener">https://www.jianshu.com/p/c9de55660d1b</a></p>
+<p>## </p>
+<h1 id="npm包安装一览"><a href="#npm包安装一览" class="headerlink" title="npm包安装一览"></a>npm包安装一览</h1><ol>
+<li><p>站内微搜索， 需安装插件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>给博客添加feed</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>给博客生成站点地图</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-seo-friendly-sitemap --save</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 <h1 id="jade"><a href="#jade" class="headerlink" title="jade:"></a>jade:</h1><p><a href="https://www.jianshu.com/p/05ed25bfc2c5" target="_blank" rel="noopener">https://www.jianshu.com/p/05ed25bfc2c5</a></p>
 <h1 id="next主题"><a href="#next主题" class="headerlink" title="next主题"></a>next主题</h1><p>官方中文文档<br><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a><br>官方github中文文档<br><a href="https://github.com/iissnan/hexo-theme-next/blob/master/README.cn.md" target="_blank" rel="noopener">https://github.com/iissnan/hexo-theme-next/blob/master/README.cn.md</a><br>教程–简书<br><a href="https://www.jianshu.com/p/21c94eb7bcd1" target="_blank" rel="noopener">https://www.jianshu.com/p/21c94eb7bcd1</a></p>
 <h1 id="博客迁移"><a href="#博客迁移" class="headerlink" title="博客迁移"></a>博客迁移</h1><ol>
@@ -597,13 +634,13 @@
                   <span class="links-of-author-item">
                     <a href="https://github.com/lw5946" target="_blank" title="GitHub">
                       
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                        <i class="fa fa-fw fa-github"></i></a>
                   </span>
                 
                   <span class="links-of-author-item">
                     <a href="mailto:732506298@qq.com" target="_blank" title="E-Mail">
                       
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                        <i class="fa fa-fw fa-envelope"></i></a>
                   </span>
                 
             </div>
@@ -630,7 +667,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优化"><span class="nav-number">2.</span> <span class="nav-text">优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jade"><span class="nav-number">3.</span> <span class="nav-text">jade:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#next主题"><span class="nav-number">4.</span> <span class="nav-text">next主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#博客迁移"><span class="nav-number">5.</span> <span class="nav-text">博客迁移</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">6.</span> <span class="nav-text">问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优化"><span class="nav-number">2.</span> <span class="nav-text">优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原则"><span class="nav-number">2.1.</span> <span class="nav-text">原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资源链接"><span class="nav-number">2.2.</span> <span class="nav-text">资源链接</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#npm包安装一览"><span class="nav-number">3.</span> <span class="nav-text">npm包安装一览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jade"><span class="nav-number">4.</span> <span class="nav-text">jade:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#next主题"><span class="nav-number">5.</span> <span class="nav-text">next主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#博客迁移"><span class="nav-number">6.</span> <span class="nav-text">博客迁移</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">7.</span> <span class="nav-text">问题</span></a></li></ol></div>
             
 
           </div>
@@ -664,7 +701,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9.5k</span>
+    <span title="Site words total count">9.6k</span>
   
 </div>
 
@@ -697,6 +734,12 @@
       </div>
     
 
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
     
 
   </div>
@@ -839,6 +882,323 @@
 
   
 
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('10');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'manual') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
 
 
 
@@ -955,8 +1315,48 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Evernote,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
   
 
   

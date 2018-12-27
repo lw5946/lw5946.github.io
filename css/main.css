@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #691362;
+  background: #8cd0ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -1918,7 +1918,6 @@ pre .javascript .function {
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: justify;
-  white-space: nowrap;
   line-height: 1.8;
 }
 .post-toc .nav .nav-child {
@@ -2362,6 +2361,29 @@ pre .javascript .function {
 .site-uv::after {
   content: "|";
   padding-left: 10px;
+}
+#needsharebutton-postbottom {
+  position: relative;
+  cursor: pointer;
+  height: 26px;
+}
+#needsharebutton-postbottom .btn {
+  display: initial;
+  padding: 1px 4px;
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+#needsharebutton-float {
+  position: fixed;
+  bottom: 38px;
+  left: -8px;
+  z-index: 9999;
+  cursor: pointer;
+}
+#needsharebutton-float .btn {
+  padding: 0 10px 0 14px;
+  border: 1px solid #555;
+  border-radius: 4px;
 }
 .page-archive .archive-page-counter {
   position: relative;
@@ -2911,7 +2933,6 @@ pre .javascript .function {
 }
 .links-of-author-item {
   margin: 5px 0 0;
-  width: 50%;
 }
 .links-of-author-item a {
   max-width: 216px;
@@ -2961,9 +2982,7 @@ pre .javascript .function {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   margin: 5px 0 0;
-  width: 50%;
   display: inline-block;
-  width: unset;
 }
 .links-of-blogroll-inline .links-of-blogroll-item a {
   max-width: 216px;
@@ -3054,10 +3073,11 @@ pre .javascript .function {
 }
 .post-body h3 {
   font-size: 1.3em;
-  border-bottom: 1px dotted #eee;
+  border-bottom: 1px solid #eee;
 }
 .post-body h4 {
   font-size: 1.2em;
+  border-bottom: 1px dotted #eee;
 }
 .post-body h5 {
   font-size: 1.07em;

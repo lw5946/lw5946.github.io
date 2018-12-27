@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>http://www.myblogs.work</loc>
+        <changefreq>daily</changefreq>
+        <priority>1</priority>
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/blog/hexo-install/</loc>
+        <lastmod>2018-12-27T14:25:11.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/</loc>
+        <lastmod>2018-12-26T14:23:38.369Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-tip/</loc>
+        <lastmod>2018-12-25T14:58:49.876Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-version/</loc>
+        <lastmod>2018-12-25T14:58:49.876Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-feign/</loc>
+        <lastmod>2018-12-25T14:58:49.875Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-preface/</loc>
+        <lastmod>2018-12-25T14:58:49.875Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-eureka-1/</loc>
+        <lastmod>2018-12-25T14:58:49.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-eureka/</loc>
+        <lastmod>2018-12-25T14:58:49.874Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-config/</loc>
+        <lastmod>2018-12-25T14:58:49.873Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-config-1/</loc>
+        <lastmod>2018-12-25T14:58:49.873Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-boot/spring-boot-swagger/</loc>
+        <lastmod>2018-12-25T14:58:49.872Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-boot/spring-boot-admin/</loc>
+        <lastmod>2018-12-25T14:58:49.871Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-boot/spring-boot-mail/</loc>
+        <lastmod>2018-12-25T14:58:49.871Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-boot/spring-boot-banner/</loc>
+        <lastmod>2018-12-25T14:58:49.871Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/jekyll/jekyll-help/</loc>
+        <lastmod>2018-12-25T14:58:49.870Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/jekyll/local-server/</loc>
+        <lastmod>2018-12-25T14:58:49.870Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/git/git-index/</loc>
+        <lastmod>2018-12-25T14:58:49.869Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/demo/blog-demo/</loc>
+        <lastmod>2018-12-25T14:58:49.868Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/blog/website/</loc>
+        <lastmod>2018-12-25T14:58:49.868Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/blog/github-page/</loc>
+        <lastmod>2018-12-25T14:58:49.867Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/blog/hello-world/</loc>
+        <lastmod>2018-12-25T14:58:49.867Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+</urlset>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[网站由jekyll迁移到hexo]]></title>
+    <url>%2Fblog%2Fhexo-install%2F</url>
+    <content type="text"><![CDATA[安装 安装git与node：https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/details/70254917 node -&gt; yarn配置: https://blog.csdn.net/wanshaobo888/article/details/70254917https://blog.csdn.net/kucoll/article/details/79890176 安装hexo安装hexo, 而不是hexo-cli,才配置成功环境变量: npm install -g hexohexo设置为环境变量:https://www.cnblogs.com/yuyufeng/p/5723778.html 安装主题：https://github.com/SumiMakito/hexo-theme-typography/blob/master/README_zh-CN.md 安装python：https://blog.csdn.net/weixin_36222137/article/details/78463543?locationNum=10&amp;fps=1 使用hexo d 自动上传到服务器https://blog.csdn.net/without_scruple/article/details/79085907 上传的是源码部分https://www.jianshu.com/p/67c57c70f275 优化原则 尽量不修改主题的文件， 避免影响更新！！！ 修改样式，可以在themes\使用的主题\source\css_custom\custom.styl 资源链接首先参考官方说明 https://www.jianshu.com/p/78c218f9d1e7 https://www.jianshu.com/p/2640561e96f8 https://www.jianshu.com/p/c9de55660d1b ## npm包安装一览 站内微搜索， 需安装插件： 12npm install hexo-generator-search --savenpm install hexo-generator-searchdb --save 给博客添加feed 1npm install hexo-generator-feed --save 给博客生成站点地图 1npm install hexo-generator-seo-friendly-sitemap --save jade:https://www.jianshu.com/p/05ed25bfc2c5 next主题官方中文文档http://theme-next.iissnan.com/官方github中文文档https://github.com/iissnan/hexo-theme-next/blob/master/README.cn.md教程–简书https://www.jianshu.com/p/21c94eb7bcd1 博客迁移 下载之后，安装node，hexo（node_modules） 进入博客根目录，运行命令npm install hexo --save命令，然后运行npm install安装各模块所需组件 在博客根目录运行hexo -v可以查看各组件版本，即表示hexo安装成功 问题 unable to sync pages directory 可能是组件所需的node_modules安装的不全，在博客根目录运行npm install ， 若还没好，看github是否发错误信息邮件 无法生成html https://blog.csdn.net/huihut/article/details/73196343 字数统计配置好之后需要安装 https://github.com/willin/hexo-wordcount LearnCloud需要新建class https://www.jianshu.com/p/702a7aec4d00]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[spring-cloud使用的一些技巧、心得]]></title>
+    <url>%2Fspring-cloud%2Fspring-cloud-tip%2F</url>
+    <content type="text"><![CDATA[技巧的总结 使用主机名而不是ip地址访问服务的时候使用主机名（域名），如：localhost等，而不是IP地址 因为，如果使用ip地址，服务在迁移的时候又需要改调用服务的ip，因为微服务会有很多个小服务，这一改起来可能就很多了，而主机名的话，可以通过修改hosts文件来自定义。可以写个脚本文件来修改 如果机器多，可以搭个dns服务器，然后其他机器通过dns服务器解析域名 这样部署新程序的时候，迁移的时候，不需要修改配置文件中的域名 写日志elk logstash es kibana]]></content>
+      <categories>
+        <category>spring-cloud</category>
+      </categories>
+      <tags>
+        <tag>spring-cloud</tag>
+        <tag>tip</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[高可用服务注册中心]]></title>
+    <url>%2Fspring-cloud%2Fspring-cloud-eureka-1%2F</url>
+    <content type="text"><![CDATA[之前服务注册中心 说明了服务注册server、client以及一些列的功能，但是这个时候服务中心是单一的，如果出问题，就会造成很严重的后果，服务中心也可以互相注册，形成服务中心的高可用。 准备首先准备两个服务注册中心， 12345678910111213# 第一个注册中心server: port: 1112eureka: instance: ip-address: 127.0.0.1# hostname: server2 client: service-url: # 通过ip访问 defaultZone: http://127.0.0.1:1111/eureka # 通过hostname访问 # defaultZone: http://server1:1111/eureka 1234567891011# 第二个注册中心server: port: 1111eureka: instance: ip-address: 127.0.0.1# hostname: server2 client: service-url: defaultZone: http://127.0.0.1:1112/eureka# defaultZone: http://server1:1112/eureka 客户端多个服务中心都用上 1eureka.client.serviceUrl.defaultZone=http://127.0.0.1:1111/eureka,http://127.0.0.1:1112/eureka 服务中心之间最好是相互注册，形成闭环 文章部分内容引自：http://blog.didispace.com/springcloud6/]]></content>
+      <categories>
+        <category>spring-cloud</category>
+      </categories>
+      <tags>
+        <tag>spring-cloud</tag>
+        <tag>eureka</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[配置中心高可用]]></title>
+    <url>%2Fspring-cloud%2Fspring-cloud-config-1%2F</url>
+    <content type="text"><![CDATA[之前配置中心中主要说明了使用配置中心以及客户端的用法，这个配置中心是单点的，可以借助Eureka Server实现配置中心的高可用，让客户端通过配置中心在服务中心注册的serviceId来访问 1. 将配置中心注册到Eureka Server1234567891011121314151617# 配置中心的bootstrap.yamlspring: application: name: config-server# 通过本地仓库 profiles: active: native cloud: config: server: native: # 配置文件根路径 search-locations: E:/IdeaProjects/properties/eureka: client: # 服务注册中心的url service-url.defaultZone: http://localhost:1111/eureka 123456789@EnableDiscoveryClient@EnableConfigServer@SpringBootApplicationpublic class ConfigserverApplication &#123; public static void main(String[] args) &#123; SpringApplication.run(ConfigserverApplication.class, args); &#125;&#125; 2.客户端中引用12345678910111213spring: application: name: spring-cloud-base-service cloud: config: discovery: enabled: true service-id: config-server profile: deveureka: client: # 服务注册中心的url service-url.defaultZone: http://localhost:1111/eureka 3.效果仍然通过之前的方式查看引用的配置 这里引用的是E:/IdeaProjects/properties/spring-cloud-base-service-dev.yaml 1234567@Value("$&#123;from&#125;")private String from;@RequestMapping("/from")public String from() &#123; return from;&#125;]]></content>
+      <categories>
+        <category>spring-cloud</category>
+      </categories>
+      <tags>
+        <tag>spring-cloud</tag>
+        <tag>config-server</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[服务网关]]></title>
+    <url>%2Fspring-cloud%2Fspring-cloud-api-gateway%2F</url>
+    <content type="text"><![CDATA[1. 目标服务网关是微服务中不可或缺的一部分，是服务暴露在外的前锋。 一些功能提取到服务网关中，是内部服务更注重于业务功能 网关功能如下： 统一多个服务路由、负载均衡 统一对外暴露接口、内部服务变化尽量不影响外部的调用 统一权限控制，分离非业务的功能 2. 服务路由2.1 pom123456789&lt;dependency&gt; &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-netflix-zuul&lt;/artifactId&gt;&lt;/dependency&gt;&lt;!-- 需要注册到服务中心，所以需要eureka --&gt;&lt;dependency&gt; &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-client&lt;/artifactId&gt;&lt;/dependency&gt; 2.2 yaml123# application.yamlserver: port: 5555 123456789101112131415161718192021222324spring: application: name: api-gatewayzuul: routes: # rotes to url api-a-url: path: /api-a-url/** url: http://127.0.0.1:8080/ # rotes to serviceId # 如果多个服务在服务中心注册的serviceId(单个应用的spring.application.name)一样， # 就可以实现负载均衡 api-a: path: /api-a/** serviceId: spring-cloud-base-service api-b: path: /api-b/** serviceId: demo-b # zuul.routes.&lt;serviceId&gt;=&lt;path&gt; spring-cloud-base-service: /demo/**eureka: client: service-url: defaultZone: http://127.0.0.1:1111/eureka/ 路由配置规则： zuul.routes.&lt;route&gt;.path 与 zuul.routes.&lt;route&gt;.serviceId（或zuul.routes.&lt;route&gt;.url） zuul.routes.&lt;serviceId&gt;=&lt;path&gt; 其中 &lt;route&gt;表示规则名，可以自定义；&lt;serviceId&gt;表示服务名；&lt;path&gt;表示客户端请求的路径表达式 通配符含义： 通配符 含义 举例 ? 匹配单个字符 /api-a/a * 匹配对个字符，一层路径 /api-a/aaa ** 任意匹配 /api-a/aaa或/api-a/a/b/c 2.3 java12345678910111213141516171819package com.lw.apigateway;import org.springframework.boot.SpringApplication;import org.springframework.cloud.client.SpringCloudApplication;import org.springframework.cloud.netflix.zuul.EnableZuulProxy;/** * @EnableZuulProxy 注解开启Zuul * @author LiuWang * @date 2018/3/19 19:26 */@EnableZuulProxy@SpringCloudApplicationpublic class ApiGatewayApplication &#123; public static void main(String[] args) &#123; SpringApplication.run(ApiGatewayApplication.class, args); &#125;&#125; @SpringCloudApplication相当于:@SpringBootApplication、@EnableDiscoveryClient、@EnableCircuitBreaker的组合 2.4 使用 开启服务注册中心 将客户端spring-cloud-base-service打包，复制三份，修改server.port，分别为8080，8081，8082，开启 开启服务网关api-gateway 2.5 效果 当访问http://127.0.0.1:5555/api-a-url/add时会路由到http://127.0.0.1:8080/add 当访问http://127.0.0.1:5555/api-a/add时会路由到http://127.0.0.1:8080/add或http://127.0.0.1:8081/add或http://127.0.0.1:8082/add，多次请求，会发现各个服务窗口都有打印请求到的信息。负载均衡成功实现！ 当访问http://127.0.0.1:5555/api-b/add会路由到spring.application.name为demo-service的addcontroller上 3. 服务过滤123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051package com.lw.apigateway.filter;import com.netflix.zuul.ZuulFilter;import com.netflix.zuul.context.RequestContext;import org.apache.commons.lang.StringUtils;import org.slf4j.Logger;import org.slf4j.LoggerFactory;import javax.servlet.http.HttpServletRequest;/** * @author LiuWang * @date 2018/3/20 */public class AccessFilter extends ZuulFilter &#123; private static final Logger LOGGER = LoggerFactory.getLogger(AccessFilter.class); @Override public String filterType() &#123; return "pre"; &#125; @Override public int filterOrder() &#123; return 0; &#125; @Override public boolean shouldFilter() &#123; return true; &#125; @Override public Object run() &#123; RequestContext ctx = RequestContext.getCurrentContext(); HttpServletRequest request = ctx.getRequest(); LOGGER.info(String.format("%s request to %s", request.getMethod(), request.getRequestURL().toString())); String token = request.getParameter("token"); if (StringUtils.isBlank(token))&#123; LOGGER.warn("token is empty"); //未通过验证的返回信息 ctx.setSendZuulResponse(false); ctx.setResponseStatusCode(401); ctx.setResponseBody("token is empty"); return null; &#125; LOGGER.info("token is ok"); //通过验证，则继续请求的流程 return null; &#125;&#125; 自定义过滤器的实现，需要继承ZuulFilter，需要重写实现下面四个方法： filterType：返回一个字符串代表过滤器的类型，在zuul中定义了四种不同生命周期的过滤器类型，具体如下： pre：可以在请求被路由之前调用 routing：在路由请求时候被调用 post：在routing和error过滤器之后被调用 error：处理请求时发生错误时被调用 filterOrder：通过int值来定义过滤器的执行顺序 shouldFilter：返回一个boolean类型来判断该过滤器是否要执行，所以通过此函数可实现过滤器的开关。在上例中，我们直接返回true，所以该过滤器总是生效。 run：过滤器的具体逻辑。需要注意，这里我们通过ctx.setSendZuulResponse(false)令zuul过滤该请求，不对其进行路由，然后通过ctx.setResponseStatusCode(401)设置了其返回的错误码，当然我们也可以进一步优化我们的返回，比如，通过ctx.setResponseBody(body)对返回body内容进行编辑等。 在实现了自定义过滤器之后，还需要实例化该过滤器才能生效，我们只需要在应用主类中增加如下内容： 1234@Beanpublic AccessFilter accessFilter()&#123; return new AccessFilter();&#125; 启动该服务网关后，访问： http://localhost:5555/api-a/add?a=1&amp;b=2：返回401错误，页面显示token is empty http://localhost:5555/api-a/add?a=1&amp;b=2&amp;accessToken=token：正确路由到spring-cloud-base-service，并返回计算内容 filterType的其他类型以及生命周期如下： 4. 其他配置设置超时 12345678910111213141516# 断路器超时要 大于 负载均衡器超时总和# 负载均衡器超时总和不是 ReadTimeout + ConnectTimeout# 断路器设置hystrix: command: default: execution: isolation: thread: timeoutInMilliseconds: 30000# 负载均衡器设置ribbon: # 请求处理的超时时间 ReadTimeout: 1000 # 请求连接的超时时间 ConnectTimeout: 1000 5. 问题 如何在网关中设置统一的异常处理？ 参考文章（Edgware.SR2与此版本需要不同处理）： http://blog.didispace.com/spring-cloud-starter-dalston-6-1/ http://blog.didispace.com/spring-cloud-starter-dalston-6-2/ http://blog.didispace.com/spring-cloud-starter-dalston-6-3/ 6. 理解在Spring Cloud Netflix中，Zuul巧妙的整合了Eureka来实现面向服务的路由。实际上，我们可以直接将API网关也看做是Eureka服务治理下的一个普通微服务应用。它除了会将自己注册到Eureka服务注册中心上之外，也会从注册中心获取所有服务以及它们的实例清单。所以，在Eureka的帮助下，API网关服务本身就已经维护了系统中所有serviceId与实例地址的映射关系。当有外部请求到达API网关的时候，根据请求的URL路径找到最佳匹配的path规则，API网关就可以知道要将该请求路由到哪个具体的serviceId上去。由于在API网关中已经知道serviceId对应服务实例的地址清单，那么只需要通过Ribbon的负载均衡策略，直接在这些清单中选择一个具体的实例进行转发就能完成路由工作了。 7. 为什么要使用服务网关 不仅仅实现了路由功能来屏蔽诸多服务细节，更实现了服务级别、均衡负载的路由。 实现了接口权限校验与微服务业务逻辑的解耦。通过服务网关中的过滤器，在各生命周期中去校验请求的内容，将原本在对外服务层做的校验前移，保证了微服务的无状态性，同时降低了微服务的测试难度，让服务本身更集中关注业务逻辑的处理。 实现了断路器，不会因为具体微服务的故障而导致服务网关的阻塞，依然可以对外服务。 文章中部分内容引自： http://blog.didispace.com/springcloud5/ http://blog.didispace.com/spring-cloud-starter-dalston-6-2/]]></content>
+      <categories>
+        <category>spring-cloud</category>
+      </categories>
+      <tags>
+        <tag>spring-cloud</tag>
+        <tag>api-gateway</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[配置中心]]></title>
+    <url>%2Fspring-cloud%2Fspring-cloud-config%2F</url>
+    <content type="text"><![CDATA[1. 本地仓库管理配置1.1 配置中心服务端1.1.1 pom1234&lt;dependency&gt; &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-config-server&lt;/artifactId&gt;&lt;/dependency&gt; 1.1.2 yaml服务配置建议写在bootstrap.yaml文件中 123456789101112spring: application: name: config-server# 通过本地仓库 profiles: active: native cloud: config: server: native: # 配置文件根路径 search-locations: E:/IdeaProjects/properties/ 1.1.3 java123456789// 开启配置服务@EnableConfigServer@SpringBootApplicationpublic class ConfigserverApplication &#123; public static void main(String[] args) &#123; SpringApplication.run(ConfigserverApplication.class, args); &#125;&#125; 1.2 客户端1.2.1 pom1234&lt;dependency&gt; &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-config&lt;/artifactId&gt;&lt;/dependency&gt; 1.2.2 yaml1234567891011121314spring: application: name: spring-cloud-base-service cloud: config: # 引用配置为: 配置中心根目录/$&#123;label&#125;/$&#123;spring.application.name&#125;-$&#123;profile&#125;.yaml,如:E:/IdeaProjects/properties/config-label-test/spring-cloud-base-service-prod.yaml profile: prod label: config-label-test # 配置中心的url uri: http://127.0.0.1:7001/eureka: client: # 服务注册中心的url service-url.defaultZone: http://localhost:1111/eureka 1.2.3 java示例demo 123456789//DemoController类@Value("$&#123;from&#125;")private String from;//获取配置中的属性@RequestMapping("/from")public String from()&#123; return this.from;&#125; 2. git仓库管理配置2.1 服务端1.1.1 yaml1234567891011121314spring: application: name: config-server# 通过git方式 cloud: config: server: git: # git仓库的url uri: https://gitee.com/lw888/SpringCloud-Learning # 配置文件的根路径(仓库内的文件夹) search-paths: config-server/spring-cloud-base-service username: ******** password: ******** 2.2 客户端各属性的含义发生改变 123456789101112131415spring: application: name: spring-cloud-base-service cloud: config: # 引用配置为: $&#123;label&#125;分支的$&#123;search-paths&#125;/$&#123;spring.application.name&#125;-$&#123;profile&#125;.yaml # 如:config-label-test分支的config-server/spring-cloud-base-service/spring-cloud-base-service-prod.yaml profile: prod label: config-label-test # 配置中心的url uri: http://127.0.0.1:7001/eureka: client: # 服务注册中心的url service-url.defaultZone: http://localhost:1111/eureka 3. 配置映射规则说明3.1 本地配置映射 /{label}/{application}-{profile}.yaml 3.2 git仓库配置映射 spring.cloud.config.server.git.uri：配置git仓库位置 spring.cloud.config.server.git.searchPaths：配置仓库路径下的相对搜索位置，可以配置多个 spring.cloud.config.server.git.username：访问git仓库的用户名 spring.cloud.config.server.git.password：访问git仓库的用户密码 spring.cloud.config.label：对应git分支]]></content>
+      <categories>
+        <category>spring-cloud</category>
+      </categories>
+      <tags>
+        <tag>spring-cloud</tag>
+        <tag>config-server</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[服务消费与断路器]]></title>
+    <url>%2Fspring-cloud%2Fspring-cloud-feign%2F</url>
+    <content type="text"><![CDATA[客户端消费者，ribbon与feign，我更新换feign。 Feign使编写Web Service客户端变得非常简单。调用外部接口跟调用本地接口一样方便！ 一. 负载均衡1. 问题Q：曾经使用cloud的Brixton.RELEASE(spring-boot:1.3.5)版本用feign实现过负载均衡，现在使用Edgware.SR2(spring-boot:1.5.9.RELEASE)却不行了，报错： There was an unexpected error (type=Internal Server Error, status=500). com.netflix.client.ClientException: Load balancer does not have available server for client: spring-cloud-base-service A： 解决一，发现当设置hystrix和ribbon时不会出现这样的问题； 解决二，在客户端使用 eureka.instance.prefer-ip-address: true时也能解决，此配置表示优先使用ip地址而不是主机名 Q: 之前实现的形式，看到是对接口的负载均衡，也就是说要负载均衡的接口需要在负载均衡器里写一个个方法对应，这样势必非常麻烦，如何解决呢？ A: 服务间的负载均衡可以使用zuul 2. 操作yaml配置12345678910111213141516171819202122spring: application: name: loadbalance## 负载均衡器也注册到服务中心eureka: client: service-url.defaultZone: http://localhost:1111/eurekafeign: hystrix: enabled: truehystrix: command: default: execution: isolation: thread: timeoutInMilliseconds: 3000000ribbon: # 请求处理的超时时间 ReadTimeout: 3000 # 请求连接的超时时间 ConnectTimeout: 3000 application主类添加@EnableDiscoveryClient`@EnableFeignClients`注解 feignClient及hystrix123456789101112131415161718package com.career.api;import com.career.api.hystrix.ComputeClientHystrix;import org.springframework.cloud.netflix.feign.FeignClient;import org.springframework.web.bind.annotation.RequestMapping;import org.springframework.web.bind.annotation.RequestMethod;import org.springframework.web.bind.annotation.RequestParam;/** * Created by LiuWang on 2017/10/31. */// 注意：这里使用value对应服务名@FeignClient(value = "spring-cloud-base-service", fallback = ComputeClientHystrix.class)public interface ComputeClient &#123; @RequestMapping(value = "/add", method = RequestMethod.GET) Integer add(@RequestParam("a") Integer a, @RequestParam("b") Integer b);&#125; 123456789101112131415package com.career.api.hystrix;import com.career.api.ComputeClient;import org.springframework.stereotype.Component;/** * Created by LiuWang on 2017/11/1. */@Componentpublic class ComputeClientHystrix implements ComputeClient &#123; @Override public Integer add(Integer a, Integer b) &#123; return new Integer(9999); &#125;&#125; 二. 调用外部服务使用Feign调用其他服务的接口特别方便 1234567891011121314151617181920212223242526272829303132333435363738package com.sailing.zunyi.remoteapi;import com.sailing.zunyi.remoteapi.hystrix.CarClientHystrix;import org.springframework.cloud.netflix.feign.FeignClient;import org.springframework.web.bind.annotation.GetMapping;import org.springframework.web.bind.annotation.RequestParam;/** * 调用车辆大数据平台接口 * * @author LiuWang * @date 2017/11/8 */// 注意：这里使用url// $&#123;remote-api.car&#125;为application.yaml配置中的信息@FeignClient(name = "car-api", url = "$&#123;remote-api.car&#125;", fallback = CarClientHystrix.class)public interface CarBigData &#123; /** * 从车辆大数据平台获取过车总数 * * @author LiuWang * @date 2017/11/9 9:51 */ @GetMapping(value = "/clyp/gcxxtj/getGcxxTj") String carAmonut(); /** * 车驾管信息 * * @param hphm 车牌号 * @param hpzl 车牌种类(01,02,03等) * @author LiuWang * @date 2018/3/6 13:35 */ @GetMapping(value = "/clyp/cljbxx/getcljbxx") String carInfo(@RequestParam("hphm") String hphm, @RequestParam("hpzl") String hpzl);&#125; 三. 断路器hystrix123456789101112#开启断路器feign: hystrix: enabled: true#hystrix断路器超时(执行fallback方法)设置hystrix: command: default: execution: isolation: thread: timeoutInMilliseconds: 30000 12345678910111213141516171819202122232425262728293031323334package com.sailing.zunyi.remoteapi.hystrix;import com.sailing.zunyi.remoteapi.CarBigData;import org.slf4j.Logger;import org.slf4j.LoggerFactory;import org.springframework.stereotype.Component;/** * 调用车辆大数据平台接口的回调类 * * @author LiuWang * @date 2017/11/11 */@Componentpublic class CarClientHystrix implements CarBigData &#123; private static final Logger LOGGER = LoggerFactory.getLogger(CarClientHystrix.class); /** * 查询过车总数接口调用失败时返回"-1" * * @author LiuWang * @date 2017/11/11 15:17 */ @Override public String carAmonut() &#123; return "-1"; &#125; @Override public String carInfo(String hphm, String hpzl) &#123; LOGGER.info("------查询车驾管信息失败-----hphm:&#123;&#125;,hpzl:&#123;&#125;", hphm, hpzl); return "-1"; &#125;&#125;]]></content>
+      <categories>
+        <category>spring-cloud</category>
+      </categories>
+      <tags>
+        <tag>spring-cloud</tag>
+        <tag>feign</tag>
+        <tag>hystrix</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[服务注册中心]]></title>
+    <url>%2Fspring-cloud%2Fspring-cloud-eureka%2F</url>
+    <content type="text"><![CDATA[1. 共有jar1234567891011121314151617181920212223242526272829303132333435363738394041&lt;parent&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt; &lt;version&gt;1.5.9.RELEASE&lt;/version&gt; &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;&lt;/parent&gt;&lt;properties&gt; &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt; &lt;project.reporting.outputEncoding&gt;UTF-8&lt;/project.reporting.outputEncoding&gt; &lt;java.version&gt;1.8&lt;/java.version&gt; &lt;spring-cloud.version&gt;Edgware.SR2&lt;/spring-cloud.version&gt;&lt;/properties&gt;&lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt; &lt;scope&gt;test&lt;/scope&gt; &lt;/dependency&gt;&lt;/dependencies&gt;&lt;dependencyManagement&gt; &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-dependencies&lt;/artifactId&gt; &lt;version&gt;$&#123;spring-cloud.version&#125;&lt;/version&gt; &lt;type&gt;pom&lt;/type&gt; &lt;scope&gt;import&lt;/scope&gt; &lt;/dependency&gt; &lt;/dependencies&gt;&lt;/dependencyManagement&gt;&lt;build&gt; &lt;plugins&gt; &lt;plugin&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt; &lt;/plugin&gt; &lt;/plugins&gt;&lt;/build&gt; 2. 创建”服务注册中心”这个应用只作为服务注册中心,不用来做其他(不做业务功能) 相比较普通的服务,这个是另外加的 2.1 新增jar 1234&lt;dependency&gt; &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-server&lt;/artifactId&gt;&lt;/dependency&gt; 2.2 java通过@EnableEurekaServer注解启动一个服务注册中心提供给其他应用进行对话 1234567@EnableEurekaServer@SpringBootApplicationpublic class Application &#123; public static void main(String[] args) &#123; new SpringApplicationBuilder(Application.class).web(true).run(args); &#125;&#125; 2.3 yaml在默认设置下，该服务注册中心也会将自己作为客户端来尝试注册它自己，所以我们需要禁用它的客户端注册行为 123456789101112131415server: port: 1111eureka: client: ## 在默认设置下，该服务注册中心也会将自己作为客户端来尝试注册它自己 ## 所以我们需要禁用它的客户端注册行为 register-with-eureka: false fetch-registry: false# service-url:# defaultZone: http://localhost:$&#123;server.port&#125;/eureka/ server: # 关闭自我保护 enable-self-preservation: false # 清理无效client节点时间间隔 eviction-interval-timer-in-ms: 4000 为了与后续要进行注册的服务区分，这里将服务注册中心的端口通过server.port属性设置为1111 3.创建”客户端”3.1 新增jar1234&lt;dependency&gt; &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt; &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-client&lt;/artifactId&gt;&lt;/dependency&gt; 3.2 java1234567@EnableDiscoveryClient@SpringBootApplicationpublic class SpringCloudBaseApplication &#123; public static void main(String[] args) &#123; SpringApplication.run(SpringCloudBaseApplication.class, args); &#125;&#125; 实例，通过DiscoveryClient对象及相关的信息 1234567891011121314@RestControllerpublic class ComputeController &#123; private final Logger logger = Logger.getLogger(getClass()); @Autowired private DiscoveryClient client; @RequestMapping(value = "/add" ,method = RequestMethod.GET) public Integer add(@RequestParam Integer a, @RequestParam Integer b) &#123; //这个只是用来指导请求的主机名和serviceid,可以不要 ServiceInstance instance = client.getLocalServiceInstance(); Integer r = a + b; logger.info("/add, host:" + instance.getHost() + ", service_id:" + instance.getServiceId() + ", result:" + r); return r; &#125;&#125; 3.3 yaml12345678spring: application: name: spring-cloud-base-serviceserver: port: 8080eureka: client: service-url.defaultZone: http://localhost:1111/eureka 4. 访问http://localhost:1111/ 5. 问题其他服务重启（如修改网关等其他服务的配置之后重启）之后，发现再次调用服务，很多时候还是使用的之前的配置，必须把服务中心也重启 eureka.server.eviction-interval-timer-in-ms: 2000 清除无效服务配置也无效]]></content>
+      <categories>
+        <category>spring-cloud</category>
+      </categories>
+      <tags>
+        <tag>spring-cloud</tag>
+        <tag>eureka</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[spring-cloud-helloworld]]></title>
+    <url>%2Fspring-cloud%2Fspring-cloud-version%2F</url>
+    <content type="text"><![CDATA[SpringCloud版本号很多入门的教程里，发现spring-cloud的版本号为一串英文，Brixton.RELEASE，Dalston.SR4，现在更是到了Finchley.M8 Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其子项目也都维护着自己的发布版本号。那么每一个Spring Cloud的版本都会包含不同的子项目版本，为了要管理每个版本的子项目清单，避免版本名与子项目的发布号混淆，所以没有采用版本号的方式，而是通过命名的方式。 这些版本名字采用了伦敦地铁站的名字，根据字母表的顺序来对应版本时间顺序，比如：最早的Release版本：Angel，第二个Release版本：Brixton，以此类推…… 引用参考文章: http://blog.didispace.com/springcloud-version/]]></content>
+      <categories>
+        <category>spring-cloud</category>
+      </categories>
+      <tags>
+        <tag>spring-cloud</tag>
+        <tag>version</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[spring-cloud前言]]></title>
+    <url>%2Fspring-cloud%2Fspring-cloud-preface%2F</url>
+    <content type="text"><![CDATA[开始梳理SpringCloud的学习笔记和代码，并做一个简单的分享 学习SpringCloud前，最好先学习springboot 1. 目标 主要是自己学习过程的分享 如果当时用在项目上，会根据项目的需要做自定义的改变 优先使用各模块当时的最新版本(当前最稳定的是Edgware.SR2(对应boot:1.5.9.RELEASE，这里使用这个版本))(这个看来应该是spring-boot-1.x的最后版本，Finchley.M7版本对应的是boot2.x) 现在是入门级的分享，以后深入研究会一个个模块做分享 2. 规范(建议)2.1 bootstrap.yaml官方建议 机器翻译: 优先级：bootstrap.yaml &gt; application.yaml 如果某个配置在application.yaml和bootstrap.yaml中都有，使用的是bootstrap.yaml中的。 bootstrap.yaml放引用cloud组件的配置 application.yaml放boot独有的配置 3. 上帝视角 微服务在这里暂时分成四个部分： 服务注册中心 服务应用（业务） 配置中心 网关 其中前三个又各自负载均衡，整体的容错率就很高]]></content>
+      <categories>
+        <category>spring-cloud</category>
+      </categories>
+      <tags>
+        <tag>spring-cloud</tag>
+        <tag>preface</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[自定义服务开启标语banner]]></title>
+    <url>%2Fspring-boot%2Fspring-boot-banner%2F</url>
+    <content type="text"><![CDATA[操作在 /src/main/resources目录新建一个banner.txt文件，将ASCII字符画复制进去就OK。 示例1234567891011121314151617181920212223$&#123;AnsiColor.BRIGHT_YELLOW&#125;////////////////////////////////////////////////////////////////////// _ooOoo_ //// o8888888o //// 88&quot; . &quot;88 //// (| ^_^ |) //// O\ = /O //// ____/`---&apos;\____ //// .&apos; \\| |// `. //// / \\||| : |||// \ //// / _||||| -:- |||||- \ //// | | \\\ - /// | | //// | \_| &apos;&apos;\---/&apos;&apos; | | //// \ .-\__ `-` ___/-. / //// ___`. .&apos; /--.--\ `. . ___ //// .&quot;&quot; &apos;&lt; `.___\_&lt;|&gt;_/___.&apos; &gt;&apos;&quot;&quot;. //// | | : `- \`.;`\ _ /`;.`/ - ` : | | //// \ \ `-. \_ __\ /__ _/ .-` / / //// ========`-.____`-.___\_____/___.-`____.-&apos;======== //// `=---=&apos; //// ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ //// BUDDHA BLESS NEVER BUG ////////////////////////////////////////////////////////////////////// 其中AnsiColor.BRIGHT_YELLOW表示黄色字体显示标语。 工具patorjk.com/software/taag www.network-science.de/ascii/ www.degraeve.com/img2txt.php]]></content>
+      <categories>
+        <category>spring-boot</category>
+      </categories>
+      <tags>
+        <tag>spring-boot</tag>
+        <tag>banner</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[SpringBoot使用SwaggerUI构建API文档服务]]></title>
+    <url>%2Fspring-boot%2Fspring-boot-swagger%2F</url>
+    <content type="text"><![CDATA[目标 低耦合、低侵入 能很方便的生成API文档 方便测试 2018/3/7更新 引入Jar1234567891011&lt;dependency&gt; &lt;groupId&gt;io.springfox&lt;/groupId&gt; &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt; &lt;version&gt;2.8.0&lt;/version&gt;&lt;/dependency&gt;&lt;dependency&gt; &lt;groupId&gt;io.springfox&lt;/groupId&gt; &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt; &lt;version&gt;2.8.0&lt;/version&gt;&lt;/dependency&gt; 配置123456789101112131415161718192021222324252627282930313233343536373839404142package com.career.swaggerdemo.config;import io.swagger.annotations.ApiOperation;import org.springframework.context.annotation.Bean;import org.springframework.context.annotation.Configuration;import springfox.documentation.builders.ApiInfoBuilder;import springfox.documentation.builders.PathSelectors;import springfox.documentation.builders.RequestHandlerSelectors;import springfox.documentation.service.ApiInfo;import springfox.documentation.service.Contact;import springfox.documentation.spi.DocumentationType;import springfox.documentation.spring.web.plugins.Docket;import springfox.documentation.swagger2.annotations.EnableSwagger2;/** * @author LiuWang * @date 2018/2/28 */@Configuration@EnableSwagger2public class Swagger &#123; @Bean public Docket createRestApi()&#123; return new Docket(DocumentationType.SWAGGER_2) .apiInfo(apiInfo()) .select() .apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class)) .paths(PathSelectors.any()) .build(); &#125; private ApiInfo apiInfo()&#123; Contact contact = new Contact("妙语生花", "http://www.myblogs.work", "732506298@qq.com"); return new ApiInfoBuilder() .title("Spring Boot中使用Swagger2构建RESTful APIs") .description("更多Spring Boot相关文章请关注：http://www.myblogs.work/") .termsOfServiceUrl("http://www.myblogs.work/") .contact(contact) .version("1.0") .build(); &#125;&#125; controller123//controller类添加注解，对此controller做说明@Api(tags = "设备统计")@RestController model123456789101112131415161718192021222324252627282930313233343536373839import io.swagger.annotations.ApiModel;import io.swagger.annotations.ApiModelProperty;import lombok.Data;/** * 设备信息统计所使用实体 * * @author LiuWang * @date 2017/11/15 19:20 */@Data@ApiModel(description = "设备状态信息")public class SbdqztxxEntity &#123; @ApiModelProperty(value = "开始时间", notes = "yyyy-MM-dd hh:mm:ss") private String beginTime; @ApiModelProperty(value = "结束时间", notes = "yyyy-MM-dd hh:mm:ss") private String endTime; @ApiModelProperty(value = "设备名称", notes = "通过URLEncoder编码后的值") private String equName; @ApiModelProperty(value = "设备状态") private String equStatus; @ApiModelProperty(value = "设备类型") private String equType; @ApiModelProperty(value = "区域名称", notes = "通过URLEncoder编码后的值") private String areaName; @ApiModelProperty(value = "部门隶属关系") private String lsgx; @ApiModelProperty(value = "是否有经纬度", notes = "'1'表示有") private String hasGeo; @ApiModelProperty(value = "是否导Excel", notes = "'true'为导出") private String isExcel; //分页参数 @ApiModelProperty(value = "分页索引", notes = "页数默认从1开始") private int pageIndex = 1; @ApiModelProperty(value = "每页数量", notes = "默认10个") private int pageSize = 10;&#125; 传参参考资料：https://swagger.io/docs/specification/describing-parameters/ 传复杂对象参数不用写@ApiImplicitParam，对应的参数解释可以在model里写 传简单参数，可以写ApiImplicitParam做详细的说明 ps:复杂对象表示：一个实体内有多个参数；简单参数，就是直接写在方法参数列表中，一个参数对应一个值。 paramType: path 通过url传参 query 通过?传参 body 通过body传参 header 通过头信息传参 cookie 通过cookie传参，如：Cookie: debug=0; csrftoken=BUSe35dohU3O1MZvDCU 如：Cookie: debug=0; csrftoken=BUSe35dohU3O1MZvDCU query传参?带参数 设置设置ApiImplicitParam的paramType = “body” 单个参数123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354//传实体参数不用写@ApiImplicitParam，对应的参数解释可以在model里写@ApiOperation(value = "设备状态统计")@GetMapping("/equipStatus")public ActionResult getEquipmetStatus(HttpServletResponse response, SbdqztxxEntity zt) throws IOException &#123; String areaName = zt.getAreaName(); if (StringUtils.isBlank(areaName) || StringUtils.isBlank(zt.getLsgx())) &#123; return new ActionResult( ResultEnum.PARAM_ERROR.getResultCode(), "areaName与lsgx必传", null ); &#125; //前台对中文编码处理 zt.setAreaName(URLDecoder.decode(areaName, "UTF-8")); String equName = zt.getEquName(); if (StringUtils.isNotBlank(equName)) &#123; zt.setEquName(URLDecoder.decode(equName, "UTF-8")); &#125; if ("true".equals(zt.getIsExcel())) &#123; //导出EXCEL return new ActionResult( ResultEnum.SUCCESS.getResultCode(), equipmentCountService.equipmetStatus2Excel(response, zt), null ); &#125; return new ActionResult( ResultEnum.SUCCESS.getResultCode(), equipmentCountService.getEquipmetStatus(zt), null );&#125;@ApiOperation(value = "所有设备统计")//这里可以不写，不写就不会有参数的解释@ApiImplicitParam(name = "isExcel", value = "true为导出Excel", dataType = "String", paramType = "query", example = "true")@GetMapping("allStatis")public ActionResult allEquipStatis(HttpServletResponse response, String isExcel) throws IOException &#123; if ("true".equals(isExcel)) &#123; //导Excel return new ActionResult( ResultEnum.SUCCESS.getResultCode(), equipmentCountService.allEquipStatis2Excel(response), null ); &#125; return new ActionResult( ResultEnum.SUCCESS.getResultCode(), equipmentCountService.allEquipStatis(), null );&#125; 多参数123456789101112131415161718192021@ApiOperation(value = "***信息")@ApiImplicitParams(&#123; @ApiImplicitParam(name = "hphm", value = "车牌号", dataType = "String", paramType = "query"), @ApiImplicitParam(name = "hpzl", value = "车牌种类", dataType = "String", paramType = "query") &#125;)@GetMapping("/carInfo")public ActionResult carInfo(String hphm, String hpzl) &#123; List result = indexCountService.carInfo(hphm, hpzl); if (result == null) &#123; return new ActionResult( ResultEnum.REMOTE_SERVER_FAILED.getResultCode(), "****接口调用失败", null ); &#125; return new ActionResult( ResultEnum.SUCCESS.getResultCode(), result, null );&#125; body传参post方式通过body传参 设置ApiImplicitParam的paramType = “body” 123456789101112@ApiOperation(value = "测试SwaggerUI功能", notes = "post方式body传实体对象参数")@PostMapping("/testBody")public String testBody(@RequestBody(required = false) EmpEntity con) &#123; return "SUCCESS";&#125;@ApiOperation(value = "测试SwaggerUI功能", notes = "post方式body传简单对象参数")@ApiImplicitParam(name = "con", value = "条件", paramType = "body")@PostMapping("/testBodySec")public String testBodySec(@RequestBody(required = false) String con) &#123; return "SUCCESS";&#125; URL传参传给简单对象 @PathVariable注解必须有，不然得不到值 ApiImplicitParam注解可以不要，写的话，paramType = “path”，推荐写上 1234567@ApiOperation(value = "测试SwaggerUI功能", notes = "get方式url传简单参数")@ApiImplicitParam(name = "con", value = "条件", paramType = "path")@GetMapping("/testUrlParam/&#123;con&#125;")public String testUrlParam(@PathVariable String con) &#123; return con;&#125; 传给复杂对象 ApiImplicitParam必须要，否则此接口URL为localhost:8080//testUrlBody/{empno}，empno的值由?传参过来。而不是把empno的值作为url的一部分 不要@PathVariable注解 123456@ApiOperation(value = "测试SwaggerUI功能", notes = "get方式url传自定义对象参数")@ApiImplicitParam(name = "empno", value = "员工编号", paramType = "path")@GetMapping("/testUrlBody/&#123;empno&#125;")public String testUrlBody(EmpEntity con) &#123; return "SUCCESS";&#125; 其它其它传参方式少见，这里暂不介绍 访问ip:port/swagger-ui.html 效果 测试接口 点 Try it out 显示参数输入框 点所有参数下方的Execute请求接口 问题这个版本的swagger-ui好像对浏览器的版本有要求， 有些浏览器访问不到，推荐chrome 参考文档详细见官方文档https://swagger.io/docs/specification/about/]]></content>
+      <categories>
+        <category>spring-boot</category>
+      </categories>
+      <tags>
+        <tag>spring-boot</tag>
+        <tag>swagger</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[本地预览Jekll博客]]></title>
+    <url>%2Fjekyll%2Flocal-server%2F</url>
+    <content type="text"><![CDATA[之前一直都是将代码提交到github然后刷新页面看效果，这样一个小问题很多时候得重复提交好多次才解决 为了解决这个问题，需要现在本地调试预览 这其中，经历的东西全都是没用过的，各种找教程，也几次快要放弃，最终辛亏是搭起来了 知识储备这一方面是看的教程，一方面是对应的总结，知道这些，对于博客的搭建过程，知道如何去排错，解决问题 ruby与rubygem、jekyll、bundle、rvm的关系 ruby是一种脚本语言 ruby的其中一个“程序”叫rubygems，简称 gem jekyll是基于ruby的，所以搭建jekyll之前必须确保ruby正常安装 bundle是用来管理项目的gem的 rvm是用来管理ruby的，ruby的其中一个“程序”叫rubygems，简称 gem 所以，更新gem的时候，通过gem手动更新和通过bundle自动更新并不一样 自动更新命令：bundle update （更新所有，并自动更改Gemfile.lock文件） 更新某一个gem： bundle update json（更新json） 安装指定版本的gem：gem install json -v 1.8.6 查看版本： gem list 查看指定gem的版本：gem list json 安装环境使用的是 ruby-2.3.3-x64-mingw32.7z DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe（与ruby版本对应） 安装方法见jekyll博客搭建之艰辛之路—-撒网要见鱼 与教程的版本岁不同，但使用我这个版本是可以的，只不过挺麻烦。 解决问题在用jekyll serve（jekyll s)开启服务时，总会报一系列的错，有时候是有些东西需要更新，通过bundle或gem的更新命令更新，有些时候gem是最新的，但Gemfile.lock中使用的版本没有，可以通过命令安装制定版本的gem SSL证书在最后一步差点放弃，最后过了一天，尝试了下百度挺容易就解决了 用的方法是手动添加SSL证书 下载 cacert.pem file 证书下载 在命令行中输入 12rem 将SSL_CERT_FILE设置为pem的路径set SSL_CERT_FILE=E:\rubyDevkit\lib\ssl_book\cacert.pem 运行 每次运行都要执行步骤2，貌似可以将SSL_CERT_FILE设置为环境变量来解决，我是直接将“SSL证书”中步骤2的命令写在shell脚本中 通过http://localhost:4000访问，更新完刷新页面 感谢解决SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed.教程的指导]]></content>
+      <categories>
+        <category>jekyll</category>
+      </categories>
+      <tags>
+        <tag>jekyll</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[SpringBoot监控服务]]></title>
+    <url>%2Fspring-boot%2Fspring-boot-admin%2F</url>
+    <content type="text"><![CDATA[通过spring-boot-admin来监控SpringBoot服务 使用Spring Boot Actuator监控，1，所有监控需要调用固定接口；2，如果SpringBoot集群很大，每个应用需要调用不同接口来查看监控信息，因此太繁琐，spring-boot-admin致力于解决这类问题 serverpom.xml12345&lt;dependency&gt; &lt;groupId&gt;de.codecentric&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-admin-starter-server&lt;/artifactId&gt; &lt;version&gt;1.5.7&lt;/version&gt;&lt;/dependency&gt; application.yaml12server: port: 8000 基类基类中添加@EnableAdminServer开启监控服务 clientpom.xml12345&lt;dependency&gt; &lt;groupId&gt;de.codecentric&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-admin-starter-client&lt;/artifactId&gt; &lt;version&gt;1.5.7&lt;/version&gt;&lt;/dependency&gt; application.yaml1234567891011server: port: 8001spring: boot: admin: # admin server端的url url: http://localhost:8000management: security: # 关闭安全验证 enabled: false 然后访问http://localhost:8000]]></content>
+      <categories>
+        <category>spring-boot</category>
+      </categories>
+      <tags>
+        <tag>spring-boot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[邮件服务]]></title>
+    <url>%2Fspring-boot%2Fspring-boot-mail%2F</url>
+    <content type="text"><![CDATA[由于密码等信息写在配置文件中可能泄露，因此这里示例自定义配置,。 使用Spring提供的自动配置，这里不做详述，详情参考邮件服务–纯洁的微笑 123# 此处使用126邮箱mail: host: smtp.126.com 123456789101112131415161718192021222324252627@Configuration@ConfigurationProperties(prefix = "mail")public class MailConfig &#123; //只有host需要配置 private String host; private final String username = "用户名"; private final String password = "密码"; private String defaultEncoding = "UTF-8"; @Bean(name = "JavaMailSender") public JavaMailSender getSender() &#123; JavaMailSenderImpl mailSender = new JavaMailSenderImpl(); mailSender.setUsername(username); mailSender.setPassword(password); mailSender.setDefaultEncoding(defaultEncoding); mailSender.setHost(host); return mailSender; &#125; public String getHost() &#123; return host; &#125; public void setHost(String host) &#123; this.host = host; &#125;&#125; 由于Spring的邮件发送会默认自动装配Spring.mail相关配置,且创建一个JavaMailSender的bean，这里是采用自己的配置且自动示例一个Bean]]></content>
+      <categories>
+        <category>spring-boot</category>
+      </categories>
+      <tags>
+        <tag>spring-boot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[什么？网页不能显示最新的?]]></title>
+    <url>%2Fblog%2Fgithub-page%2F</url>
+    <content type="text"><![CDATA[看到github上的内容已经是最新的，为什么网站上就是不能显示最新的呢，为什么呢？ 当页面有error时，页面就会显示上一次完好的内容，或者显示初始的内容:) 当页面有问题（error或者warning）时，github会给你发邮件哒，注意查收哦。]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用git同步]]></title>
+    <url>%2Fgit%2Fgit-index%2F</url>
+    <content type="text"><![CDATA[git的理念每一个地方就是一个仓库（repository），本地就是本地仓库，本地仓库就不区分是什么分支了，pull和push的时候，想同步哪个分支都可以自由选择。本地维护本地的代码。没有中央仓库的概念。 更新：pull 提交：commit，commit相当于是提交到本地仓库 推：push，推给远程仓库 可以先pull，有冲突就merge，然后push]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Jekyll使用]]></title>
+    <url>%2Fjekyll%2Fjekyll-help%2F</url>
+    <content type="text"><![CDATA[参考文档Jekyll使用说明 根目录site.url 1&#123;&#123; site.url &#125;&#125;用来表示根目录，建议用，这样每一个路径都是完整的URL，方便迁移 高亮代码片段Jekyll自带语法高亮功能：（linenos显示行数） 例子如下： 1234567891011121314def show @widget = Widget(params[:id]) respond_to do |format| format.html # show.html.erb format.json &#123; render json: @widget &#125; endend 使用的时候有问题:Jekyll使用样例中是没有问题的，但是当我复制到这里时（不时放在代码块中），github page报错：highlight标签没有闭合。 补充：没有问题，是因为在介绍的文本中写了半截highlight标签，最后还是觉得highlight标签不好用，代码换行不够给力啊。而且markdown代码块标签不要和Jeklyll的highlight标签一起用。]]></content>
+      <categories>
+        <category>jekyll</category>
+      </categories>
+      <tags>
+        <tag>jekyll</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[我的网站]]></title>
+    <url>%2Fblog%2Fwebsite%2F</url>
+    <content type="text"><![CDATA[网址www.myblogs.work 域名解析解析设置 1. 记录类型 记录值设置为A，然后在github上可以获取到github page的ip地址为192.30.252.153 和 192.30.252.154，然后记录值分别写这两个IP 2. 主机记录设置为：www或@，对应网址为：www.myblogs.work或myblogs.work 3. 解析线路默认 4. TTL值直接默认10分钟 5.配置CNAME解析记录类型: CNAME, 主机记录: @或www, 解析线路: 默认, 记录值: lw5946.github.io(github page页的url), TTL值: 默认10分钟。 解析情况检测 检测在各地解析情况 window命令窗口检测 域名与github page关联通过以上的设置会通过访问域名从而访问到github，那github如何知道访问的是哪个页面，说的page呢？ 方法有两种(殊途同归)： 在自己的page（username.github.io）页设置domain与域名对应（设置完会自动创建CNAME文件） 手动创建CNAME文件（无后缀名），文件内容为域名，如：www.myblogs.work 域名终于解析成功，代表的确是域名解析需要挺长的一段时间，这段时间，域名其实还相当于没有生效，虽然阿里云说域名新增解析即时生效，修改解析两小时之内生效，然而并不是如此。坑爹啊，浪费我很多时间、精力。]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2Fblog%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[个人博客开始使用 我的个人博客正式搭起来了，其实过程还是挺顺利的，不顺利的地方可能是因为域名解析需要时间，这个只有等待，等到明天看看结果，这个只有等待的事，我却折腾了半天，浪费了太多时间，一件事情的开始总不是那么的容易:)]]></content>
+      <categories>
+        <category>blog</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[post blog demo]]></title>
+    <url>%2Fdemo%2Fblog-demo%2F</url>
+    <content type="text"><![CDATA[Quick note about CSS animation. CSS AnimationCSS3 animation lets an element gradually change from one style to another. Two steps: Use @keyframes to define an animation. Set this animation on an element with animation properties We could set properties one-by-one or with following shorthand: 1animation: [animation-name] [animation-duration] [animation-timing-function] [animation-delay] [animation-iteration-count] [animation-direction] [animation-fill-mode] [animation-play-state]; @keyframesIt defines what the animation looks like at each stage of the animation timeline. It is composed of: Name of the animation. For example, changeColor. Stages: From 0% to 100% to represent the whole process of animation CSS Properties: The CSS properties defined for each stage of the animation timeline. Following example creates an animation called changeColor and assign it to div:hover: 123456789101112131415@keyframes changeColor &#123; 0% &#123; background: red; &#125; 60% &#123; background: blue; &#125; 100%&#123; background: green; &#125;&#125;div:hover&#123; animation: changeColor 5s ease .1s;&#125; In above example, we could also use from to represent 0% and to to represent 100% Animation PropertiesIt has following properties: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction animation-fill-mode animation-play-state animation-nameThe name of the animation, defined in the @keyframes. animation-durationThe duration of the animation, in seconds (e.g., 5s) or milliseconds (e.g., 200ms). animation-timing-functionThe speed curve or pace of the animation: Timing Function Description linear The animation has the same speed from start to end ease Default value. The animation has a slow start, then fast, before it ends slowly. ease-in Start slowly and end fast. ease-out Start more quickly than linear ones and end slowly. The opposite of ease-in. ease-in-out Both a slow start and a slow end initial Sets this property to its default value. So ease. inherit Inherits this property from its parent element. Check The basics of easing for details. animation-delayIt specifies when the animation will start. The value is defined in seconds (s) or milliseconds (mil). animation-iteration-countIt specifies the number of times that the animation will play. The possible values are: a specific number of iterations (default is 1) infinite - repeats forever initial inherit animation-directionIt specifies whether the animation should play forward, reverse, or in alternate cycles. normal - Default. On each cycle the animation resets to the beginning state (0%) and plays forward again (to 100%). reverse - On each cycle the animation resets to the end state (100%) and plays backwards (to 0%). alternate - On each odd cycle, the animation plays forward (0% to 100%). On each even cycle, the animation plays backwards (100% to 0%). alternate-reverse - On each odd cycle, the animation plays in reverse (100% to 0%). On each even cycle, the animation plays forward (0% or 100%). animation-fill-modeIt specifies if the animation styles are visible before or after the animation plays. normal - Default. The animation does not apply any styles to the element, before or after the animation. forwards - After the animation is finished, the styles defined in the final keyframe (100%) are retained by the element. backwards - Before the animation (during the animation delay), the styles of the initial keyframe (0%) are applied to the element. both - forwards with backwards. animation-play-stateTwo values: running and paused. It specifies whether the animation is playing or paused. Resuming a paused animation starts the animation where it was left off. But if pause an animation, the element style will return back to its origin. Example: 123div:hover &#123; animation-play-state: paused;&#125; Multiple AnimationsAdd multiple animations to a selector with comma: 123div &#123; animation: animationA 2s, animationB 2s;&#125; Refs Imooc 十天精通CSS3 CSS Animation for Beginners CSS3 animation-timing-function Property]]></content>
+      <categories>
+        <category>demo</category>
+      </categories>
+      <tags>
+        <tag>demo</tag>
+      </tags>
+  </entry>
+</search>

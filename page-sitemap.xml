@@ -8,6 +8,13 @@
     </url>
     
     <url>
+        <loc>http://www.myblogs.work/categories/</loc>
+        <lastmod>2018-12-27T15:26:53.387Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://www.myblogs.work/404.html</loc>
         <lastmod>2018-12-25T14:58:49.866Z</lastmod>
         <changefreq>weekly</changefreq>

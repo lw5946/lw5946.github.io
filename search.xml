@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[网站由jekyll迁移到hexo]]></title>
     <url>%2Fblog%2Fhexo-install%2F</url>
-    <content type="text"><![CDATA[安装 安装git与node：https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/details/70254917 node -&gt; yarn配置: https://blog.csdn.net/wanshaobo888/article/details/70254917https://blog.csdn.net/kucoll/article/details/79890176 安装hexo安装hexo, 而不是hexo-cli,才配置成功环境变量: npm install -g hexohexo设置为环境变量:https://www.cnblogs.com/yuyufeng/p/5723778.html 安装主题：https://github.com/SumiMakito/hexo-theme-typography/blob/master/README_zh-CN.md 安装python：https://blog.csdn.net/weixin_36222137/article/details/78463543?locationNum=10&amp;fps=1 使用hexo d 自动上传到服务器https://blog.csdn.net/without_scruple/article/details/79085907 上传的是源码部分https://www.jianshu.com/p/67c57c70f275 优化原则 尽量不修改主题的文件， 避免影响更新！！！ 修改样式，可以在themes\使用的主题\source\css_custom\custom.styl 资源链接首先参考官方说明 https://www.jianshu.com/p/78c218f9d1e7 https://www.jianshu.com/p/2640561e96f8 https://www.jianshu.com/p/c9de55660d1b ## npm包安装一览 站内微搜索， 需安装插件： 12npm install hexo-generator-search --savenpm install hexo-generator-searchdb --save 给博客添加feed 1npm install hexo-generator-feed --save 给博客生成站点地图 1npm install hexo-generator-seo-friendly-sitemap --save jade:https://www.jianshu.com/p/05ed25bfc2c5 next主题官方中文文档http://theme-next.iissnan.com/官方github中文文档https://github.com/iissnan/hexo-theme-next/blob/master/README.cn.md教程–简书https://www.jianshu.com/p/21c94eb7bcd1 博客迁移 下载之后，安装node，hexo（node_modules） 进入博客根目录，运行命令npm install hexo --save命令，然后运行npm install安装各模块所需组件 在博客根目录运行hexo -v可以查看各组件版本，即表示hexo安装成功 问题 unable to sync pages directory 可能是组件所需的node_modules安装的不全，在博客根目录运行npm install ， 若还没好，看github是否发错误信息邮件 无法生成html https://blog.csdn.net/huihut/article/details/73196343 字数统计配置好之后需要安装 https://github.com/willin/hexo-wordcount LearnCloud需要新建class https://www.jianshu.com/p/702a7aec4d00]]></content>
+    <content type="text"><![CDATA[安装 安装git与node：https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/details/70254917 node -&gt; yarn配置: https://blog.csdn.net/wanshaobo888/article/details/70254917https://blog.csdn.net/kucoll/article/details/79890176 安装hexo安装hexo, 而不是hexo-cli,才配置成功环境变量: npm install -g hexohexo设置为环境变量:https://www.cnblogs.com/yuyufeng/p/5723778.html 安装主题：https://github.com/SumiMakito/hexo-theme-typography/blob/master/README_zh-CN.md 安装python：https://blog.csdn.net/weixin_36222137/article/details/78463543?locationNum=10&amp;fps=1 使用hexo d 自动上传到服务器https://blog.csdn.net/without_scruple/article/details/79085907 上传的是源码部分https://www.jianshu.com/p/67c57c70f275 优化原则 尽量不修改主题的文件， 避免影响更新！！！ 修改样式，可以在themes\使用的主题\source\css_custom\custom.styl 资源链接首先参考官方说明 https://www.jianshu.com/p/1f8107a8778c https://www.jianshu.com/p/78c218f9d1e7 https://www.jianshu.com/p/2640561e96f8 https://www.jianshu.com/p/c9de55660d1b ## npm包安装一览 站内微搜索， 需安装插件： 12npm install hexo-generator-search --savenpm install hexo-generator-searchdb --save 给博客添加feed 1npm install hexo-generator-feed --save 给博客生成站点地图 1npm install hexo-generator-seo-friendly-sitemap --save jade:https://www.jianshu.com/p/05ed25bfc2c5 next主题官方中文文档http://theme-next.iissnan.com/官方github中文文档https://github.com/iissnan/hexo-theme-next/blob/master/README.cn.md教程–简书https://www.jianshu.com/p/21c94eb7bcd1 博客迁移 下载之后，安装node，hexo（node_modules） 进入博客根目录，运行命令npm install hexo --save命令，然后运行npm install安装各模块所需组件 在博客根目录运行hexo -v可以查看各组件版本，即表示hexo安装成功 问题 unable to sync pages directory 可能是组件所需的node_modules安装的不全，在博客根目录运行npm install ， 若还没好，看github是否发错误信息邮件 无法生成html https://blog.csdn.net/huihut/article/details/73196343 字数统计配置好之后需要安装 https://github.com/willin/hexo-wordcount LearnCloud需要新建class https://www.jianshu.com/p/702a7aec4d00 修改过主题代码的地方，更新时注意备份尽量不修改主题的源代码， 避免更新被覆盖，但有些地方必须改，这里做个记录 修改文章底部带#号的标签样式，修改模板/themes/next/layout/_macro/post.swig，搜索 rel=&quot;tag&quot;&gt;#，将 # 换成&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;]]></content>
       <categories>
         <category>blog</category>
       </categories>
@@ -200,17 +200,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Jekyll使用]]></title>
-    <url>%2Fjekyll%2Fjekyll-help%2F</url>
-    <content type="text"><![CDATA[参考文档Jekyll使用说明 根目录site.url 1&#123;&#123; site.url &#125;&#125;用来表示根目录，建议用，这样每一个路径都是完整的URL，方便迁移 高亮代码片段Jekyll自带语法高亮功能：（linenos显示行数） 例子如下： 1234567891011121314def show @widget = Widget(params[:id]) respond_to do |format| format.html # show.html.erb format.json &#123; render json: @widget &#125; endend 使用的时候有问题:Jekyll使用样例中是没有问题的，但是当我复制到这里时（不时放在代码块中），github page报错：highlight标签没有闭合。 补充：没有问题，是因为在介绍的文本中写了半截highlight标签，最后还是觉得highlight标签不好用，代码换行不够给力啊。而且markdown代码块标签不要和Jeklyll的highlight标签一起用。]]></content>
-      <categories>
-        <category>jekyll</category>
-      </categories>
-      <tags>
-        <tag>jekyll</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[我的网站]]></title>
     <url>%2Fblog%2Fwebsite%2F</url>
     <content type="text"><![CDATA[网址www.myblogs.work 域名解析解析设置 1. 记录类型 记录值设置为A，然后在github上可以获取到github page的ip地址为192.30.252.153 和 192.30.252.154，然后记录值分别写这两个IP 2. 主机记录设置为：www或@，对应网址为：www.myblogs.work或myblogs.work 3. 解析线路默认 4. TTL值直接默认10分钟 5.配置CNAME解析记录类型: CNAME, 主机记录: @或www, 解析线路: 默认, 记录值: lw5946.github.io(github page页的url), TTL值: 默认10分钟。 解析情况检测 检测在各地解析情况 window命令窗口检测 域名与github page关联通过以上的设置会通过访问域名从而访问到github，那github如何知道访问的是哪个页面，说的page呢？ 方法有两种(殊途同归)： 在自己的page（username.github.io）页设置domain与域名对应（设置完会自动创建CNAME文件） 手动创建CNAME文件（无后缀名），文件内容为域名，如：www.myblogs.work 域名终于解析成功，代表的确是域名解析需要挺长的一段时间，这段时间，域名其实还相当于没有生效，虽然阿里云说域名新增解析即时生效，修改解析两小时之内生效，然而并不是如此。坑爹啊，浪费我很多时间、精力。]]></content>
@@ -219,6 +208,17 @@
       </categories>
       <tags>
         <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Jekyll使用]]></title>
+    <url>%2Fjekyll%2Fjekyll-help%2F</url>
+    <content type="text"><![CDATA[参考文档Jekyll使用说明 根目录site.url 1&#123;&#123; site.url &#125;&#125;用来表示根目录，建议用，这样每一个路径都是完整的URL，方便迁移 高亮代码片段Jekyll自带语法高亮功能：（linenos显示行数） 例子如下： 1234567891011121314def show @widget = Widget(params[:id]) respond_to do |format| format.html # show.html.erb format.json &#123; render json: @widget &#125; endend 使用的时候有问题:Jekyll使用样例中是没有问题的，但是当我复制到这里时（不时放在代码块中），github page报错：highlight标签没有闭合。 补充：没有问题，是因为在介绍的文本中写了半截highlight标签，最后还是觉得highlight标签不好用，代码换行不够给力啊。而且markdown代码块标签不要和Jeklyll的highlight标签一起用。]]></content>
+      <categories>
+        <category>jekyll</category>
+      </categories>
+      <tags>
+        <tag>jekyll</tag>
       </tags>
   </entry>
   <entry>

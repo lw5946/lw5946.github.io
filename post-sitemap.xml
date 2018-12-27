@@ -9,7 +9,7 @@
 
     <url>
         <loc>http://www.myblogs.work/blog/hexo-install/</loc>
-        <lastmod>2018-12-27T14:25:11.400Z</lastmod>
+        <lastmod>2018-12-27T14:40:08.887Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -72,7 +72,7 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-config/</loc>
+        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-config-1/</loc>
         <lastmod>2018-12-25T14:58:49.873Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -80,7 +80,7 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-config-1/</loc>
+        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-config/</loc>
         <lastmod>2018-12-25T14:58:49.873Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -96,6 +96,14 @@
     </url>
 
     <url>
+        <loc>http://www.myblogs.work/spring-boot/spring-boot-banner/</loc>
+        <lastmod>2018-12-25T14:58:49.871Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://www.myblogs.work/spring-boot/spring-boot-admin/</loc>
         <lastmod>2018-12-25T14:58:49.871Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -105,14 +113,6 @@
 
     <url>
         <loc>http://www.myblogs.work/spring-boot/spring-boot-mail/</loc>
-        <lastmod>2018-12-25T14:58:49.871Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://www.myblogs.work/spring-boot/spring-boot-banner/</loc>
         <lastmod>2018-12-25T14:58:49.871Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -160,7 +160,7 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/blog/github-page/</loc>
+        <loc>http://www.myblogs.work/blog/hello-world/</loc>
         <lastmod>2018-12-25T14:58:49.867Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -168,7 +168,7 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/blog/hello-world/</loc>
+        <loc>http://www.myblogs.work/blog/github-page/</loc>
         <lastmod>2018-12-25T14:58:49.867Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

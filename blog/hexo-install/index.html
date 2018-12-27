@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="诗和远方">
 <meta property="og:description" content="安装 安装git与node：https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo  npm\yarn配置node -&amp;gt; npm配置: https://blog.csdn.net/wanshaobo888/article/details/70254917   node -&amp;gt; yarn配置: https://blog.csdn.net/wa">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-27T14:25:11.400Z">
+<meta property="og:updated_time" content="2018-12-27T14:40:08.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网站由jekyll迁移到hexo">
 <meta name="twitter:description" content="安装 安装git与node：https://hexo.io/zh-cn/docs/#%E5%AE%89%E8%A3%85-Hexo  npm\yarn配置node -&amp;gt; npm配置: https://blog.csdn.net/wanshaobo888/article/details/70254917   node -&amp;gt; yarn配置: https://blog.csdn.net/wa">
@@ -384,7 +384,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  491
+                  591
                 </span>
               
 
@@ -433,6 +433,7 @@
 <li>修改样式，可以在themes\<code>使用的主题</code>\source\css_custom\custom.styl</li>
 </ol>
 <h2 id="资源链接"><a href="#资源链接" class="headerlink" title="资源链接"></a>资源链接</h2><p>首先参考官方说明</p>
+<p><a href="https://www.jianshu.com/p/1f8107a8778c" target="_blank" rel="noopener">https://www.jianshu.com/p/1f8107a8778c</a></p>
 <p><a href="https://www.jianshu.com/p/78c218f9d1e7" target="_blank" rel="noopener">https://www.jianshu.com/p/78c218f9d1e7</a></p>
 <p><a href="https://www.jianshu.com/p/2640561e96f8" target="_blank" rel="noopener">https://www.jianshu.com/p/2640561e96f8</a></p>
 <p><a href="https://www.jianshu.com/p/c9de55660d1b" target="_blank" rel="noopener">https://www.jianshu.com/p/c9de55660d1b</a></p>
@@ -467,6 +468,10 @@
 <li><p>LearnCloud需要新建class<br> <a href="https://www.jianshu.com/p/702a7aec4d00" target="_blank" rel="noopener">https://www.jianshu.com/p/702a7aec4d00</a></p>
 </li>
 </ol>
+<h1 id="修改过主题代码的地方，更新时注意备份"><a href="#修改过主题代码的地方，更新时注意备份" class="headerlink" title="修改过主题代码的地方，更新时注意备份"></a>修改过主题代码的地方，更新时注意备份</h1><p>尽量不修改主题的源代码， 避免更新被覆盖，但有些地方必须改，这里做个记录</p>
+<ol>
+<li>修改文章底部带#号的标签样式，修改模板<code>/themes/next/layout/_macro/post.swig</code>，搜索 <code>rel=&quot;tag&quot;&gt;#</code>，将 # 换成<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></li>
+</ol>
 
       
     </div>
@@ -484,7 +489,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/blog/" rel="tag"># blog</a>
+            <a href="/tags/blog/" rel="tag"><i class="fa fa-tag"></i> blog</a>
           
         </div>
       
@@ -667,7 +672,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优化"><span class="nav-number">2.</span> <span class="nav-text">优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原则"><span class="nav-number">2.1.</span> <span class="nav-text">原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资源链接"><span class="nav-number">2.2.</span> <span class="nav-text">资源链接</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#npm包安装一览"><span class="nav-number">3.</span> <span class="nav-text">npm包安装一览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jade"><span class="nav-number">4.</span> <span class="nav-text">jade:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#next主题"><span class="nav-number">5.</span> <span class="nav-text">next主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#博客迁移"><span class="nav-number">6.</span> <span class="nav-text">博客迁移</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">7.</span> <span class="nav-text">问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优化"><span class="nav-number">2.</span> <span class="nav-text">优化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原则"><span class="nav-number">2.1.</span> <span class="nav-text">原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#资源链接"><span class="nav-number">2.2.</span> <span class="nav-text">资源链接</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#npm包安装一览"><span class="nav-number">3.</span> <span class="nav-text">npm包安装一览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jade"><span class="nav-number">4.</span> <span class="nav-text">jade:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#next主题"><span class="nav-number">5.</span> <span class="nav-text">next主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#博客迁移"><span class="nav-number">6.</span> <span class="nav-text">博客迁移</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">7.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#修改过主题代码的地方，更新时注意备份"><span class="nav-number">8.</span> <span class="nav-text">修改过主题代码的地方，更新时注意备份</span></a></li></ol></div>
             
 
           </div>
@@ -701,7 +706,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9.6k</span>
+    <span title="Site words total count">9.7k</span>
   
 </div>
 

@@ -2,20 +2,40 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next gemini use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
 
 
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
 
 
 
@@ -38,10 +58,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
 
 
 
@@ -50,44 +66,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=6.6.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=6.6.0">
 
 
-  <link rel="mask-icon" href="/favicon.png?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-  <link rel="alternate" href="/atom.xml" title="诗和远方" type="application/atom+xml">
+  <link rel="mask-icon" href="/images/favicon.png?v=6.6.0" color="#222">
 
 
 
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="诗和远方">
-<meta property="og:url" content="http://www.myblogs.work/index.html">
-<meta property="og:site_name" content="诗和远方">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="诗和远方">
 
 
 
@@ -96,15 +93,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '5.1.4',
-    sidebar: {"position":"right","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
-    fancybox: true,
+    version: '6.6.0',
+    sidebar: {"position":"right","display":"always","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '作者'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -116,15 +111,39 @@
 </script>
 
 
+  
+
+
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="诗和远方">
+<meta property="og:url" content="http://www.myblogs.work/index.html">
+<meta property="og:site_name" content="诗和远方">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="诗和远方">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="诗和远方" type="application/atom+xml">
+
+
+
 
   <link rel="canonical" href="http://www.myblogs.work/">
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>诗和远方</title>
   
+
 
 
 
@@ -143,10 +162,39 @@
 
 
 
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 <link rel="stylesheet" href="/css/prism.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -169,13 +217,15 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+    
       
         <h1 class="site-subtitle" itemprop="description">執筆畫青春</h1>
       
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -183,56 +233,102 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            时间轴
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home menu-item-active">
 
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">16</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>时间轴<span class="badge">21</span></a>
+
+  </li>
+
+      
       
         <li class="menu-item menu-item-search">
           
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
-            
-            搜索
-          </a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
+  
+
   
 
   
@@ -261,12 +357,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -277,6 +384,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -303,11 +412,20 @@
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/blog/hexo-install/" itemprop="url">网站由jekyll迁移到hexo</a></h2>
+                
+                <a href="/blog/hexo-install/" class="post-title-link" itemprop="http://www.myblogs.work/index.html">网站由jekyll迁移到hexo</a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -315,11 +433,12 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-26T00:00:00+08:00">
-                2018-12-26
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2018-12-26 00:00:00" itemprop="dateCreated datePublished" datetime="2018-12-26T00:00:00+08:00">2018-12-26</time>
             
 
             
@@ -337,11 +456,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/blog/" itemprop="url" rel="index">
-                    <span itemprop="name">blog</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/blog/" itemprop="url" rel="index"><span itemprop="name">blog</span></a></span>
 
                 
                 
@@ -351,43 +466,23 @@
 
           
             
-          
-
-          
-          
-             <span id="/blog/hexo-install/" class="leancloud_visitors" data-flag-title="网站由jekyll迁移到hexo">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
+                  <i class="fa fa-comment-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  591
-                </span>
-              
+                <a href="/blog/hexo-install/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/blog/hexo-install/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-              
+          
+          
 
-              
-            </div>
+          
+
           
 
           
@@ -399,7 +494,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -413,21 +508,23 @@
 npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/details/7025
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/blog/hexo-install/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -458,6 +555,8 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -484,11 +583,20 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/spring-cloud/spring-cloud-tip/" itemprop="url">spring-cloud使用的一些技巧、心得</a></h2>
+                
+                <a href="/spring-cloud/spring-cloud-tip/" class="post-title-link" itemprop="http://www.myblogs.work/index.html">spring-cloud使用的一些技巧、心得</a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -496,11 +604,12 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-20T00:00:00+08:00">
-                2018-03-20
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2018-03-20 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-20T00:00:00+08:00">2018-03-20</time>
             
 
             
@@ -518,11 +627,7 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/spring-cloud/" itemprop="url" rel="index">
-                    <span itemprop="name">spring-cloud</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/spring-cloud/" itemprop="url" rel="index"><span itemprop="name">spring-cloud</span></a></span>
 
                 
                 
@@ -532,43 +637,23 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 
           
             
-          
-
-          
-          
-             <span id="/spring-cloud/spring-cloud-tip/" class="leancloud_visitors" data-flag-title="spring-cloud使用的一些技巧、心得">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
+                  <i class="fa fa-comment-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  184
-                </span>
-              
+                <a href="/spring-cloud/spring-cloud-tip/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/spring-cloud/spring-cloud-tip/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-              
+          
+          
 
-              
-            </div>
+          
+
           
 
           
@@ -580,7 +665,7 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -593,21 +678,23 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 因为，如果使用ip地址，服务在迁移的时候又需要改调用服务的ip，因为微服务会有很多个小服务，这一改起来可能就很多了，而主机名的话，可以通过修改hosts文件来自定义。可以写个脚本文件来修改
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/spring-cloud/spring-cloud-tip/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -638,6 +725,8 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -664,11 +753,20 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/spring-cloud/spring-cloud-eureka-1/" itemprop="url">高可用服务注册中心</a></h2>
+                
+                <a href="/spring-cloud/spring-cloud-eureka-1/" class="post-title-link" itemprop="http://www.myblogs.work/index.html">高可用服务注册中心</a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -676,11 +774,12 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-19T00:00:00+08:00">
-                2018-03-19
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2018-03-19 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-19T00:00:00+08:00">2018-03-19</time>
             
 
             
@@ -698,11 +797,7 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/spring-cloud/" itemprop="url" rel="index">
-                    <span itemprop="name">spring-cloud</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/spring-cloud/" itemprop="url" rel="index"><span itemprop="name">spring-cloud</span></a></span>
 
                 
                 
@@ -712,43 +807,23 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 
           
             
-          
-
-          
-          
-             <span id="/spring-cloud/spring-cloud-eureka-1/" class="leancloud_visitors" data-flag-title="高可用服务注册中心">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
+                  <i class="fa fa-comment-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  231
-                </span>
-              
+                <a href="/spring-cloud/spring-cloud-eureka-1/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/spring-cloud/spring-cloud-eureka-1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-              
+          
+          
 
-              
-            </div>
+          
+
           
 
           
@@ -760,7 +835,7 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -773,21 +848,23 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 12345678910111213# 第一个注册中心server:  port:
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/spring-cloud/spring-cloud-eureka-1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -818,6 +895,8 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -844,11 +923,20 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/spring-cloud/spring-cloud-config-1/" itemprop="url">配置中心高可用</a></h2>
+                
+                <a href="/spring-cloud/spring-cloud-config-1/" class="post-title-link" itemprop="http://www.myblogs.work/index.html">配置中心高可用</a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -856,11 +944,12 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-18T00:00:00+08:00">
-                2018-03-18
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2018-03-18 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-18T00:00:00+08:00">2018-03-18</time>
             
 
             
@@ -878,11 +967,7 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/spring-cloud/" itemprop="url" rel="index">
-                    <span itemprop="name">spring-cloud</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/spring-cloud/" itemprop="url" rel="index"><span itemprop="name">spring-cloud</span></a></span>
 
                 
                 
@@ -892,43 +977,23 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 
           
             
-          
-
-          
-          
-             <span id="/spring-cloud/spring-cloud-config-1/" class="leancloud_visitors" data-flag-title="配置中心高可用">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
+                  <i class="fa fa-comment-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  251
-                </span>
-              
+                <a href="/spring-cloud/spring-cloud-config-1/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/spring-cloud/spring-cloud-config-1/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-              
+          
+          
 
-              
-            </div>
+          
+
           
 
           
@@ -940,7 +1005,7 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -952,21 +1017,23 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 1. 将配置中心注册到Eureka Server1234567891011121314151617# 配
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/spring-cloud/spring-cloud-config-1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -997,6 +1064,8 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -1023,11 +1092,20 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/spring-cloud/spring-cloud-api-gateway/" itemprop="url">服务网关</a></h2>
+                
+                <a href="/spring-cloud/spring-cloud-api-gateway/" class="post-title-link" itemprop="http://www.myblogs.work/index.html">服务网关</a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1035,11 +1113,12 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-17T00:00:00+08:00">
-                2018-03-17
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2018-03-17 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-17T00:00:00+08:00">2018-03-17</time>
             
 
             
@@ -1057,11 +1136,7 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/spring-cloud/" itemprop="url" rel="index">
-                    <span itemprop="name">spring-cloud</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/spring-cloud/" itemprop="url" rel="index"><span itemprop="name">spring-cloud</span></a></span>
 
                 
                 
@@ -1071,43 +1146,23 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 
           
             
-          
-
-          
-          
-             <span id="/spring-cloud/spring-cloud-api-gateway/" class="leancloud_visitors" data-flag-title="服务网关">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
+                  <i class="fa fa-comment-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  1.8k
-                </span>
-              
+                <a href="/spring-cloud/spring-cloud-api-gateway/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/spring-cloud/spring-cloud-api-gateway/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-              
+          
+          
 
-              
-            </div>
+          
+
           
 
           
@@ -1119,7 +1174,7 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1128,21 +1183,23 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
         
           使用服务网关统一管理对外暴露的服务
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/spring-cloud/spring-cloud-api-gateway/">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1173,6 +1230,8 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -1199,11 +1258,20 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/spring-cloud/spring-cloud-config/" itemprop="url">配置中心</a></h2>
+                
+                <a href="/spring-cloud/spring-cloud-config/" class="post-title-link" itemprop="http://www.myblogs.work/index.html">配置中心</a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1211,11 +1279,12 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-16T00:00:00+08:00">
-                2018-03-16
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2018-03-16 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-16T00:00:00+08:00">2018-03-16</time>
             
 
             
@@ -1233,11 +1302,7 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/spring-cloud/" itemprop="url" rel="index">
-                    <span itemprop="name">spring-cloud</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/spring-cloud/" itemprop="url" rel="index"><span itemprop="name">spring-cloud</span></a></span>
 
                 
                 
@@ -1247,43 +1312,23 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 
           
             
-          
-
-          
-          
-             <span id="/spring-cloud/spring-cloud-config/" class="leancloud_visitors" data-flag-title="配置中心">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
+                  <i class="fa fa-comment-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  551
-                </span>
-              
+                <a href="/spring-cloud/spring-cloud-config/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/spring-cloud/spring-cloud-config/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-              
+          
+          
 
-              
-            </div>
+          
+
           
 
           
@@ -1295,7 +1340,7 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1306,21 +1351,23 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
           1. 本地仓库管理配置1.1 配置中心服务端1.1.1 pom1234&lt;dependency&gt;    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;    &lt;artifactId&gt;spring-cloud-co
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/spring-cloud/spring-cloud-config/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1351,6 +1398,8 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -1377,11 +1426,20 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/spring-cloud/spring-cloud-feign/" itemprop="url">服务消费与断路器</a></h2>
+                
+                <a href="/spring-cloud/spring-cloud-feign/" class="post-title-link" itemprop="http://www.myblogs.work/index.html">服务消费与断路器</a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1389,11 +1447,12 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-15T00:00:00+08:00">
-                2018-03-15
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2018-03-15 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-15T00:00:00+08:00">2018-03-15</time>
             
 
             
@@ -1411,11 +1470,7 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/spring-cloud/" itemprop="url" rel="index">
-                    <span itemprop="name">spring-cloud</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/spring-cloud/" itemprop="url" rel="index"><span itemprop="name">spring-cloud</span></a></span>
 
                 
                 
@@ -1425,43 +1480,23 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
 
           
             
-          
-
-          
-          
-             <span id="/spring-cloud/spring-cloud-feign/" class="leancloud_visitors" data-flag-title="服务消费与断路器">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
+                  <i class="fa fa-comment-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  803
-                </span>
-              
+                <a href="/spring-cloud/spring-cloud-feign/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/spring-cloud/spring-cloud-feign/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-              
+          
+          
 
-              
-            </div>
+          
+
           
 
           
@@ -1473,7 +1508,7 @@ npm\yarn配置node -&gt; npm配置: https://blog.csdn.net/wanshaobo888/article/d
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1486,21 +1521,23 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
 一. 负载均衡1. 问题Q：曾经使用cloud的Brixton.RELEASE(spring-boot:1.3.5)版本用feign实现过负
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/spring-cloud/spring-cloud-feign/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1531,6 +1568,8 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -1557,11 +1596,20 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/spring-cloud/spring-cloud-eureka/" itemprop="url">服务注册中心</a></h2>
+                
+                <a href="/spring-cloud/spring-cloud-eureka/" class="post-title-link" itemprop="http://www.myblogs.work/index.html">服务注册中心</a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1569,11 +1617,12 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-14T00:00:00+08:00">
-                2018-03-14
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2018-03-14 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-14T00:00:00+08:00">2018-03-14</time>
             
 
             
@@ -1591,11 +1640,7 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/spring-cloud/" itemprop="url" rel="index">
-                    <span itemprop="name">spring-cloud</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/spring-cloud/" itemprop="url" rel="index"><span itemprop="name">spring-cloud</span></a></span>
 
                 
                 
@@ -1605,43 +1650,23 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
 
           
             
-          
-
-          
-          
-             <span id="/spring-cloud/spring-cloud-eureka/" class="leancloud_visitors" data-flag-title="服务注册中心">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
+                  <i class="fa fa-comment-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  806
-                </span>
-              
+                <a href="/spring-cloud/spring-cloud-eureka/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/spring-cloud/spring-cloud-eureka/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-              
+          
+          
 
-              
-            </div>
+          
+
           
 
           
@@ -1653,7 +1678,7 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1664,21 +1689,23 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
           1. 共有jar1234567891011121314151617181920212223242526272829303132333435363738394041&lt;parent&gt;    &lt;groupId&gt;org.springframework.boot&lt;/groupId
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/spring-cloud/spring-cloud-eureka/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1709,6 +1736,8 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -1735,11 +1764,20 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/spring-cloud/spring-cloud-version/" itemprop="url">spring-cloud-helloworld</a></h2>
+                
+                <a href="/spring-cloud/spring-cloud-version/" class="post-title-link" itemprop="http://www.myblogs.work/index.html">spring-cloud-helloworld</a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1747,11 +1785,12 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-13T00:00:00+08:00">
-                2018-03-13
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2018-03-13 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-13T00:00:00+08:00">2018-03-13</time>
             
 
             
@@ -1769,11 +1808,7 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/spring-cloud/" itemprop="url" rel="index">
-                    <span itemprop="name">spring-cloud</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/spring-cloud/" itemprop="url" rel="index"><span itemprop="name">spring-cloud</span></a></span>
 
                 
                 
@@ -1783,43 +1818,23 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
 
           
             
-          
-
-          
-          
-             <span id="/spring-cloud/spring-cloud-version/" class="leancloud_visitors" data-flag-title="spring-cloud-helloworld">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
+                  <i class="fa fa-comment-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  215
-                </span>
-              
+                <a href="/spring-cloud/spring-cloud-version/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/spring-cloud/spring-cloud-version/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-              
+          
+          
 
-              
-            </div>
+          
+
           
 
           
@@ -1831,7 +1846,7 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1844,21 +1859,23 @@ Feign使编写Web Service客户端变得非常简单。调用外部接口跟调�
 Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其子项目也都维护着自己的发布版本号。那么每一个
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/spring-cloud/spring-cloud-version/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -1891,6 +1908,8 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
   
   
 
+  
+
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
@@ -1915,11 +1934,20 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
         
           <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/spring-cloud/spring-cloud-preface/" itemprop="url">spring-cloud前言</a></h2>
+                
+                <a href="/spring-cloud/spring-cloud-preface/" class="post-title-link" itemprop="http://www.myblogs.work/index.html">spring-cloud前言</a>
+              
+            
+          </h2>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1927,11 +1955,12 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-12T00:00:00+08:00">
-                2018-03-12
-              </time>
-            
 
+              
+                
+              
+
+              <time title="创建时间：2018-03-12 00:00:00" itemprop="dateCreated datePublished" datetime="2018-03-12T00:00:00+08:00">2018-03-12</time>
             
 
             
@@ -1949,11 +1978,7 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/spring-cloud/" itemprop="url" rel="index">
-                    <span itemprop="name">spring-cloud</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/spring-cloud/" itemprop="url" rel="index"><span itemprop="name">spring-cloud</span></a></span>
 
                 
                 
@@ -1963,43 +1988,23 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
 
           
             
-          
-
-          
-          
-             <span id="/spring-cloud/spring-cloud-preface/" class="leancloud_visitors" data-flag-title="spring-cloud前言">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
+                  <i class="fa fa-comment-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  281
-                </span>
-              
+                <a href="/spring-cloud/spring-cloud-preface/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/spring-cloud/spring-cloud-preface/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-              
+          
+          
 
-              
-            </div>
+          
+
           
 
           
@@ -2011,7 +2016,7 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
     
     
     
-    <div class="post-body" itemprop="articleBody">
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -2027,21 +2032,23 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
 优先使用各模块当时的最新版本(当前最稳定的是Edgware.SR2(对应boot
           ...
           <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/spring-cloud/spring-cloud-preface/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
           <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
 
     
 
+    
+       
+    
     
 
     
@@ -2070,15 +2077,12 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
 
           </div>
-          
-
-
           
 
         </div>
@@ -2111,42 +2115,90 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">21</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">分类</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
+                <div class="site-state-item site-state-posts">
                 
-                  <span class="site-state-item-count">16</span>
-                  <span class="site-state-item-name">标签</span>
+                  <a href="/archives/">
                 
-              </div>
-            
+                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-          </nav>
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
 
           
             <div class="feed-link motion-element">
@@ -2159,28 +2211,36 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/lw5946" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i></a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:732506298@qq.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i></a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/lw5946" title="GitHub &rarr; https://github.com/lw5946" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                  
+                    
+                  
+                  <a href="mailto:732506298@qq.com" title="E-Mail &rarr; mailto:732506298@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
             </div>
           
 
           
-          
 
           
           
 
+          
+            
+          
           
 
         </div>
@@ -2188,6 +2248,13 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
 
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -2201,20 +2268,13 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Liu Wang</span>
 
   
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-      <span class="post-meta-item-text">Site words total count&#58;</span>
-    
-    <span title="Site words total count">9.7k</span>
+
   
 </div>
 
@@ -2234,17 +2294,11 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
 
 
 
+
         
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
     
 
     
@@ -2254,7 +2308,10 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
         </span>
       </div>
     
+	
+    
 
+    
   </div>
 
   
@@ -2273,7 +2330,11 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -2293,16 +2354,6 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -2311,18 +2362,13 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.6.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.6.0"></script>
 
 
 
@@ -2330,9 +2376,9 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.6.0"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.6.0"></script>
 
 
 
@@ -2341,27 +2387,11 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.6.0"></script>
 
 
 
   
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
 
 
 
@@ -2374,7 +2404,30 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
 
 
 
-
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'BqftNhq3QU35wJHaCxKWG0Ii-gzGzoHsz',
+        appKey: 'TNxW1qGnwhjvRuosbOyxtHOK',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
 
 
 
@@ -2429,6 +2482,8 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
         .css('overflow', 'hidden');
       $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
 
+      
+
       $.ajax({
         url: path,
         dataType: isXml ? "xml" : "json",
@@ -2462,6 +2517,7 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
                 var title = data.title.trim();
                 var titleInLowerCase = title.toLowerCase();
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
                 var contentInLowerCase = content.toLowerCase();
                 var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
@@ -2704,113 +2760,6 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
   
 
   
-  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
-  <script>AV.initialize("BqftNhq3QU35wJHaCxKWG0Ii-gzGzoHsz", "TNxW1qGnwhjvRuosbOyxtHOK");</script>
-  <script>
-    function showTime(Counter) {
-      var query = new AV.Query(Counter);
-      var entries = [];
-      var $visitors = $(".leancloud_visitors");
-
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      query.containedIn('url', entries);
-      query.find()
-        .done(function (results) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.get('url');
-            var time = item.get('time');
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
-          }
-        })
-        .fail(function (object, error) {
-          console.log("Error: " + error.code + " " + error.message);
-        });
-    }
-
-    function addCount(Counter) {
-      var $visitors = $(".leancloud_visitors");
-      var url = $visitors.attr('id').trim();
-      var title = $visitors.attr('data-flag-title').trim();
-      var query = new AV.Query(Counter);
-
-      query.equalTo("url", url);
-      query.find({
-        success: function(results) {
-          if (results.length > 0) {
-            var counter = results[0];
-            counter.fetchWhenSave(true);
-            counter.increment("time");
-            counter.save(null, {
-              success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
-              },
-              error: function(counter, error) {
-                console.log('Failed to save Visitor num, with error message: ' + error.message);
-              }
-            });
-          } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
-          }
-        },
-        error: function(error) {
-          console.log('Error:' + error.code + " " + error.message);
-        }
-      });
-    }
-
-    $(function() {
-      var Counter = AV.Object.extend("Counter");
-      if ($('.leancloud_visitors').length == 1) {
-        addCount(Counter);
-      } else if ($('.post-title-link').length > 1) {
-        showTime(Counter);
-      }
-    });
-  </script>
-
-
-
-  
 
   
 <script>
@@ -2830,10 +2779,10 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
 
 
   
-  
-  
-  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
 
+  
+
+  
   
   
   <script src="/lib/needsharebutton/needsharebutton.js"></script>
@@ -2858,8 +2807,97 @@ Spring Cloud是一个拥有诸多子项目的大型综合项目，原则上其�
   
 
   
+  
+  
+  <script src="/lib/pangu/dist/pangu.min.js?v=3.3"></script>
+  <script type="text/javascript">pangu.spacingPage();</script>
+
 
   
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script type="text/javascript">
+  
+    bookmark.loadBookmark();
+  
+  </script>
+
+
+  
+  <style>
+    .copy-btn {
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid #d5d5d5;
+      border-radius: 3px;
+      user-select: none;
+      outline: 0;
+    }
+
+    .highlight-wrap .copy-btn {
+      transition: opacity .3s ease-in-out;
+      opacity: 0;
+      padding: 2px 6px;
+      position: absolute;
+      right: 4px;
+      top: 8px;
+    }
+
+    .highlight-wrap:hover .copy-btn,
+    .highlight-wrap .copy-btn:focus {
+      opacity: 1
+    }
+
+    .highlight-wrap {
+      position: relative;
+    }
+  </style>
+  <script>
+    $('.highlight').each(function (i, e) {
+      var $wrap = $('<div>').addClass('highlight-wrap')
+      $(e).after($wrap)
+      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
+        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
+          return $(e).text()
+        }).toArray().join('\n')
+        var ta = document.createElement('textarea')
+        document.body.appendChild(ta)
+        ta.style.position = 'absolute'
+        ta.style.top = '0px'
+        ta.style.left = '0px'
+        ta.value = code
+        ta.select()
+        ta.focus()
+        var result = document.execCommand('copy')
+        document.body.removeChild(ta)
+        
+          if(result)$(this).text('复制成功')
+          else $(this).text('复制失败')
+        
+        $(this).blur()
+      })).on('mouseleave', function (e) {
+        var $b = $(this).find('.copy-btn')
+        setTimeout(function () {
+          $b.text('复制')
+        }, 300)
+      }).append(e)
+    })
+  </script>
+
 
   
 

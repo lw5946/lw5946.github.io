@@ -9,7 +9,7 @@
 
     <url>
         <loc>http://www.myblogs.work/blog/hexo-install/</loc>
-        <lastmod>2018-12-27T15:32:39.289Z</lastmod>
+        <lastmod>2018-12-28T14:32:50.641Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -40,14 +40,6 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-feign/</loc>
-        <lastmod>2018-12-25T14:58:49.875Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://www.myblogs.work/spring-cloud/spring-cloud-preface/</loc>
         <lastmod>2018-12-25T14:58:49.875Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -56,8 +48,8 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-eureka/</loc>
-        <lastmod>2018-12-25T14:58:49.874Z</lastmod>
+        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-feign/</loc>
+        <lastmod>2018-12-25T14:58:49.875Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -72,8 +64,8 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-config/</loc>
-        <lastmod>2018-12-25T14:58:49.873Z</lastmod>
+        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-eureka/</loc>
+        <lastmod>2018-12-25T14:58:49.874Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -81,6 +73,14 @@
 
     <url>
         <loc>http://www.myblogs.work/spring-cloud/spring-cloud-config-1/</loc>
+        <lastmod>2018-12-25T14:58:49.873Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-cloud/spring-cloud-config/</loc>
         <lastmod>2018-12-25T14:58:49.873Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -96,7 +96,7 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/spring-boot/spring-boot-banner/</loc>
+        <loc>http://www.myblogs.work/spring-boot/spring-boot-admin/</loc>
         <lastmod>2018-12-25T14:58:49.871Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -104,7 +104,7 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/spring-boot/spring-boot-admin/</loc>
+        <loc>http://www.myblogs.work/spring-boot/spring-boot-banner/</loc>
         <lastmod>2018-12-25T14:58:49.871Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -144,14 +144,6 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/blog/website/</loc>
-        <lastmod>2018-12-25T14:58:49.868Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://www.myblogs.work/demo/blog-demo/</loc>
         <lastmod>2018-12-25T14:58:49.868Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -160,8 +152,8 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/blog/hello-world/</loc>
-        <lastmod>2018-12-25T14:58:49.867Z</lastmod>
+        <loc>http://www.myblogs.work/blog/website/</loc>
+        <lastmod>2018-12-25T14:58:49.868Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -169,6 +161,14 @@
 
     <url>
         <loc>http://www.myblogs.work/blog/github-page/</loc>
+        <lastmod>2018-12-25T14:58:49.867Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/blog/hello-world/</loc>
         <lastmod>2018-12-25T14:58:49.867Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

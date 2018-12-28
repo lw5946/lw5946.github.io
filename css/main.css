@@ -1867,7 +1867,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f4ff6a;
+  background: #f28813;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3173,4 +3173,97 @@ ul.breadcrumb li+li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+html,
+body,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Sans Pro", "Roboto", "Helvetica", "Helvetica Neue", "Source Han Sans SC", "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC", sans-serif;
+}
+.menu .menu-item a:hover,
+.menu-item-active a {
+  color: #fff !important;
+  background-color: #2e405b;
+  border-bottom-color: #fff;
+}
+.posts-expand .post-title-link::before {
+  transition-duration: 0s;
+}
+.posts-expand .post-title-link:hover::before {
+  visibility: hidden;
+}
+body {
+  font-size: 18px;
+  line-height: 1.5em;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.04);
+  min-height: 100vh;
+}
+.posts-expand .post-meta {
+  text-align: left;
+  margin: 3px 0 30px 0;
+}
+.posts-expand .post-title {
+  text-align: left;
+font-weight
+}
+.post-block {
+  background: rgba(255,255,255,0);
+}
+.posts-expand .post-title-link {
+  line-height: inherit;
+  color: #2e405b;
+  transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  -moz-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  -webkit-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  border-bottom: solid #2e405b 2px;
+  padding: 0;
+  cursor: pointer;
+  cursor: hand;
+  font-size: 24px;
+  font-weight: bold;
+}
+a {
+  color: #2e405b;
+  transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  -moz-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  -webkit-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
+  border-bottom: solid #2e405b 2px;
+  padding: 0;
+  cursor: pointer;
+  cursor: hand;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+a:focus,
+a:hover {
+  color: #23527c;
+/* text-decoration: underline; */
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+a:hover {
+  color: #fff !important;
+  background-color: #2e405b;
+  border-bottom: solid transparent 2px;
+}
+.site-state-item-count {
+  color: #fff !important;
+  background-color: #2e405b;
 }

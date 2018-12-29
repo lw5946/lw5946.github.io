@@ -261,44 +261,6 @@
         
         
           
-          <li class="menu-item menu-item-categories">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags menu-item-active">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">16</span></a>
-
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-archives">
 
     
@@ -373,12 +335,6 @@
             
 
     
-    
-      
-      
-    
-      
-      
     
       
       
@@ -701,7 +657,7 @@
                 
                 
                 <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
+                  
                     
                     
                       
@@ -718,7 +674,7 @@
                     
                     <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
-                  </a>
+                  
                 </div>
               
 
@@ -994,7 +950,7 @@
         avatar:'mm',
         meta:guest,
         pageSize:'10' || 10,
-        visitor: false
+        visitor: true
     });
   </script>
 
@@ -1358,6 +1314,18 @@
 
   <script>
     
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "topCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Evernote,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
     
       flOptions = {};
       
@@ -1387,15 +1355,6 @@
   
 
   
-  
-  
-  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
-  <script type="text/javascript">
-  
-    bookmark.loadBookmark();
-  
-  </script>
-
 
   
   <style>

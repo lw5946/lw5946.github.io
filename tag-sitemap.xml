@@ -59,6 +59,13 @@
     </url>
 
     <url>
+        <loc>http://www.myblogs.work/tags/preface/</loc>
+        <lastmod>2018-12-25T14:58:49.875Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://www.myblogs.work/tags/feign/</loc>
         <lastmod>2018-12-25T14:58:49.875Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -67,13 +74,6 @@
 
     <url>
         <loc>http://www.myblogs.work/tags/hystrix/</loc>
-        <lastmod>2018-12-25T14:58:49.875Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.myblogs.work/tags/preface/</loc>
         <lastmod>2018-12-25T14:58:49.875Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>

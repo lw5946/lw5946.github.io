@@ -261,44 +261,6 @@
         
         
           
-          <li class="menu-item menu-item-categories">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">16</span></a>
-
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-archives menu-item-active">
 
     
@@ -373,12 +335,6 @@
             
 
     
-    
-      
-      
-    
-      
-      
     
       
       
@@ -994,6 +950,41 @@
 
       <h3 class="post-title">
         
+            <a class="post-title-link" href="/jekyll/jekyll-help/" itemprop="url">
+              
+                <span itemprop="name">Jekyll使用</span>
+              
+            </a>
+        
+      </h3>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2018-02-02T00:00:00+08:00" content="2018-02-02">
+          02-02
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h3 class="post-title">
+        
             <a class="post-title-link" href="/blog/website/" itemprop="url">
               
                 <span itemprop="name">我的网站</span>
@@ -1032,41 +1023,6 @@
             <a class="post-title-link" href="/git/git-index/" itemprop="url">
               
                 <span itemprop="name">使用git同步</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-02-02T00:00:00+08:00" content="2018-02-02">
-          02-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/jekyll/jekyll-help/" itemprop="url">
-              
-                <span itemprop="name">Jekyll使用</span>
               
             </a>
         
@@ -1220,7 +1176,7 @@
                 
                 
                 <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
+                  
                     
                     
                       
@@ -1237,7 +1193,7 @@
                     
                     <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
-                  </a>
+                  
                 </div>
               
 
@@ -1513,7 +1469,7 @@
         avatar:'mm',
         meta:guest,
         pageSize:'10' || 10,
-        visitor: false
+        visitor: true
     });
   </script>
 
@@ -1877,6 +1833,18 @@
 
   <script>
     
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "topCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Evernote,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
     
       flOptions = {};
       
@@ -1906,15 +1874,6 @@
   
 
   
-  
-  
-  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
-  <script type="text/javascript">
-  
-    bookmark.loadBookmark();
-  
-  </script>
-
 
   
   <style>

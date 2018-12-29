@@ -266,44 +266,6 @@
         
         
           
-          <li class="menu-item menu-item-categories">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类<span class="badge">6</span></a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-
-    
-    
-    
-      
-    
-
-    
-      
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">16</span></a>
-
-  </li>
-        
-        
-        
-          
           <li class="menu-item menu-item-archives">
 
     
@@ -414,8 +376,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Jekyll使用<a href="https://github.com/lw5946/lw5946.github.io.gitjekyll/jekyll-help.md" class="post-edit-link" title="编辑" rel="noopener" target="_blank"><i class="fa fa-pencil"></i></a>
-                
+          <h2 class="post-title" itemprop="name headline">Jekyll使用
               
             
           </h2>
@@ -481,6 +442,17 @@
           
 
           
+          
+             <span id="/jekyll/jekyll-help/" class="leancloud_visitors" data-flag-title="Jekyll使用">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -556,14 +528,34 @@
 
       
       
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+               <div id="needsharebutton-postbottom">
+                 <span class="btn">
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                 </span>
+               </div>
+            
+          </div>
+        
+        </div>
+      
       
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/blog/website/" rel="next" title="我的网站">
+                <i class="fa fa-chevron-left"></i> 我的网站
               </a>
             
           </div>
@@ -572,8 +564,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/git/git-index/" rel="prev" title="使用git同步">
-                使用git同步 <i class="fa fa-chevron-right"></i>
+              <a href="/blog/github-page/" rel="prev" title="什么？网页不能显示最新的?">
+                什么？网页不能显示最新的? <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -660,7 +652,7 @@
                 
                 
                 <div class="site-state-item site-state-categories">
-                  <a href="/categories/index.html">
+                  
                     
                     
                       
@@ -677,7 +669,7 @@
                     
                     <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
-                  </a>
+                  
                 </div>
               
 
@@ -973,7 +965,7 @@
         avatar:'mm',
         meta:guest,
         pageSize:'10' || 10,
-        visitor: false
+        visitor: true
     });
   </script>
 
@@ -1337,6 +1329,18 @@
 
   <script>
     
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "topCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Evernote,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
     
       flOptions = {};
       
@@ -1366,15 +1370,6 @@
   
 
   
-  
-  
-  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
-  <script type="text/javascript">
-  
-    bookmark.scrollToMark('manual', "#更多");
-  
-  </script>
-
 
   
   <style>

@@ -428,6 +428,31 @@
     
     
     <entry>
+      <title>Jekyll使用</title>
+      <link href="/jekyll/jekyll-help/"/>
+      <url>/jekyll/jekyll-help/</url>
+      
+        <content type="html"><![CDATA[<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://www.jekyll.com.cn/docs/configuration/" target="_blank">Jekyll使用说明</a></p><h2 id="根目录"><a href="#根目录" class="headerlink" title="根目录"></a>根目录</h2><p>site.url</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; site.url &#125;&#125;用来表示根目录，建议用，这样每一个路径都是完整的URL，方便迁移</span><br></pre></td></tr></table></figure><h2 id="高亮代码片段"><a href="#高亮代码片段" class="headerlink" title="高亮代码片段"></a>高亮代码片段</h2><p>Jekyll自带语法高亮功能：（linenos显示行数）</p><p>例子如下：</p><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show</span></span></span><br><span class="line"></span><br><span class="line">  @widget = Widget(params[<span class="symbol">:id</span>])</span><br><span class="line"></span><br><span class="line">  respond_to <span class="keyword">do</span> <span class="params">|format|</span></span><br><span class="line"></span><br><span class="line">    format.html <span class="comment"># show.html.erb</span></span><br><span class="line"></span><br><span class="line">    format.json &#123; render <span class="symbol">json:</span> @widget &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure><h6 id="使用的时候有问题"><a href="#使用的时候有问题" class="headerlink" title="使用的时候有问题:"></a>使用的时候有问题:</h6><p>Jekyll使用样例中是没有问题的，但是当我复制到这里时（不时放在代码块中），github page报错：highlight标签没有闭合。</p><p>补充：没有问题，是因为在介绍的文本中写了半截highlight标签，最后还是觉得highlight标签不好用，代码换行不够给力啊。而且markdown代码块标签不要和Jeklyll的highlight标签一起用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> jekyll </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jekyll </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我的网站</title>
       <link href="/blog/website/"/>
       <url>/blog/website/</url>
@@ -470,31 +495,6 @@
         <tags>
             
             <tag> git </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Jekyll使用</title>
-      <link href="/jekyll/jekyll-help/"/>
-      <url>/jekyll/jekyll-help/</url>
-      
-        <content type="html"><![CDATA[<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="https://www.jekyll.com.cn/docs/configuration/" target="_blank">Jekyll使用说明</a></p><h2 id="根目录"><a href="#根目录" class="headerlink" title="根目录"></a>根目录</h2><p>site.url</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; site.url &#125;&#125;用来表示根目录，建议用，这样每一个路径都是完整的URL，方便迁移</span><br></pre></td></tr></table></figure><h2 id="高亮代码片段"><a href="#高亮代码片段" class="headerlink" title="高亮代码片段"></a>高亮代码片段</h2><p>Jekyll自带语法高亮功能：（linenos显示行数）</p><p>例子如下：</p><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">show</span></span></span><br><span class="line"></span><br><span class="line">  @widget = Widget(params[<span class="symbol">:id</span>])</span><br><span class="line"></span><br><span class="line">  respond_to <span class="keyword">do</span> <span class="params">|format|</span></span><br><span class="line"></span><br><span class="line">    format.html <span class="comment"># show.html.erb</span></span><br><span class="line"></span><br><span class="line">    format.json &#123; render <span class="symbol">json:</span> @widget &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure><h6 id="使用的时候有问题"><a href="#使用的时候有问题" class="headerlink" title="使用的时候有问题:"></a>使用的时候有问题:</h6><p>Jekyll使用样例中是没有问题的，但是当我复制到这里时（不时放在代码块中），github page报错：highlight标签没有闭合。</p><p>补充：没有问题，是因为在介绍的文本中写了半截highlight标签，最后还是觉得highlight标签不好用，代码换行不够给力啊。而且markdown代码块标签不要和Jeklyll的highlight标签一起用。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> jekyll </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> jekyll </tag>
             
         </tags>
       

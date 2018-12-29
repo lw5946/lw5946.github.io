@@ -124,13 +124,13 @@
 <meta property="og:site_name" content="诗和远方">
 <meta property="og:description" content="使用服务网关统一管理对外暴露的服务">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/!--￼7--%3E/assets/images/spring-cloud/api-gateway/gateway_1.jpg">
-<meta property="og:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/!--￼8--%3E/assets/images/spring-cloud/api-gateway/gateway_2.png">
-<meta property="og:updated_time" content="2018-12-26T14:23:38.369Z">
+<meta property="og:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/gateway_1.jpg">
+<meta property="og:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/!--￼7--%3E/assets/images/spring-cloud/api-gateway/gateway_2.png">
+<meta property="og:updated_time" content="2018-12-29T13:19:52.273Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务网关">
 <meta name="twitter:description" content="使用服务网关统一管理对外暴露的服务">
-<meta name="twitter:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/!--￼7--%3E/assets/images/spring-cloud/api-gateway/gateway_1.jpg">
+<meta name="twitter:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/gateway_1.jpg">
 
 
 
@@ -281,7 +281,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>时间轴<span class="badge">21</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>时间轴<span class="badge">22</span></a>
 
   </li>
 
@@ -531,11 +531,11 @@
 <li>开启服务网关api-gateway</li>
 </ol>
 <h3 id="2-5-效果"><a href="#2-5-效果" class="headerlink" title="2.5 效果"></a>2.5 效果</h3><ul>
-<li>当访问<a href="http://127.0.0.1:5555/api-a-url/add时会路由到http://127.0.0.1:8080/add" target="_blank" rel="noopener">http://127.0.0.1:5555/api-a-url/add时会路由到http://127.0.0.1:8080/add</a></li>
-<li>当访问<a href="http://127.0.0.1:5555/api-a/add时会路由到http://127.0.0.1:8080/add或http://127.0.0.1:8081/add或http://127.0.0.1:8082/add，多次请求，会发现各个服务窗口都有打印请求到的信息。负载均衡成功实现！" target="_blank" rel="noopener">http://127.0.0.1:5555/api-a/add时会路由到http://127.0.0.1:8080/add或http://127.0.0.1:8081/add或http://127.0.0.1:8082/add，多次请求，会发现各个服务窗口都有打印请求到的信息。负载均衡成功实现！</a></li>
-<li>当访问<a href="http://127.0.0.1:5555/api-b/add会路由到spring.application.name为demo-service的addcontroller上" target="_blank" rel="noopener">http://127.0.0.1:5555/api-b/add会路由到spring.application.name为demo-service的addcontroller上</a></li>
+<li>当访问<code>http://127.0.0.1:5555/api-a-url/add</code>时会路由到<code>http://127.0.0.1:8080/add</code></li>
+<li>当访问<code>http://127.0.0.1:5555/api-a/add</code>时会路由到<code>http://127.0.0.1:8080/add</code>或<code>http://127.0.0.1:8081/add</code>或<code>http://127.0.0.1:8082/add</code>，多次请求，会发现各个服务窗口都有打印请求到的信息。负载均衡成功实现！</li>
+<li>当访问<code>http://127.0.0.1:5555/api-b/add</code>会路由到spring.application.name为demo-service的add路由上</li>
 </ul>
-<p><img src="!--￼7--&gt;/assets/images/spring-cloud/api-gateway/gateway_1.jpg" alt=""></p>
+<p><img src="/spring-cloud/spring-cloud-api-gateway/gateway_1.jpg" alt=""></p>
 <h2 id="3-服务过滤"><a href="#3-服务过滤" class="headerlink" title="3. 服务过滤"></a>3. 服务过滤</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.lw.apigateway.filter;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.netflix.zuul.ZuulFilter;</span><br><span class="line"><span class="keyword">import</span> com.netflix.zuul.context.RequestContext;</span><br><span class="line"><span class="keyword">import</span> org.apache.commons.lang.StringUtils;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.Logger;</span><br><span class="line"><span class="keyword">import</span> org.slf4j.LoggerFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LiuWang</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@date</span> 2018/3/20</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AccessFilter</span> <span class="keyword">extends</span> <span class="title">ZuulFilter</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger LOGGER = LoggerFactory.getLogger(AccessFilter.class);</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">filterType</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"pre"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">filterOrder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">shouldFilter</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        RequestContext ctx = RequestContext.getCurrentContext();</span><br><span class="line">        HttpServletRequest request = ctx.getRequest();</span><br><span class="line">        LOGGER.info(String.format(<span class="string">"%s request to %s"</span>, request.getMethod(), request.getRequestURL().toString()));</span><br><span class="line">        String token = request.getParameter(<span class="string">"token"</span>);</span><br><span class="line">        <span class="keyword">if</span> (StringUtils.isBlank(token))&#123;</span><br><span class="line">            LOGGER.warn(<span class="string">"token is empty"</span>);</span><br><span class="line">            <span class="comment">//未通过验证的返回信息</span></span><br><span class="line">            ctx.setSendZuulResponse(<span class="keyword">false</span>);</span><br><span class="line">            ctx.setResponseStatusCode(<span class="number">401</span>);</span><br><span class="line">            ctx.setResponseBody(<span class="string">"token is empty"</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        LOGGER.info(<span class="string">"token is ok"</span>);</span><br><span class="line">        <span class="comment">//通过验证，则继续请求的流程</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>自定义过滤器的实现，需要继承<code>ZuulFilter</code>，需要重写实现下面四个方法：</p>
 <ol>
@@ -560,7 +560,7 @@
 <li><code>http://localhost:5555/api-a/add?a=1&amp;b=2&amp;accessToken=token</code>：正确路由到spring-cloud-base-service，并返回计算内容</li>
 </ul>
 <p>filterType的其他类型以及生命周期如下：</p>
-<p><img src="!--￼8--&gt;/assets/images/spring-cloud/api-gateway/gateway_2.png" alt=""></p>
+<p><img src="/spring-cloud/spring-cloud-api-gateway/!--￼7--&gt;/assets/images/spring-cloud/api-gateway/gateway_2.png" alt=""></p>
 <h2 id="4-其他配置"><a href="#4-其他配置" class="headerlink" title="4. 其他配置"></a>4. 其他配置</h2><p>设置超时</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 断路器超时要 大于 负载均衡器超时总和</span></span><br><span class="line"><span class="comment"># 负载均衡器超时总和不是 ReadTimeout + ConnectTimeout</span></span><br><span class="line"><span class="comment"># 断路器设置</span></span><br><span class="line"><span class="attr">hystrix:</span></span><br><span class="line"><span class="attr">  command:</span></span><br><span class="line"><span class="attr">    default:</span></span><br><span class="line"><span class="attr">      execution:</span></span><br><span class="line"><span class="attr">        isolation:</span></span><br><span class="line"><span class="attr">          thread:</span></span><br><span class="line"><span class="attr">            timeoutInMilliseconds:</span> <span class="number">30000</span></span><br><span class="line"><span class="comment"># 负载均衡器设置</span></span><br><span class="line"><span class="attr">ribbon:</span></span><br><span class="line">  <span class="comment"># 请求处理的超时时间</span></span><br><span class="line"><span class="attr">  ReadTimeout:</span> <span class="number">1000</span></span><br><span class="line">  <span class="comment"># 请求连接的超时时间</span></span><br><span class="line"><span class="attr">  ConnectTimeout:</span> <span class="number">1000</span></span><br></pre></td></tr></table></figure>
 <h2 id="5-问题"><a href="#5-问题" class="headerlink" title="5. 问题"></a>5. 问题</h2><ol start="2">
@@ -592,13 +592,6 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\spring-cloud\spring-cloud-config\" rel="bookmark">配置中心</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
       <div class="popular-posts-title"><a href="\spring-cloud\spring-cloud-config-1\" rel="bookmark">配置中心高可用</a></div>
       
     </li>
@@ -606,7 +599,7 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\spring-cloud\spring-cloud-eureka-1\" rel="bookmark">高可用服务注册中心</a></div>
+      <div class="popular-posts-title"><a href="\spring-cloud\spring-cloud-config\" rel="bookmark">配置中心</a></div>
       
     </li>
   
@@ -620,7 +613,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\spring-cloud\spring-cloud-preface\" rel="bookmark">spring-cloud前言</a></div>
+      <div class="popular-posts-title"><a href="\spring-cloud\spring-cloud-eureka-1\" rel="bookmark">高可用服务注册中心</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\spring-cloud\spring-cloud-feign\" rel="bookmark">服务消费与断路器</a></div>
       
     </li>
   
@@ -769,7 +769,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -794,7 +794,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   
                 </div>
@@ -839,7 +841,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">16</span>
+                      
+                    
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>
@@ -903,7 +907,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-目标"><span class="nav-number">1.</span> <span class="nav-text">1. 目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-服务路由"><span class="nav-number">2.</span> <span class="nav-text">2. 服务路由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-pom"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 pom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-yaml"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 yaml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-java"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-使用"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-效果"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-服务过滤"><span class="nav-number">3.</span> <span class="nav-text">3. 服务过滤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-其他配置"><span class="nav-number">4.</span> <span class="nav-text">4. 其他配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-问题"><span class="nav-number">5.</span> <span class="nav-text">5. 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-理解"><span class="nav-number">6.</span> <span class="nav-text">6. 理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-为什么要使用服务网关"><span class="nav-number">7.</span> <span class="nav-text">7. 为什么要使用服务网关</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-目标"><span class="nav-text">1. 目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-服务路由"><span class="nav-text">2. 服务路由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-pom"><span class="nav-text">2.1 pom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-yaml"><span class="nav-text">2.2 yaml</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-java"><span class="nav-text">2.3 java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-使用"><span class="nav-text">2.4 使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-效果"><span class="nav-text">2.5 效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-服务过滤"><span class="nav-text">3. 服务过滤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-其他配置"><span class="nav-text">4. 其他配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-问题"><span class="nav-text">5. 问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-理解"><span class="nav-text">6. 理解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-为什么要使用服务网关"><span class="nav-text">7. 为什么要使用服务网关</span></a></li></ol></div>
             
 
           </div>

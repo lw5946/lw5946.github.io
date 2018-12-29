@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.myblogs.work/"/>
-  <updated>2018-12-28T14:32:50.641Z</updated>
+  <updated>2018-12-29T13:33:25.247Z</updated>
   <id>http://www.myblogs.work/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>网站由jekyll迁移到hexo</title>
-    <link href="http://www.myblogs.work/blog/hexo-install/"/>
-    <id>http://www.myblogs.work/blog/hexo-install/</id>
-    <published>2018-12-25T16:00:00.000Z</published>
-    <updated>2018-12-28T14:32:50.641Z</updated>
+    <title>学习</title>
+    <link href="http://www.myblogs.work/study/study-index/"/>
+    <id>http://www.myblogs.work/study/study-index/</id>
+    <published>2018-12-28T16:00:00.000Z</published>
+    <updated>2018-12-29T13:33:25.247Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,35 @@
       
         
         
-          &lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;安装git与node：&lt;a
+          &lt;h1 id=&quot;读书总会有点作用&quot;&gt;&lt;a href=&quot;#读书总会有点作用&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="study" scheme="http://www.myblogs.work/categories/study/"/>
+    
+    
+      <category term="学习" scheme="http://www.myblogs.work/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网站由jekyll迁移到hexo</title>
+    <link href="http://www.myblogs.work/blog/hexo-install/"/>
+    <id>http://www.myblogs.work/blog/hexo-install/</id>
+    <published>2018-12-25T16:00:00.000Z</published>
+    <updated>2018-12-29T13:24:16.835Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h1&gt;&lt;p&gt;迁移总算是告一段落了，虽然还有些细节没有做好，以后再慢慢完善吧！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;[x]
         
       
     
@@ -77,7 +104,7 @@
     <link href="http://www.myblogs.work/spring-cloud/spring-cloud-eureka-1/"/>
     <id>http://www.myblogs.work/spring-cloud/spring-cloud-eureka-1/</id>
     <published>2018-03-18T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.874Z</updated>
+    <updated>2018-12-29T13:09:56.759Z</updated>
     
     <summary type="html">
     
@@ -133,7 +160,7 @@
     <link href="http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/"/>
     <id>http://www.myblogs.work/spring-cloud/spring-cloud-api-gateway/</id>
     <published>2018-03-16T16:00:00.000Z</published>
-    <updated>2018-12-26T14:23:38.369Z</updated>
+    <updated>2018-12-29T13:19:52.273Z</updated>
     
     <summary type="html">
     
@@ -215,7 +242,7 @@
     <link href="http://www.myblogs.work/spring-cloud/spring-cloud-eureka/"/>
     <id>http://www.myblogs.work/spring-cloud/spring-cloud-eureka/</id>
     <published>2018-03-13T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.874Z</updated>
+    <updated>2018-12-29T13:10:12.256Z</updated>
     
     <summary type="html">
     
@@ -271,7 +298,7 @@
     <link href="http://www.myblogs.work/spring-cloud/spring-cloud-preface/"/>
     <id>http://www.myblogs.work/spring-cloud/spring-cloud-preface/</id>
     <published>2018-03-11T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.875Z</updated>
+    <updated>2018-12-29T13:09:43.496Z</updated>
     
     <summary type="html">
     
@@ -329,7 +356,7 @@
     <link href="http://www.myblogs.work/spring-boot/spring-boot-swagger/"/>
     <id>http://www.myblogs.work/spring-boot/spring-boot-swagger/</id>
     <published>2018-02-28T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.872Z</updated>
+    <updated>2018-12-29T13:05:27.658Z</updated>
     
     <summary type="html">
     
@@ -462,11 +489,11 @@
   </entry>
   
   <entry>
-    <title>Jekyll使用</title>
-    <link href="http://www.myblogs.work/jekyll/jekyll-help/"/>
-    <id>http://www.myblogs.work/jekyll/jekyll-help/</id>
+    <title>使用git同步</title>
+    <link href="http://www.myblogs.work/git/git-index/"/>
+    <id>http://www.myblogs.work/git/git-index/</id>
     <published>2018-02-01T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.870Z</updated>
+    <updated>2018-12-25T14:58:49.869Z</updated>
     
     <summary type="html">
     
@@ -474,16 +501,16 @@
       
         
         
-          &lt;h2 id=&quot;参考文档&quot;&gt;&lt;a href=&quot;#参考文档&quot; class=&quot;headerlink&quot; title=&quot;参考文档&quot;&gt;&lt;/a&gt;参考文档&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.jekyll.com.cn/docs/configuration/&quot;
+          &lt;h2 id=&quot;git的理念&quot;&gt;&lt;a href=&quot;#git的理念&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
     
-      <category term="jekyll" scheme="http://www.myblogs.work/categories/jekyll/"/>
+      <category term="git" scheme="http://www.myblogs.work/categories/git/"/>
     
     
-      <category term="jekyll" scheme="http://www.myblogs.work/tags/jekyll/"/>
+      <category term="git" scheme="http://www.myblogs.work/tags/git/"/>
     
   </entry>
   
@@ -515,11 +542,11 @@
   </entry>
   
   <entry>
-    <title>使用git同步</title>
-    <link href="http://www.myblogs.work/git/git-index/"/>
-    <id>http://www.myblogs.work/git/git-index/</id>
+    <title>Jekyll使用</title>
+    <link href="http://www.myblogs.work/jekyll/jekyll-help/"/>
+    <id>http://www.myblogs.work/jekyll/jekyll-help/</id>
     <published>2018-02-01T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.869Z</updated>
+    <updated>2018-12-25T14:58:49.870Z</updated>
     
     <summary type="html">
     
@@ -527,42 +554,16 @@
       
         
         
-          &lt;h2 id=&quot;git的理念&quot;&gt;&lt;a href=&quot;#git的理念&quot; class=&quot;headerlink&quot;
+          &lt;h2 id=&quot;参考文档&quot;&gt;&lt;a href=&quot;#参考文档&quot; class=&quot;headerlink&quot; title=&quot;参考文档&quot;&gt;&lt;/a&gt;参考文档&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.jekyll.com.cn/docs/configuration/&quot;
         
       
     
     </summary>
     
-      <category term="git" scheme="http://www.myblogs.work/categories/git/"/>
+      <category term="jekyll" scheme="http://www.myblogs.work/categories/jekyll/"/>
     
     
-      <category term="git" scheme="http://www.myblogs.work/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://www.myblogs.work/blog/hello-world/"/>
-    <id>http://www.myblogs.work/blog/hello-world/</id>
-    <published>2018-01-31T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.867Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;个人博客&quot;&gt;&lt;a href=&quot;#个人博客&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="blog" scheme="http://www.myblogs.work/categories/blog/"/>
-    
-    
-      <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
+      <category term="jekyll" scheme="http://www.myblogs.work/tags/jekyll/"/>
     
   </entry>
   

@@ -31,36 +31,8 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/tags/spring-boot/</loc>
-        <lastmod>2018-12-25T14:58:49.872Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.myblogs.work/tags/swagger/</loc>
-        <lastmod>2018-12-25T14:58:49.872Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.myblogs.work/tags/config-server/</loc>
         <lastmod>2018-12-25T14:58:49.873Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.myblogs.work/tags/eureka/</loc>
-        <lastmod>2018-12-25T14:58:49.874Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.myblogs.work/tags/preface/</loc>
-        <lastmod>2018-12-25T14:58:49.875Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -94,22 +66,57 @@
     </url>
 
     <url>
+        <loc>http://www.myblogs.work/tags/spring-boot/</loc>
+        <lastmod>2018-12-29T13:05:27.658Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/tags/swagger/</loc>
+        <lastmod>2018-12-29T13:05:27.658Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/tags/preface/</loc>
+        <lastmod>2018-12-29T13:09:43.496Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/tags/eureka/</loc>
+        <lastmod>2018-12-29T13:10:12.256Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://www.myblogs.work/tags/spring-cloud/</loc>
-        <lastmod>2018-12-26T14:23:38.369Z</lastmod>
+        <lastmod>2018-12-29T13:19:52.273Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://www.myblogs.work/tags/api-gateway/</loc>
-        <lastmod>2018-12-26T14:23:38.369Z</lastmod>
+        <lastmod>2018-12-29T13:19:52.273Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://www.myblogs.work/tags/blog/</loc>
-        <lastmod>2018-12-28T14:32:50.641Z</lastmod>
+        <lastmod>2018-12-29T13:24:16.835Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/tags/%E5%AD%A6%E4%B9%A0/</loc>
+        <lastmod>2018-12-29T13:33:25.247Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

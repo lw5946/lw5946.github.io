@@ -124,12 +124,12 @@
 <meta property="og:site_name" content="诗和远方">
 <meta property="og:description" content="1. 共有jar1234567891011121314151617181920212223242526272829303132333435363738394041&amp;lt;parent&amp;gt;    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;spring-boot-starter-pare">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-eureka/!--￼8--%3E/assets/images/spring-cloud/eureka/eureka_1.jpg">
-<meta property="og:updated_time" content="2018-12-25T14:58:49.874Z">
+<meta property="og:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-eureka/eureka_1.jpg">
+<meta property="og:updated_time" content="2018-12-29T13:10:12.256Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务注册中心">
 <meta name="twitter:description" content="1. 共有jar1234567891011121314151617181920212223242526272829303132333435363738394041&amp;lt;parent&amp;gt;    &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;spring-boot-starter-pare">
-<meta name="twitter:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-eureka/!--￼8--%3E/assets/images/spring-cloud/eureka/eureka_1.jpg">
+<meta name="twitter:image" content="http://www.myblogs.work/spring-cloud/spring-cloud-eureka/eureka_1.jpg">
 
 
 
@@ -280,7 +280,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>时间轴<span class="badge">21</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>时间轴<span class="badge">22</span></a>
 
   </li>
 
@@ -491,7 +491,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ComputeController</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> Logger logger = Logger.getLogger(getClass());</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> DiscoveryClient client;</span><br><span class="line">    <span class="meta">@RequestMapping</span>(value = <span class="string">"/add"</span> ,method = RequestMethod.GET)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">add</span><span class="params">(@RequestParam Integer a, @RequestParam Integer b)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//这个只是用来指导请求的主机名和serviceid,可以不要</span></span><br><span class="line">        ServiceInstance instance = client.getLocalServiceInstance();</span><br><span class="line">        Integer r = a + b;</span><br><span class="line">        logger.info(<span class="string">"/add, host:"</span> + instance.getHost() + <span class="string">", service_id:"</span> + instance.getServiceId() + <span class="string">", result:"</span> + r);</span><br><span class="line">        <span class="keyword">return</span> r;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="3-3-yaml"><a href="#3-3-yaml" class="headerlink" title="3.3 yaml"></a>3.3 yaml</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">  application:</span></span><br><span class="line"><span class="attr">    name:</span> <span class="string">spring-cloud-base-service</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="attr">  port:</span> <span class="number">8080</span></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line"><span class="attr">  client:</span></span><br><span class="line">    <span class="string">service-url.defaultZone:</span> <span class="attr">http://localhost:1111/eureka</span></span><br></pre></td></tr></table></figure>
 <h2 id="4-访问"><a href="#4-访问" class="headerlink" title="4. 访问"></a>4. 访问</h2><p><a href="http://localhost:1111/" target="_blank" rel="noopener">http://localhost:1111/</a></p>
-<p><img src="!--￼8--&gt;/assets/images/spring-cloud/eureka/eureka_1.jpg" alt=""></p>
+<p><img src="/spring-cloud/spring-cloud-eureka/eureka_1.jpg" alt=""></p>
 <h2 id="5-问题"><a href="#5-问题" class="headerlink" title="5. 问题"></a>5. 问题</h2><p>其他服务重启（如修改网关等其他服务的配置之后重启）之后，发现再次调用服务，很多时候还是使用的之前的配置，必须把服务中心也重启</p>
 <p>eureka.server.eviction-interval-timer-in-ms: 2000 清除无效服务配置也无效</p>
 
@@ -514,13 +514,6 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\spring-cloud\spring-cloud-config\" rel="bookmark">配置中心</a></div>
-      
-    </li>
-  
-    <li class="popular-posts-item">
-      
-      
       <div class="popular-posts-title"><a href="\spring-cloud\spring-cloud-config-1\" rel="bookmark">配置中心高可用</a></div>
       
     </li>
@@ -528,14 +521,21 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\spring-cloud\spring-cloud-preface\" rel="bookmark">spring-cloud前言</a></div>
+      <div class="popular-posts-title"><a href="\spring-cloud\spring-cloud-config\" rel="bookmark">配置中心</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="\spring-cloud\spring-cloud-tip\" rel="bookmark">spring-cloud使用的一些技巧、心得</a></div>
+      <div class="popular-posts-title"><a href="\spring-cloud\spring-cloud-feign\" rel="bookmark">服务消费与断路器</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\spring-cloud\spring-cloud-preface\" rel="bookmark">spring-cloud前言</a></div>
       
     </li>
   
@@ -684,7 +684,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -709,7 +709,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   
                 </div>
@@ -754,7 +756,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">16</span>
+                      
+                    
+                    <span class="site-state-item-count">17</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>
@@ -818,7 +822,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-共有jar"><span class="nav-number">1.</span> <span class="nav-text">1. 共有jar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建”服务注册中心”"><span class="nav-number">2.</span> <span class="nav-text">2. 创建”服务注册中心”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-新增jar"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 新增jar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-java"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-yaml"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 yaml</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-创建”客户端”"><span class="nav-number">3.</span> <span class="nav-text">3.创建”客户端”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-新增jar"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 新增jar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-java"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-yaml"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 yaml</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-访问"><span class="nav-number">4.</span> <span class="nav-text">4. 访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-问题"><span class="nav-number">5.</span> <span class="nav-text">5. 问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-共有jar"><span class="nav-text">1. 共有jar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-创建”服务注册中心”"><span class="nav-text">2. 创建”服务注册中心”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-新增jar"><span class="nav-text">2.1 新增jar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-java"><span class="nav-text">2.2 java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-yaml"><span class="nav-text">2.3 yaml</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-创建”客户端”"><span class="nav-text">3.创建”客户端”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-新增jar"><span class="nav-text">3.1 新增jar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-java"><span class="nav-text">3.2 java</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-yaml"><span class="nav-text">3.3 yaml</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-访问"><span class="nav-text">4. 访问</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-问题"><span class="nav-text">5. 问题</span></a></li></ol></div>
             
 
           </div>

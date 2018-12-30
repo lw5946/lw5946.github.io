@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.myblogs.work/"/>
-  <updated>2018-12-29T13:33:25.247Z</updated>
+  <updated>2018-12-30T14:11:40.298Z</updated>
   <id>http://www.myblogs.work/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>此页面暂时只为了categories能正常显示各分类</title>
+    <link href="http://www.myblogs.work/index/"/>
+    <id>http://www.myblogs.work/index/</id>
+    <published>2018-12-30T12:30:53.670Z</published>
+    <updated>2018-12-30T14:11:40.298Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;此页面暂时只为了categories能正常显示各分类，当categories能正常现实之后，就删除此页&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;注意：此文章如果故意放在最后，categories也不能正常显示&lt;/code&gt;&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>学习</title>
@@ -356,7 +380,7 @@
     <link href="http://www.myblogs.work/spring-boot/spring-boot-swagger/"/>
     <id>http://www.myblogs.work/spring-boot/spring-boot-swagger/</id>
     <published>2018-02-28T16:00:00.000Z</published>
-    <updated>2018-12-30T12:16:58.942Z</updated>
+    <updated>2018-12-30T14:07:57.105Z</updated>
     
     <summary type="html">
     
@@ -511,32 +535,6 @@
     
     
       <category term="git" scheme="http://www.myblogs.work/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jekyll使用</title>
-    <link href="http://www.myblogs.work/jekyll/jekyll-help/"/>
-    <id>http://www.myblogs.work/jekyll/jekyll-help/</id>
-    <published>2018-02-01T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.870Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;参考文档&quot;&gt;&lt;a href=&quot;#参考文档&quot; class=&quot;headerlink&quot; title=&quot;参考文档&quot;&gt;&lt;/a&gt;参考文档&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.jekyll.com.cn/docs/configuration/&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="jekyll" scheme="http://www.myblogs.work/categories/jekyll/"/>
-    
-    
-      <category term="jekyll" scheme="http://www.myblogs.work/tags/jekyll/"/>
     
   </entry>
   

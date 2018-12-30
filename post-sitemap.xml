@@ -9,7 +9,15 @@
 
     <url>
         <loc>http://www.myblogs.work/index/</loc>
-        <lastmod>2018-12-30T13:58:31.396Z</lastmod>
+        <lastmod>2018-12-30T14:11:40.298Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/spring-boot/spring-boot-swagger/</loc>
+        <lastmod>2018-12-30T14:07:57.105Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,14 +26,6 @@
     <url>
         <loc>http://www.myblogs.work/blog/hexo-install/</loc>
         <lastmod>2018-12-30T13:03:53.178Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://www.myblogs.work/spring-boot/spring-boot-swagger/</loc>
-        <lastmod>2018-12-30T12:16:58.942Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -120,14 +120,6 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/spring-boot/spring-boot-banner/</loc>
-        <lastmod>2018-12-25T14:58:49.871Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://www.myblogs.work/spring-boot/spring-boot-mail/</loc>
         <lastmod>2018-12-25T14:58:49.871Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -136,8 +128,8 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/jekyll/jekyll-help/</loc>
-        <lastmod>2018-12-25T14:58:49.870Z</lastmod>
+        <loc>http://www.myblogs.work/spring-boot/spring-boot-banner/</loc>
+        <lastmod>2018-12-25T14:58:49.871Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -145,6 +137,14 @@
 
     <url>
         <loc>http://www.myblogs.work/jekyll/local-server/</loc>
+        <lastmod>2018-12-25T14:58:49.870Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/jekyll/jekyll-help/</loc>
         <lastmod>2018-12-25T14:58:49.870Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

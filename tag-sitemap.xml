@@ -101,22 +101,22 @@
     </url>
 
     <url>
+        <loc>http://www.myblogs.work/tags/blog/</loc>
+        <lastmod>2018-12-30T13:03:53.178Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://www.myblogs.work/tags/spring-boot/</loc>
-        <lastmod>2018-12-30T12:16:58.942Z</lastmod>
+        <lastmod>2018-12-30T14:07:57.105Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://www.myblogs.work/tags/swagger/</loc>
-        <lastmod>2018-12-30T12:16:58.942Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.myblogs.work/tags/blog/</loc>
-        <lastmod>2018-12-30T13:03:53.178Z</lastmod>
+        <lastmod>2018-12-30T14:07:57.105Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

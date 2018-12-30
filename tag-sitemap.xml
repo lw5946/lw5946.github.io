@@ -66,20 +66,6 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/tags/spring-boot/</loc>
-        <lastmod>2018-12-29T13:05:27.658Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.myblogs.work/tags/swagger/</loc>
-        <lastmod>2018-12-29T13:05:27.658Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.myblogs.work/tags/preface/</loc>
         <lastmod>2018-12-29T13:09:43.496Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -108,15 +94,29 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/tags/blog/</loc>
-        <lastmod>2018-12-29T13:24:16.835Z</lastmod>
+        <loc>http://www.myblogs.work/tags/%E5%AD%A6%E4%B9%A0/</loc>
+        <lastmod>2018-12-29T13:33:25.247Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/tags/%E5%AD%A6%E4%B9%A0/</loc>
-        <lastmod>2018-12-29T13:33:25.247Z</lastmod>
+        <loc>http://www.myblogs.work/tags/spring-boot/</loc>
+        <lastmod>2018-12-30T12:16:58.942Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/tags/swagger/</loc>
+        <lastmod>2018-12-30T12:16:58.942Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/tags/blog/</loc>
+        <lastmod>2018-12-30T13:03:53.178Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

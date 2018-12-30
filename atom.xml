@@ -47,7 +47,7 @@
     <link href="http://www.myblogs.work/blog/hexo-install/"/>
     <id>http://www.myblogs.work/blog/hexo-install/</id>
     <published>2018-12-25T16:00:00.000Z</published>
-    <updated>2018-12-29T13:24:16.835Z</updated>
+    <updated>2018-12-30T13:03:53.178Z</updated>
     
     <summary type="html">
     
@@ -57,7 +57,7 @@
         
           &lt;h1 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h1&gt;&lt;p&gt;迁移总算是告一段落了，虽然还有些细节没有做好，以后再慢慢完善吧！&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;[x]
+&lt;li
         
       
     
@@ -356,7 +356,7 @@
     <link href="http://www.myblogs.work/spring-boot/spring-boot-swagger/"/>
     <id>http://www.myblogs.work/spring-boot/spring-boot-swagger/</id>
     <published>2018-02-28T16:00:00.000Z</published>
-    <updated>2018-12-29T13:05:27.658Z</updated>
+    <updated>2018-12-30T12:16:58.942Z</updated>
     
     <summary type="html">
     
@@ -515,6 +515,32 @@
   </entry>
   
   <entry>
+    <title>Jekyll使用</title>
+    <link href="http://www.myblogs.work/jekyll/jekyll-help/"/>
+    <id>http://www.myblogs.work/jekyll/jekyll-help/</id>
+    <published>2018-02-01T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.870Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;参考文档&quot;&gt;&lt;a href=&quot;#参考文档&quot; class=&quot;headerlink&quot; title=&quot;参考文档&quot;&gt;&lt;/a&gt;参考文档&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.jekyll.com.cn/docs/configuration/&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="jekyll" scheme="http://www.myblogs.work/categories/jekyll/"/>
+    
+    
+      <category term="jekyll" scheme="http://www.myblogs.work/tags/jekyll/"/>
+    
+  </entry>
+  
+  <entry>
     <title>我的网站</title>
     <link href="http://www.myblogs.work/blog/website/"/>
     <id>http://www.myblogs.work/blog/website/</id>
@@ -538,32 +564,6 @@
     
     
       <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jekyll使用</title>
-    <link href="http://www.myblogs.work/jekyll/jekyll-help/"/>
-    <id>http://www.myblogs.work/jekyll/jekyll-help/</id>
-    <published>2018-02-01T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.870Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;参考文档&quot;&gt;&lt;a href=&quot;#参考文档&quot; class=&quot;headerlink&quot; title=&quot;参考文档&quot;&gt;&lt;/a&gt;参考文档&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.jekyll.com.cn/docs/configuration/&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="jekyll" scheme="http://www.myblogs.work/categories/jekyll/"/>
-    
-    
-      <category term="jekyll" scheme="http://www.myblogs.work/tags/jekyll/"/>
     
   </entry>
   

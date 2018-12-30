@@ -29,13 +29,6 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/categories/spring-boot/</loc>
-        <lastmod>2018-12-29T13:05:27.658Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.myblogs.work/categories/spring-cloud/</loc>
         <lastmod>2018-12-29T13:19:52.273Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -43,15 +36,22 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/categories/blog/</loc>
-        <lastmod>2018-12-29T13:24:16.835Z</lastmod>
+        <loc>http://www.myblogs.work/categories/study/</loc>
+        <lastmod>2018-12-29T13:33:25.247Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/categories/study/</loc>
-        <lastmod>2018-12-29T13:33:25.247Z</lastmod>
+        <loc>http://www.myblogs.work/categories/spring-boot/</loc>
+        <lastmod>2018-12-30T12:16:58.942Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/categories/blog/</loc>
+        <lastmod>2018-12-30T13:03:53.178Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -120,14 +120,6 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/spring-boot/spring-boot-mail/</loc>
-        <lastmod>2018-12-25T14:58:49.871Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://www.myblogs.work/spring-boot/spring-boot-banner/</loc>
         <lastmod>2018-12-25T14:58:49.871Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -136,8 +128,8 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/jekyll/local-server/</loc>
-        <lastmod>2018-12-25T14:58:49.870Z</lastmod>
+        <loc>http://www.myblogs.work/spring-boot/spring-boot-mail/</loc>
+        <lastmod>2018-12-25T14:58:49.871Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -145,6 +137,14 @@
 
     <url>
         <loc>http://www.myblogs.work/jekyll/jekyll-help/</loc>
+        <lastmod>2018-12-25T14:58:49.870Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/jekyll/local-server/</loc>
         <lastmod>2018-12-25T14:58:49.870Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -176,7 +176,7 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/blog/hello-world/</loc>
+        <loc>http://www.myblogs.work/blog/github-page/</loc>
         <lastmod>2018-12-25T14:58:49.867Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -184,7 +184,7 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/blog/github-page/</loc>
+        <loc>http://www.myblogs.work/blog/hello-world/</loc>
         <lastmod>2018-12-25T14:58:49.867Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

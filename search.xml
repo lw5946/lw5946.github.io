@@ -466,31 +466,6 @@
     
     
     <entry>
-      <title>使用git同步</title>
-      <link href="/git/git-index/"/>
-      <url>/git/git-index/</url>
-      
-        <content type="html"><![CDATA[<h2 id="git的理念"><a href="#git的理念" class="headerlink" title="git的理念"></a>git的理念</h2><p>每一个地方就是一个仓库（repository），本地就是本地仓库，本地仓库就不区分是什么分支了，pull和push的时候，想同步哪个分支都可以自由选择。本地维护本地的代码。没有<strong>中央仓库</strong>的概念。</p><ul><li><p>更新：pull</p></li><li><p>提交：commit，commit相当于是提交到本地仓库</p></li><li><p>推：push，推给远程仓库</p><p>可以先pull，有冲突就merge，然后push</p></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> git </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> git </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>我的网站</title>
       <link href="/blog/website/"/>
       <url>/blog/website/</url>
@@ -533,6 +508,31 @@
         <tags>
             
             <tag> jekyll </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用git同步</title>
+      <link href="/git/git-index/"/>
+      <url>/git/git-index/</url>
+      
+        <content type="html"><![CDATA[<h2 id="git的理念"><a href="#git的理念" class="headerlink" title="git的理念"></a>git的理念</h2><p>每一个地方就是一个仓库（repository），本地就是本地仓库，本地仓库就不区分是什么分支了，pull和push的时候，想同步哪个分支都可以自由选择。本地维护本地的代码。没有<strong>中央仓库</strong>的概念。</p><ul><li><p>更新：pull</p></li><li><p>提交：commit，commit相当于是提交到本地仓库</p></li><li><p>推：push，推给远程仓库</p><p>可以先pull，有冲突就merge，然后push</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
             
         </tags>
       

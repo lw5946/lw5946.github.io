@@ -513,32 +513,6 @@
   </entry>
   
   <entry>
-    <title>使用git同步</title>
-    <link href="http://www.myblogs.work/git/git-index/"/>
-    <id>http://www.myblogs.work/git/git-index/</id>
-    <published>2018-02-01T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.869Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;git的理念&quot;&gt;&lt;a href=&quot;#git的理念&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="git" scheme="http://www.myblogs.work/categories/git/"/>
-    
-    
-      <category term="git" scheme="http://www.myblogs.work/tags/git/"/>
-    
-  </entry>
-  
-  <entry>
     <title>我的网站</title>
     <link href="http://www.myblogs.work/blog/website/"/>
     <id>http://www.myblogs.work/blog/website/</id>
@@ -562,6 +536,32 @@
     
     
       <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jekyll使用</title>
+    <link href="http://www.myblogs.work/jekyll/jekyll-help/"/>
+    <id>http://www.myblogs.work/jekyll/jekyll-help/</id>
+    <published>2018-02-01T16:00:00.000Z</published>
+    <updated>2018-12-25T14:58:49.870Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;参考文档&quot;&gt;&lt;a href=&quot;#参考文档&quot; class=&quot;headerlink&quot; title=&quot;参考文档&quot;&gt;&lt;/a&gt;参考文档&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.jekyll.com.cn/docs/configuration/&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="jekyll" scheme="http://www.myblogs.work/categories/jekyll/"/>
+    
+    
+      <category term="jekyll" scheme="http://www.myblogs.work/tags/jekyll/"/>
     
   </entry>
   

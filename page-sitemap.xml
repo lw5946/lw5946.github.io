@@ -8,6 +8,13 @@
     </url>
     
     <url>
+        <loc>http://www.myblogs.work/about/</loc>
+        <lastmod>2019-01-01T13:30:25.577Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://www.myblogs.work/tags/</loc>
         <lastmod>2018-12-30T13:22:26.867Z</lastmod>
         <changefreq>weekly</changefreq>

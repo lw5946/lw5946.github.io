@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.myblogs.work/"/>
-  <updated>2018-12-30T14:11:40.298Z</updated>
+  <updated>2019-01-08T11:35:01.800Z</updated>
   <id>http://www.myblogs.work/</id>
   
   <author>
@@ -17,11 +17,75 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>此页面暂时只为了categories能正常显示各分类</title>
-    <link href="http://www.myblogs.work/index/"/>
-    <id>http://www.myblogs.work/index/</id>
-    <published>2018-12-30T12:30:53.670Z</published>
-    <updated>2018-12-30T14:11:40.298Z</updated>
+    <title>多线程中的问题与测试</title>
+    <link href="http://www.myblogs.work/thread/thread-problem/"/>
+    <id>http://www.myblogs.work/thread/thread-problem/</id>
+    <published>2019-01-07T16:00:00.000Z</published>
+    <updated>2019-01-08T11:35:01.800Z</updated>
+    
+    <summary type="html">
+    
+      熟悉多线程中可能出现的问题与测试方法，方便定位程序中的问题
+    
+    </summary>
+    
+      <category term="thread" scheme="http://www.myblogs.work/categories/thread/"/>
+    
+    
+      <category term="thread" scheme="http://www.myblogs.work/tags/thread/"/>
+    
+      <category term="concurrent" scheme="http://www.myblogs.work/tags/concurrent/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>结构化并发应用程序--多线程</title>
+    <link href="http://www.myblogs.work/thread/thread-constructed/"/>
+    <id>http://www.myblogs.work/thread/thread-constructed/</id>
+    <published>2019-01-06T16:00:00.000Z</published>
+    <updated>2019-01-08T11:35:01.795Z</updated>
+    
+    <summary type="html">
+    
+      合理的将任务拆分、分配执行、关闭
+    
+    </summary>
+    
+      <category term="thread" scheme="http://www.myblogs.work/categories/thread/"/>
+    
+    
+      <category term="thread" scheme="http://www.myblogs.work/tags/thread/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多线程之JAVA中容器、工具的使用</title>
+    <link href="http://www.myblogs.work/thread/thread-util/"/>
+    <id>http://www.myblogs.work/thread/thread-util/</id>
+    <published>2019-01-04T16:00:00.000Z</published>
+    <updated>2019-01-08T11:35:01.801Z</updated>
+    
+    <summary type="html">
+    
+      使用jdk提供的容器、工具类快速有效的实现多线程
+    
+    </summary>
+    
+      <category term="thread" scheme="http://www.myblogs.work/categories/thread/"/>
+    
+    
+      <category term="thread" scheme="http://www.myblogs.work/tags/thread/"/>
+    
+      <category term="concurrent" scheme="http://www.myblogs.work/tags/concurrent/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多线程之对象的共享</title>
+    <link href="http://www.myblogs.work/thread/thread-object-share/"/>
+    <id>http://www.myblogs.work/thread/thread-object-share/</id>
+    <published>2019-01-03T16:00:00.000Z</published>
+    <updated>2019-01-08T11:35:01.799Z</updated>
     
     <summary type="html">
     
@@ -29,14 +93,89 @@
       
         
         
-          &lt;p&gt;此页面暂时只为了categories能正常显示各分类，当categories能正常现实之后，就删除此页&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;注意：此文章如果故意放在最后，categories也不能正常显示&lt;/code&gt;&lt;/p&gt;
-
+          &lt;blockquote&gt;
+&lt;p&gt; 我们不仅希望防止某个线程正在使用对象状态而另一个线程在同时修改该状态，而且希望确保当一个线程修改了对象状态后，其他线程能够看到发生的状态变化。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;1-对象可见性&quot;&gt;&lt;a
         
       
     
     </summary>
     
+      <category term="thread" scheme="http://www.myblogs.work/categories/thread/"/>
+    
+    
+      <category term="thread" scheme="http://www.myblogs.work/tags/thread/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>线程安全-多线程</title>
+    <link href="http://www.myblogs.work/thread/thread-safe/"/>
+    <id>http://www.myblogs.work/thread/thread-safe/</id>
+    <published>2019-01-03T09:06:00.000Z</published>
+    <updated>2019-01-08T11:35:01.800Z</updated>
+    
+    <summary type="html">
+    
+      什么时候才需要考虑线程安全问题
+    
+    </summary>
+    
+      <category term="thread" scheme="http://www.myblogs.work/categories/thread/"/>
+    
+    
+      <category term="thread" scheme="http://www.myblogs.work/tags/thread/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多线程</title>
+    <link href="http://www.myblogs.work/thread/thread-index/"/>
+    <id>http://www.myblogs.work/thread/thread-index/</id>
+    <published>2019-01-01T16:00:00.000Z</published>
+    <updated>2019-01-08T11:35:01.795Z</updated>
+    
+    <summary type="html">
+    
+      理解JAVA多线程知识,提高程序执行效率
+    
+    </summary>
+    
+      <category term="thread" scheme="http://www.myblogs.work/categories/thread/"/>
+    
+    
+      <category term="thread" scheme="http://www.myblogs.work/tags/thread/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo博客部署到服务器</title>
+    <link href="http://www.myblogs.work/blog/tencent-cloud/"/>
+    <id>http://www.myblogs.work/blog/tencent-cloud/</id>
+    <published>2018-12-30T16:00:00.000Z</published>
+    <updated>2018-12-31T12:55:53.555Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;前期准备&quot;&gt;&lt;a href=&quot;#前期准备&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="blog" scheme="http://www.myblogs.work/categories/blog/"/>
+    
+    
+      <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
+    
+      <category term="tencent" scheme="http://www.myblogs.work/tags/tencent/"/>
+    
+      <category term="cloud" scheme="http://www.myblogs.work/tags/cloud/"/>
     
   </entry>
   
@@ -71,7 +210,7 @@
     <link href="http://www.myblogs.work/blog/hexo-install/"/>
     <id>http://www.myblogs.work/blog/hexo-install/</id>
     <published>2018-12-25T16:00:00.000Z</published>
-    <updated>2018-12-30T13:03:53.178Z</updated>
+    <updated>2019-01-08T11:35:01.793Z</updated>
     
     <summary type="html">
     
@@ -79,9 +218,8 @@
       
         
         
-          &lt;h1 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h1&gt;&lt;p&gt;迁移总算是告一段落了，虽然还有些细节没有做好，以后再慢慢完善吧！&lt;/p&gt;
-&lt;ul&gt;
-&lt;li
+          &lt;h1 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;安装git与node：&lt;a
         
       
     
@@ -400,168 +538,6 @@
       <category term="spring-boot" scheme="http://www.myblogs.work/tags/spring-boot/"/>
     
       <category term="swagger" scheme="http://www.myblogs.work/tags/swagger/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>本地预览Jekll博客</title>
-    <link href="http://www.myblogs.work/jekyll/local-server/"/>
-    <id>http://www.myblogs.work/jekyll/local-server/</id>
-    <published>2018-02-24T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.870Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;之前一直都是将代码提交到github然后刷新页面看效果，这样一个小问题很多时候得重复提交好多次才解决&lt;/p&gt;
-&lt;p&gt;为了解决这个问题，需要现在本地调试预览&lt;/p&gt;
-&lt;p&gt;这其中，经历的东西全都是没用过的，各种找教程，也几次快要放弃，最终辛亏是搭起来了&lt;/p&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-      <category term="jekyll" scheme="http://www.myblogs.work/categories/jekyll/"/>
-    
-    
-      <category term="jekyll" scheme="http://www.myblogs.work/tags/jekyll/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringBoot监控服务</title>
-    <link href="http://www.myblogs.work/spring-boot/spring-boot-admin/"/>
-    <id>http://www.myblogs.work/spring-boot/spring-boot-admin/</id>
-    <published>2018-02-22T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.871Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;通过spring-boot-admin来监控SpringBoot服务&lt;/p&gt;
-&lt;p&gt;使用Spring Boot
-        
-      
-    
-    </summary>
-    
-      <category term="spring-boot" scheme="http://www.myblogs.work/categories/spring-boot/"/>
-    
-    
-      <category term="spring-boot" scheme="http://www.myblogs.work/tags/spring-boot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>邮件服务</title>
-    <link href="http://www.myblogs.work/spring-boot/spring-boot-mail/"/>
-    <id>http://www.myblogs.work/spring-boot/spring-boot-mail/</id>
-    <published>2018-02-06T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.871Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;由于密码等信息写在配置文件中可能泄露，因此这里示例自定义配置,。&lt;/p&gt;
-&lt;p&gt;使用Spring提供的自动配置，这里不做详述，详情参考&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="spring-boot" scheme="http://www.myblogs.work/categories/spring-boot/"/>
-    
-    
-      <category term="spring-boot" scheme="http://www.myblogs.work/tags/spring-boot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么？网页不能显示最新的?</title>
-    <link href="http://www.myblogs.work/blog/github-page/"/>
-    <id>http://www.myblogs.work/blog/github-page/</id>
-    <published>2018-02-02T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.867Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;
-        
-      
-    
-    </summary>
-    
-      <category term="blog" scheme="http://www.myblogs.work/categories/blog/"/>
-    
-    
-      <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的网站</title>
-    <link href="http://www.myblogs.work/blog/website/"/>
-    <id>http://www.myblogs.work/blog/website/</id>
-    <published>2018-02-01T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.868Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;网址&quot;&gt;&lt;a href=&quot;#网址&quot; class=&quot;headerlink&quot; title=&quot;网址&quot;&gt;&lt;/a&gt;网址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.myblogs.work&quot;&gt;www.myblogs.work&lt;/a&gt;&lt;/p&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-      <category term="blog" scheme="http://www.myblogs.work/categories/blog/"/>
-    
-    
-      <category term="blog" scheme="http://www.myblogs.work/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Jekyll使用</title>
-    <link href="http://www.myblogs.work/jekyll/jekyll-help/"/>
-    <id>http://www.myblogs.work/jekyll/jekyll-help/</id>
-    <published>2018-02-01T16:00:00.000Z</published>
-    <updated>2018-12-25T14:58:49.870Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;参考文档&quot;&gt;&lt;a href=&quot;#参考文档&quot; class=&quot;headerlink&quot; title=&quot;参考文档&quot;&gt;&lt;/a&gt;参考文档&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.jekyll.com.cn/docs/configuration/&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="jekyll" scheme="http://www.myblogs.work/categories/jekyll/"/>
-    
-    
-      <category term="jekyll" scheme="http://www.myblogs.work/tags/jekyll/"/>
     
   </entry>
   

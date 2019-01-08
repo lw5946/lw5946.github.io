@@ -101,13 +101,6 @@
     </url>
 
     <url>
-        <loc>http://www.myblogs.work/tags/blog/</loc>
-        <lastmod>2018-12-30T13:03:53.178Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.myblogs.work/tags/spring-boot/</loc>
         <lastmod>2018-12-30T14:07:57.105Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -117,6 +110,41 @@
     <url>
         <loc>http://www.myblogs.work/tags/swagger/</loc>
         <lastmod>2018-12-30T14:07:57.105Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/tags/tencent/</loc>
+        <lastmod>2018-12-31T12:55:53.555Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/tags/cloud/</loc>
+        <lastmod>2018-12-31T12:55:53.555Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/tags/blog/</loc>
+        <lastmod>2019-01-08T11:35:01.794Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/tags/thread/</loc>
+        <lastmod>2019-01-08T11:35:01.801Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.myblogs.work/tags/concurrent/</loc>
+        <lastmod>2019-01-08T11:35:01.801Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
